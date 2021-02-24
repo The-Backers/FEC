@@ -22,6 +22,13 @@
     "webpack-cli": "^4.5.0"
   },
   "dependencies": {
-    "react-dom": "^17.0.1"
+    "@babel/core": "^7.13.1",
+    "@babel/preset-env": "^7.13.5",
+    "@babel/preset-react": "^7.12.13",
+    "@hot-loader/react-dom": "^17.0.1",
+    "babel-loader": "^8.2.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-hot-loader": "^4.13.0"
   }
 }
