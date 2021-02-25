@@ -1,0 +1,39 @@
+hey yall, welcome to my ted talk.
+
+General:
+
+  the basic format of any API request should look like this: 'https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/...'
+
+
+  every API request should also have a header with key 'AUTHORIZATION' and value of your github token
+
+Products:
+  the basic format of a products API request should look like this: 'https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/'
+
+  you can set query parameters for the number of products returned or the page of the results (i.e. 'products/?count=30')
+
+  to get data for an individual product id, you just add the id to the end of the request (i.e. 'products/11001')
+
+  to get the styles or related products for a specific product, you just add 'styles' or 'related' to the end of the request (i.e. 'products/11001/styles')
+
+Reviews:
+  the basic format of a reviews API request should look like this: 'https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews/?product_id=11001'
+
+    note that you can't make a request for reviews without first specifying the product id as a query parameter
+
+  you can further add query parameters to specify page and count (like with products), as well as sort!!!, which takes in "newest", "helpful", or "relevant" as parameters (i.e. 'reviews/?product_id=11001&sort=helpful')
+
+  you can also get the review metadata by just adding 'meta' to the end of the request (i.e. 'reviews/meta/?product_id=11001')
+
+Questions:
+  the basic format of a questions API request should look like this 'https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/qa/questions/?product_id=11001'
+
+    like with reviews, you can't make a request for questions without first specifying the product id as a query parameter
+
+  as before, you can use query paramaters to set count and page
+
+  in order to get the answers to a specific question, you need to add the question id to the end of the request, followed by 'answers' (i.e. 'qa/questions/47542/answers')
+
+    you need the question id in order to get answers
+
+  answers can also use query paramaters to set count and page
