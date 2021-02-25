@@ -13,8 +13,8 @@ class App extends React.Component {
   componentDidMount() {
     axios({
       method: 'get',
-      url: 'https://app-hrsei-api.herokuapp.com/api/fec2/:hr-nyc/reviews?product_id=2',
-      headers: {'Authorization': API_KEY}
+      url: 'https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products',
+      headers: {'AUTHORIZATION': API_KEY}
     })
     .then((result) => {this.setState({value: result.data})})
     .catch(this.setState({value: "It didn't work, sad"}))
