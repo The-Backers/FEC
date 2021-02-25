@@ -5,8 +5,7 @@
         "node": true
     },
     "extends": [
-        "plugin:react/recommended",
-        "airbnb"
+        "plugin:react/recommended"
     ],
     "parserOptions": {
         "ecmaFeatures": {

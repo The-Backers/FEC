@@ -1,11 +1,27 @@
-// this is where Tests for App.js go!
 const React = require('react');
 const enzyme = require('enzyme');
 const Adapter = require('enzyme-adapter-react-16');
 
 enzyme.configure({ adapter: new Adapter() });
 
-const App = require('./App').default;
+// example component
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    };
+  }
+
+  render() {
+    return (
+      <div>Hello World!</div>
+    );
+  }
+}
+
+// importing a component would look like this:
+// const App = require('../src/components/App').default;
 
 // example test using shallow render
 describe('App', () => {
@@ -15,3 +31,4 @@ describe('App', () => {
     expect(wrapper.text() === 'Hello World!').toBeTruthy;
   });
 });
+
