@@ -1,20 +1,15 @@
 const React = require('react');
-const { shallow, mount, render, configure } = require('enzyme');
+const enzyme = require('enzyme');
 const Adapter = require('enzyme-adapter-react-16');
 
-configure({ adapter: new Adapter() });
+enzyme.configure({ adapter: new Adapter() });
 
-const App = require('./App');
-console.log('this is app!', App);
-
-function setup() {
-  const wrapper = render(<App />);
-  return wrapper;
-};
+const App = require('./App').default;
 
 describe('App', () => {
   it('should render', () => {
-    const wrapper = setup();
+    const wrapper = enzyme.shallow(<App />);
     expect(wrapper.exists()).toBeTruthy();
+    // expect(wrapper.text()).to.equal('Hello World!'); // doesn't work?
   });
 });
