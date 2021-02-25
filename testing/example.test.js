@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // just type npm test in your terminal to run every test file! (test files should be in the format <componentName>.test.js)
 
 // copy and paste these lines every time!
