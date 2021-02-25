@@ -1,5 +1,7 @@
 import React from 'react';
 
+import API_KEY from '../../config.js'
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -8,9 +10,15 @@ class App extends React.Component {
     };
   }
 
+
   render() {
     return (
-      <div>Hello World!</div>
+      <div>
+        <h1>API Test</h1>
+
+      </div>
+
+
     );
   }
 }
