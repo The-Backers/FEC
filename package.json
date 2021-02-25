@@ -8,7 +8,9 @@
     "test": "jest"
   },
   "jest": {
-    "setupFilesAfterEnv": ["./testing/setupTests.js"]
+    "setupFilesAfterEnv": [
+      "./testing/setupTests.js"
+    ]
   },
   "repository": {
     "type": "git",
