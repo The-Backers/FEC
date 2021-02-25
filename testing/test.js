@@ -1,4 +1,3 @@
-
 test('tests if jest works', () => {
   expect(true).toBe(true);
 });

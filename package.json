@@ -19,16 +19,13 @@
   },
   "homepage": "https://github.com/The-Backers/FEC#readme",
   "devDependencies": {
-<<<<<<< HEAD
     "eslint": "^7.20.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-=======
     "jest": "^26.6.3",
->>>>>>> 06a1c5a276bdb3692f271b54349ccae4efbaadcc
     "webpack": "^5.24.1",
     "webpack-cli": "^4.5.0"
   },
@@ -37,7 +34,13 @@
     "@babel/preset-env": "^7.13.5",
     "@babel/preset-react": "^7.12.13",
     "@hot-loader/react-dom": "^17.0.1",
+    "@types/jest": "^26.0.20",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^26.6.3",
     "babel-loader": "^8.2.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "jest-enzyme": "^7.1.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hot-loader": "^4.13.0"
