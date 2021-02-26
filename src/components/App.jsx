@@ -1,9 +1,16 @@
 import React from 'react';
-import API_KEY from '../../config.js'
+import API_KEY from '../../config.js';
+import OverviewContainer from '../containers/overview/OVerviewContainer';
+import Products from './products';
+import Questions from './questions';
+import Reviews from './reviews';
 
 var App = () => (
-      <div>
-        <h1>API Test</h1>
+      <div id="overall-container">
+        <OverviewContainer />
+        <Products />
+        <Questions />
+        <Reviews />
       </div>
 
 
