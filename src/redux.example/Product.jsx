@@ -1,7 +1,9 @@
 import React from 'react';
 
+//Since we are using redux, all components should be functional.
+//Remember to follow naming convention and capitilize our comoponents.
+var Product = ({style, handleStyleChange}) => (
 
-var ProductTest = ({style, handleStyleChange}) => (
 <div>
   {console.log('this is the current product: ',style)}
   <h2>{style.name}</h2>
@@ -14,4 +16,4 @@ var ProductTest = ({style, handleStyleChange}) => (
 
 
 
-export default ProductTest;
+// export default Product;

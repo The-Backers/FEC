@@ -1,22 +1,15 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-//import rootReducer from '../reducers/rootReducer.js'
+import currentProduct from '../reducers/currentProduct';
+import products from '../../sample-data/products/get-productId-styles.json'
 
 
 
 var initialSate = {
-
+  currStyle: products.results[1]
 };
 
-var dumbReducer = (state={}, action) => {
-  if (!action) {
-    return state
-  }
-  return state;
-}
-
-
-var store = createStore(dumbReducer,
+var store = createStore(currentProduct,
   initialSate,
   applyMiddleware(thunk));
 
