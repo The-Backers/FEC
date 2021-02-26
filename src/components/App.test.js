@@ -1,4 +1,4 @@
-// this is where Tests for App.js go!
+// this is where Tests for App.jsx go!
 const React = require('react');
 const enzyme = require('enzyme');
 const Adapter = require('enzyme-adapter-react-16');

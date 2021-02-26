@@ -1,4 +1,6 @@
 import { combineReducers } from 'redux';
+import currentProduct from './currentProduct';
 
+// var rootReducer = combineReducers({currentProduct})
 
-var rootReducer = combineReducers()
+// export default rootReducer;

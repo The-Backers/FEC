@@ -1,0 +1,23 @@
+{
+  "question": "47542",
+  "page": 1,
+  "count": 5,
+  "results": [
+      {
+          "answer_id": 452872,
+          "body": "It ships from the facility in Tulsa",
+          "date": "2018-01-06T00:00:00.000Z",
+          "answerer_name": "dschulman",
+          "helpfulness": 26,
+          "photos": []
+      },
+      {
+          "answer_id": 452880,
+          "body": "Mine was delivered from Oklahoma",
+          "date": "2018-01-06T00:00:00.000Z",
+          "answerer_name": "dschulman",
+          "helpfulness": 24,
+          "photos": []
+      }
+  ]
+}

@@ -1,18 +1,14 @@
 import React from 'react';
+import ProductContainer from '../containers/productContainer.js';
+import API_KEY from '../../config.js'
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+var App = () => (
+      <div>
+        <h1>API Test</h1>
+      <ProductContainer />
+      </div>
 
-    };
-  }
 
-  render() {
-    return (
-      <div>Hello World!</div>
     );
-  }
-}
 
 export default App;

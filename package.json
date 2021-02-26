@@ -7,6 +7,11 @@
     "react-dev": "webpack --mode development --watch",
     "test": "jest"
   },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./testing/setupTests.js"
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/The-Backers/FEC"
