@@ -7,6 +7,7 @@ const RelatedItems = ({getProducts, relatedProducts}) => {
   console.log('this is relatedProducts: ', relatedProducts);
   return (
     <div className="parent-products">
+      <button onClick={getProducts}>Get Products!</button>
       <Carousel className="products-related"/>
       <ProductCard className="products-outfits"/>
       <Comparison className="comparison-card" />

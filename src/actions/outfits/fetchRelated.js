@@ -10,7 +10,6 @@ var getRelated = (dispatch) => {
     }
   })
     .then(({data}) => {
-      console.log('these are the related items', data);
       dispatch(showRelated(data))
     })
     .catch((error) => {
