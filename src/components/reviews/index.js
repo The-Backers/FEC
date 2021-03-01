@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Reviews = () =>(
-  <div className="parent-reviews">
+  <div className="parent-reviews width">
 <div className='reviews-ratings'>
 
 </div>

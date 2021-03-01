@@ -1,10 +1,17 @@
 body {
-  background-color: blanchedalmond;
+  background-color: white;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+p, h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
 
+.width {
+  width: 80vw;
+}
 
 #overall-container {
 display: grid;
@@ -12,6 +19,8 @@ grid-template-columns: 1fr;
 grid-template-rows: repeat(4, 1fr);
 grid-column-gap: 0px;
 grid-row-gap: 0px;
+width: 100vw;
+height: 100%;
 }
 
 
@@ -29,54 +38,218 @@ width: 80vw;
 
 .nav {
   grid-area: 1 / 1 / 2 / 3;
-  border: 3px solid black;
   height: 15vh;
 }
 
 .overview-body {
+  position: relative;
   grid-area: 2 / 1 / 3 / 3;
   border: 3px solid black;
   display: flex;
-  height: 60vh;
+  height: 80vh;
   flex-flow: row;
+  min-height: 600px;
+
 }
 
-.overview-body-image{
-  border-right: 3px solid black;
+.fa-expand {
+  position: relative;
+  z-index: 1;
+
+}
+
+.overview-body-image {
+  position: relative;
   width: 60%;
+  min-height: 600px;
+  max-width: 100%;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.overview-body-image img {
+  height: auto;
+  object-fit: cover;
+  max-width: 100%;
+  height: 100%;
 }
 
 .overview-body-interaction {
   width: 40%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+.overview-body-interaction h2, p {
+  margin-bottom: 0.5rem;
+}
+.checked {
+  color: orange;
 }
 
+.product-info {
+  grid-area: 1 / 1 / 2 / 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.current-stars {
+  margin: 1rem 0 0.5rem 0;
+  padding: 0;
+}
+.fa-star {
+  height: .8rem;
+}
+
+.individual-styles {
+    margin: .2rem;
+    object-fit: fill;
+    clip-path: circle(50% at 50% 50%);
+    text-decoration: none;
+    border: none;
+}
+
+.individual-styles:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
+
+.individual-styles img {
+  height: 100%;
+  width: 100%;
+
+}
+
+.product-styles {
+  grid-area: 2 / 1 / 3 / 2;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.product-buttons {
+  grid-area: 3 / 1 / 4 / 2;
+  height: 100%;
+}
 .overview-description {
   grid-area: 3 / 1 / 4 / 3;
-  display: flex;
   height: 25vh;
 }
 
 .parent-products {
   grid-area: 2 / 1 / 3 / 2;
-  border: 3px solid black;
   height: 100vh;
   width: 80vw;
   margin: 0 auto;
 }
 .parent-questions {
   grid-area: 3 / 1 / 4 / 2;
-  border: 3px solid black;
   height: 100vh;
   width: 80vw;
   margin: 0 auto;
 }
 .parent-reviews {
   grid-area: 4 / 1 / 5 / 2;
-  border: 3px solid black;
   height: 100vh;
   width: 80vw;
   margin: 0 auto;
 }
 
 
-/*# sourceMappingURL=style.css.map */
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 869px) {
+  .individual-styles {
+    height: 4rem;
+    width: 4rem;
+  }
+  .width {
+    width: 100vw;
+  }
+
+
+  .nav {
+    height: 10vh;
+  }
+  .overview-body {
+
+    grid-area: 2 / 1 / 3 / 3;
+    display: flex;
+    flex-direction: column;
+  }
+  .overview-body-image {
+    width: 100%;
+    height: 100%;
+  }
+  .overview-body-image img {
+    object-fit: cover;
+
+    width: 100%;
+    height: 100%;
+  }
+  .overview-body-interaction {
+    font-size: 1rem;
+    width: 100%;
+    height: 50vh;
+
+  }
+}
+@media (min-width: 869px) and (max-width:992px) {
+  .overview-body-interaction {
+    font-size: 1.2rem;
+  }
+  .individual-styles {
+    height: 3.8rem;
+    width: 3.8rem;
+  }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1115px) {
+  .overview-body-interaction {
+    font-size: 1.3rem;
+  }
+  .individual-styles {
+    height: 4rem;
+    width: 4rem;
+  }
+}
+
+
+@media (min-width: 1115px) {
+  .overview-body-interaction {
+    font-size: 1.4rem;
+  }
+  .individual-styles {
+    height: 5rem;
+    width: 5rem;
+  }
+}
+
+@media (min-width: 1308px) {
+  .individual-styles {
+    height: 6rem;
+    width: 6rem;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1577px) {
+  .overview-body-interaction {
+    font-size: 1.7rem;
+  }
+  .individual-styles {
+    height: 7.2rem;
+    width: 7.2rem;
+  }
+
+}

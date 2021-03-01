@@ -2,7 +2,7 @@ import React from 'react';
 import Gallery from './Gallery';
 
 const Overview = () =>(
-  <div className="parent-overview">
+  <div className="parent-overview width">
 <nav className='nav'>
   <h1>Nav bar will go here</h1>
 </nav>
