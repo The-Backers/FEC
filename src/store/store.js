@@ -6,6 +6,14 @@ import fetchProductsReducer from '../reducers/overview/fetchProductsReducer.js';
 
 var initialSate = {
   product: {},
+  currentStyles: [],
+  relatedProducts: [],
+  outfits: [],
+  reviews: [],
+  reviewMeta: {},
+  sessionId: '',
+  questions: [],
+  answers: []
 };
 
 var dumbReducer = (state={}, action) => {

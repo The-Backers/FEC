@@ -1,7 +1,7 @@
 import React from 'react';
 import API_KEY from '../../config.js';
 import OverviewContainer from '../containers/overview/OVerviewContainer';
-import Products from './products';
+import Outfits from './outfits';
 import Questions from './questions';
 import Reviews from './reviews';
 
@@ -11,7 +11,7 @@ import Reviews from './reviews';
 var App = () => (
       <div id="overall-container" >
         <OverviewContainer />
-        <Products />
+        <Outfits />
         <Questions />
         <Reviews />
       </div>
