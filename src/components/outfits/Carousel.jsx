@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Carousel = () => {
-
+  return (
+    <div>Hello this is carousel!</div>
+  );
 }
 
 export default Carousel;
