@@ -22,7 +22,7 @@ class ComponentTest extends React.Component {
                   </form>
           </div>
 
-          <Stars total = '3.6'/>
+          <Stars total = '3.6' />
       </div>
     );
   }

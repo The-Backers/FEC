@@ -2,7 +2,7 @@ import React from 'react';
 import Star from './Star.jsx'
 
 
-//stars is always going to expect a prop of total (which is the total score of whatever thing you are measuring (i.e. props.total = 3.4) )
+//stars is always going to expect a prop of total (which is the total score of whatever thing you are measuring (i.e. props.total = 3.4))
 
 const Stars = (props) => {
 

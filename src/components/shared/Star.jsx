@@ -4,14 +4,16 @@ var Star = (props) => {
 
 
   //these are the coordinates for each point on the star relative to its svg view. to change the size of the star, you need to proportionaly change both all the numbers in the startPoints string, as well as the size of the svg viewBox.
-  var starPoints = '20 4 24 16 36 16 28 24 32 36 20 28 8 36 12 24 4 16 16 16 20 4'
+  var starPoints = '20 4 24 16 36 16 28 24 32 36 20 28 8 36 12 24 4 16 16 16 20 4';
 
+
+
+  //these will come into play in a little bit
   var percent;
-
   var fillValue;
 
-  console.log('total', props.total)
-  console.log('value', props.value)
+
+
 
   //if the stars value is less than the total score, it gets filled completely
   if (props.total >= props.value) {

@@ -131,9 +131,15 @@ width: 80vw;
 
 
 /* Stars Styles Start */
+
+#stars {
+  display: flex;
+  flex-direction: horizontal;
+}
+
 .star {
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
 
 }
 /* Stars Styles End */
