@@ -1,20 +1,35 @@
 import React from 'react';
+import Star from './Star.jsx'
 
-const Stars = () => {
+
+//stars is always going to expect a prop of total (which is the total score of whatever thing you are measuring (i.e. props.total = 3.4) )
+
+const Stars = (props) => {
+
+
+
   return (
 <div id = 'stars'>
-  <div className = 'star' value = '1'>
-    <svg viewBox = '0 0 50 50' style = {{'border': 'green solid'}}>
-      {/* <path stroke = 'green' strokeWidth = '1' d =''    /> */}
-      <polyline points = '25 5 30 20 45 20 35 30 40 45 25 35 10 45 15 30 5 20 20 20' />
-    </svg>
+  <div className = 'star' >
+    <Star total = {props.total} value = '1'/>
   </div>
 
 
-  <div className = 'star' value = '2'></div>
-  <div className = 'star' value = '3'></div>
-  <div className = 'star' value = '4'></div>
-  <div className = 'star' value = '5'></div>
+  <div className = 'star' >
+    <Star total = {props.total} value = '2'/>
+  </div>
+
+  <div className = 'star' >
+    <Star total = {props.total} value = '3'/>
+  </div>
+
+  <div className = 'star' >
+    <Star total = {props.total} value = '4'/>
+  </div>
+
+  <div className = 'star' >
+    <Star total = {props.total} value = '5'/>
+  </div>
 </div>
   )
 }
@@ -22,4 +37,3 @@ const Stars = () => {
 export default Stars;
 
 
-"50 160 55 180 70 180 60 190 65 205 50 195 35 205 40 190 30 180 45 180"
