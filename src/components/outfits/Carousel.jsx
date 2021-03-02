@@ -15,9 +15,9 @@ const Carousel = ({relatedProducts}) => {
           )
         })}
       </div>
-    )
+    );
   } else {
-    return null
+    return null;
   }
 }
 
