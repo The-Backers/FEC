@@ -1,8 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-//import rootReducer from '../reducers/rootReducer.js'
-import fetchProductsReducer from '../reducers/overview/fetchProductsReducer.js';
-
+import rootReducer from '../reducers/rootReducer.js'
 
 var initialSate = {
   product: {},
@@ -16,17 +14,11 @@ var initialSate = {
   answers: []
 };
 
-var dumbReducer = (state={}, action) => {
-  if (!action) {
-    return state
-  }
-  return state;
-}
-
-
-var store = createStore(fetchProductsReducer,
+var store = createStore (
+  rootReducer,
   initialSate,
-  applyMiddleware(thunk));
+  applyMiddleware(thunk)
+);
 
-  console.log(store.getState());
-  export default store;
+console.log(store.getState());
+export default store;
