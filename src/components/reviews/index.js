@@ -1,22 +1,34 @@
 import React from 'react';
-import ReviewTile from './ReviewTile.jsx'
+import ReviewList from './ReviewList.jsx'
 
-const Reviews = ({handleGetReviews, reviews}) =>{
-  console.log('reviews', reviews)
-  return (
-  <div className="parent-reviews">
-<div className='reviews-ratings'>
-  <p>
-    {JSON.stringify(reviews)}
-  </p>
+class Reviews extends React.Component  {
 
-    <ReviewTile />
-    <button onClick={handleGetReviews}>test get reviews</button>
-</div>
-<div className='reviews-accordion'>
-</div>
-  </div>
-)
+  constructor(props) {
+    super(props)
+  }
+
+
+  componentDidMount() {
+    this.props.handleGetReviews();
+  }
+
+
+
+ render () {
+
+   return (
+   <div className="parent-reviews">
+    <div className='reviews-ratings'>
+
+
+      <ReviewList reviews = {this.props.reviews.results} />
+     <button onClick={this.props.handleGetReviews}>test get reviews</button>
+ </div>
+ <div className='reviews-accordion'>
+ </div>
+   </div>
+ )
+ }
   }
 
 export default Reviews;
