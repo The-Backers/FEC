@@ -4,10 +4,12 @@ import { combineReducers } from 'redux';
 // we need to import all reducers here
 import fetchRelatedReducer from './outfits/fetchRelatedReducer';
 import fetchProductsReducer from './overview/fetchProductsReducer';
+import fetchReviewsReducer from './reviews/fetchReviewsReducer';
 
 var rootReducer = combineReducers({
   product: fetchProductsReducer,
-  relatedProducts: fetchRelatedReducer
+  relatedProducts: fetchRelatedReducer,
+  reviews: fetchReviewsReducer
 })
 
 export default rootReducer;
