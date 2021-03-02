@@ -9,6 +9,9 @@ let Gallery = () => {
       <div className='overview-body-image'>
         <img src={styles.results[0].photos[2].url}></img>
         <div className="fas fa-expand"></div>
+        <div className='current-style-gallery'>
+          {/* create a vertical carousel here */}
+        </div>
       </div>
 
       <div className='overview-body-interaction default'>

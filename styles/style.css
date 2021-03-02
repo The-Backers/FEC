@@ -53,14 +53,22 @@ width: 80vw;
 }
 
 .fa-expand {
-  position: relative;
+  position: absolute;
+  top: 10px;
+  right: 10%;
   z-index: 1;
+  color: white;
+}
 
+.fa-expand:hover {
+  opacity: 80%;
+  cursor: pointer;
 }
 
 .overview-body-image {
+  background-color: #525252;
   position: relative;
-  width: 60%;
+  width: 50%;
   min-height: 600px;
   max-width: 100%;
   height: 100%;
@@ -86,6 +94,7 @@ width: 80vw;
   grid-row-gap: 0px;
   font-size: 1.5rem;
   padding-left: 1rem;
+  margin-left: 2rem;
 }
 .overview-body-interaction h2, p {
   margin-bottom: 0.5rem;
@@ -133,6 +142,8 @@ width: 80vw;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
+  margin-right: 1.9rem;
+  align-items: flex-start
 
 }
 
@@ -207,8 +218,8 @@ width: 80vw;
     font-size: 1.2rem;
   }
   .individual-styles {
-    height: 3.8rem;
-    width: 3.8rem;
+    height: 3.4rem;
+    width: 3.4rem;
   }
 }
 
@@ -219,8 +230,8 @@ width: 80vw;
     font-size: 1.3rem;
   }
   .individual-styles {
-    height: 4rem;
-    width: 4rem;
+    height: 3.8rem;
+    width: 3.8rem;
   }
 }
 
@@ -230,15 +241,15 @@ width: 80vw;
     font-size: 1.4rem;
   }
   .individual-styles {
-    height: 5rem;
-    width: 5rem;
+    height: 4.6rem;
+    width: 4.6rem;
   }
 }
 
 @media (min-width: 1308px) {
   .individual-styles {
-    height: 6rem;
-    width: 6rem;
+    height: 5.6rem;
+    width: 5.6rem;
   }
 }
 
@@ -248,8 +259,8 @@ width: 80vw;
     font-size: 1.7rem;
   }
   .individual-styles {
-    height: 7.2rem;
-    width: 7.2rem;
+    height: 6.9rem;
+    width: 6.9rem;
   }
 
 }
