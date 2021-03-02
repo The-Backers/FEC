@@ -26,7 +26,7 @@ class ReviewTile extends React.Component {
       month: parseInt(this.props.review.date.substring(5,7)),
       year: this.props.review.date.substring(0, 4),
       body1: this.props.review.body.substring(0, 250),
-      body2: this.props.review.body.substring(250, this.props.review.body.length)
+      body2: this.props.review.body.substring(250, this.props.review.body.length),
     }
     this.more = React.createRef();
     this.showMore = this.showMore.bind(this);
@@ -61,13 +61,13 @@ componentDidMount() {
 render() {
 
 
-
   var date = `${months[this.state.month]} ${this.state.day}, ${this.state.year}`
 
 
   return (
     <div className = 'review-tile'>
       <h3 className = 'review-summary'>{this.props.review.summary}</h3>
+      <p>{this.props.review.reviewer_name}</p>
       <p className = 'review-date'>{date}</p>
       <p>{this.state.body1}
 
@@ -80,6 +80,25 @@ render() {
           }
         })()
       }
+      {
+      (() => {
+        if (this.props.review.recommend) {
+        return (<p className = 'review-recommend'>This product is recommended!</p>)
+          }
+        })()
+      }
+      <div className = 'review-photos'>
+        {this.props.review.photos.map((element) =>
+        {
+          return (
+            <div className = 'review-photo'>
+              <img src = {element.url} style = {{maxWidth: '100px', maxHeight: '100px'}} />
+            </div>
+              )
+            }
+          )
+        }
+      </div>
     </div>
   )
 }
