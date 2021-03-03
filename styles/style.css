@@ -74,13 +74,13 @@ body {
 
 .carousel {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  overflow: scroll;
 }
 
 .product-card {
   display: flex;
   flex-direction: column;
-  flex-shrink: 1;
   margin: 10px;
   border: 3px solid black;
   background-color: white;
@@ -92,6 +92,7 @@ body {
 
 .product-image {
   background-color: aliceblue;
+  object-fit: cover;
 }
 
 /* Questions */
