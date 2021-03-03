@@ -10,25 +10,24 @@ body {
 }
 
 #overall-container {
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: repeat(4, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
-
 .parent-overview {
-display: grid;
-grid-area: 1 / 1 / 2 / 2;
-margin: 0 auto;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(3, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-border: 3px solid black;
-height: 100vh;
-width: 80vw;
+  display: grid;
+  grid-area: 1 / 1 / 2 / 2;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  border: 3px solid black;
+  height: 100vh;
+  width: 80vw;
 }
 
 .nav {
@@ -60,13 +59,38 @@ width: 80vw;
   height: 25vh;
 }
 
-.parent-products {
+/* Related Products */
+.related-products {
   grid-area: 2 / 1 / 3 / 2;
   border: 3px solid black;
   height: 100vh;
   width: 80vw;
   margin: 0 auto;
 }
+
+.related-products-title, .outfits-title {
+  margin: 0px;
+}
+
+.carousel {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  margin: 10px;
+  border: 3px solid black;
+  background-color: aliceblue;
+}
+
+.product-name {
+  margin:0px;
+}
+
+/* Questions */
 .parent-questions {
   grid-area: 3 / 1 / 4 / 2;
   border: 3px solid black;
@@ -74,6 +98,7 @@ width: 80vw;
   width: 80vw;
   margin: 0 auto;
 }
+/* Reviews */
 .parent-reviews {
   grid-area: 4 / 1 / 5 / 2;
   border: 3px solid black;

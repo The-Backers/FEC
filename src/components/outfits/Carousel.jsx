@@ -1,21 +1,19 @@
 import React from 'react';
+import ProductCard from './ProductCard.jsx';
 
 const Carousel = ({relatedProducts}) => {
   if (relatedProducts.length > 0) {
     return (
-      <div>
+      <div className="carousel">
         {relatedProducts.map((product, index) => {
+          // console.log('this is the product: ', product);
+          // console.log('this is the style Photo: ', product.stylePhoto);
           return (
-            <div key={index}>
-              <h4>{product.name}</h4>
-              <div>Image?</div>
-              <span>{product.category}</span>
-              <span>: ${product.default_price}</span>
-            </div>
-          )
+            <ProductCard key={index} product={product} index={index}/>
+          );
         })}
       </div>
-    );
+    )
   } else {
     return null;
   }
