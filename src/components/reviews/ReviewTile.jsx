@@ -1,4 +1,5 @@
 import React from 'react'
+import ReviewPhoto from './ReviewPhoto.jsx'
 
 //assigns month names to numbers
 var months = {
@@ -92,7 +93,8 @@ render() {
         {
           return (
             <div className = 'review-photo'>
-              <img src = {element.url} style = {{maxWidth: '100px', maxHeight: '100px'}} />
+              {/* <img src = {element.url} style = {{maxWidth: '100px', maxHeight: '100px'}} /> */}
+              <ReviewPhoto id = {element.id} url = {element.url} />
             </div>
               )
             }
