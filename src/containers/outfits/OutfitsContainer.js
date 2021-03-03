@@ -1,5 +1,5 @@
 import { connect, dispatch } from 'react-redux';
-import getRelated from '../../actions/outfits/fetchRelated';
+import fetchRelated from '../../actions/outfits/fetchRelated';
 import Outfits from '../../components/outfits';
 
 var mapStoreToProps = (state) => ({
@@ -7,8 +7,8 @@ var mapStoreToProps = (state) => ({
 });
 
 var mapDispatchToProps = (dispatch) => ({
-    getProducts: () => {
-      dispatch(getRelated)
+    fetchRelated: () => {
+      dispatch(fetchRelated)
     }
 });
 

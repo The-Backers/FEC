@@ -1,15 +1,22 @@
 import React from 'react';
+import ProductCard from './ProductCard.jsx';
 
-const Carousel = () => {
-  return (
-    <div>Hello this is carousel!</div>
-  );
+const Carousel = ({relatedProducts}) => {
+  if (relatedProducts.length > 0) {
+    return (
+      <div className="carousel">
+        {relatedProducts.map((product, index) => {
+          // console.log('this is the product: ', product);
+          // console.log('this is the style Photo: ', product.stylePhoto);
+          return (
+            <ProductCard key={index} product={product} index={index}/>
+          );
+        })}
+      </div>
+    )
+  } else {
+    return null;
+  }
 }
 
 export default Carousel;
-
-/*
-Add AUTHORIZATION: API_KEY header to each axios request
-axios request to: https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/{product_id}/related
-and then to each product related: https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/{product_id}
-*/
