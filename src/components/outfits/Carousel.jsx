@@ -6,8 +6,8 @@ const Carousel = ({relatedProducts}) => {
     return (
       <div className="carousel">
         {relatedProducts.map((product, index) => {
-          // console.log('this is the product: ', product);
-          // console.log('this is the style Photo: ', product.stylePhoto);
+          console.log('this is the product: ', product);
+          console.log('this is the style Photo: ', product.stylePhoto);
           return (
             <ProductCard key={index} product={product} index={index}/>
           );
