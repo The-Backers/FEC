@@ -76,6 +76,7 @@ body {
   display: flex;
   justify-content: flex-start;
   overflow: scroll;
+  margin-right: 10px;
 }
 
 .product-card {

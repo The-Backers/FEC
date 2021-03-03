@@ -3,9 +3,14 @@ import axios from 'axios';
 import addPhotos from './addPhotos.js';
 import store from '../../store/store.js'
 
-var mapRelated = (dispatch, data) => { // takes in an array of product ids!
+const getUnique = (value, index, array) => {
+  return array.indexOf(value) === index;
+}
+
+var mapRelated = (dispatch, data) => {
+  var unique = data.filter(getUnique);
   return dispatch => {
-    var items = data.map((id) => {
+    var items = unique.map((id) => {
       return (
         axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/${id}`, {
           headers: {

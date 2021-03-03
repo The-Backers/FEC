@@ -1,27 +1,27 @@
 import TOKEN from '../../../config.js';
 import axios from 'axios';
 import showRelated from './showRelated.js';
-import addStars from './addStars.js';
 import store from '../../store/store.js'
+import getAverage from '../utils.js';
 
-var addPhotos = (dispatch, products) => {
+var addStars = (dispatch, products) => {
   return dispatch => {
     var items = JSON.parse(JSON.stringify(products))
-    var photos = items.map((product) => {
+    var test = items.map((product) => {
       return (
-        axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/${product.id}/styles`, {
+        axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews/meta/?product_id=${product.id}`, {
         headers: {
           'AUTHORIZATION': TOKEN
         }
       })
         .then((response) => {
-          product.stylePhoto = response.data.results[0].photos[0].url || null;
+          product.total = getAverage(response.data.ratings) || null;
           return product;
         })
     )})
-    Promise.all(photos)
+    Promise.all(test)
       .then((data) => {
-        dispatch(addStars(dispatch, data));
+        dispatch(showRelated(data));
       })
       .catch((error) => {
         console.error(error);
@@ -29,4 +29,4 @@ var addPhotos = (dispatch, products) => {
   }
 }
 
-export default addPhotos;
+export default addStars;
