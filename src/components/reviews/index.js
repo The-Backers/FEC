@@ -1,7 +1,9 @@
 import React from 'react';
+import ComponentTest from './ComponentTest.jsx'
 
 const Reviews = () =>(
-  <div className="parent-reviews width">
+  <div className="parent-reviews">
+    <ComponentTest />
 <div className='reviews-ratings'>
 
 </div>
