@@ -6,9 +6,9 @@ let Gallery = () => {
   // local state controlled by hooks to hide default view and expand overview-body-image
 
   const [expand, setExpand] = useState(false);
-  useEffect(() => {
+  // useEffect(() => {
 
-  })
+  // })
   console.log(expand)
   if (expand) {
     console.log('success')

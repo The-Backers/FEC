@@ -7,14 +7,15 @@ const Overview = () => {
 
   let Gallery = () => {
     const [expand, setExpand] = useState(false);
+
     if (expand) {
-      return <ExpandedGallery />
+      return <ExpandedGallery expand={expand} setExpand={setExpand}/>
     } else {
-      return <DefaultGallery />
+      return <DefaultGallery expand={expand} setExpand={setExpand}/>
     }
   }
   return (
-    <div className="parent-overview width">
+    <div id="parent-overview">
 <nav className='nav'>
   <h1>Nav bar will go here</h1>
 </nav>

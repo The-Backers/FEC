@@ -3,8 +3,7 @@ import product from '../../../sample-data/products/get-productId.json';
 import styles from '../../../sample-data/products/get-productId-styles.json';
 
 
-let DefaultGallery = () => {
-  const [expand, setExpand] = useState(false);
+let DefaultGallery = ({expand, setExpand}) => {
   return (
     <div  id='overview-body' >
        <div  id='overview-body-image'>

@@ -3,8 +3,7 @@ import product from '../../../sample-data/products/get-productId.json';
 import styles from '../../../sample-data/products/get-productId-styles.json';
 
 
-let ExpandedGallery = () => {
-  const [expand, setExpand] = useState(true);
+let ExpandedGallery = ({expand, setExpand}) => {
   return (
     <div  id='overview-body-expanded' >
        <div  id='overview-body-image-expanded'>
