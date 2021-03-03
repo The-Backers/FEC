@@ -42,10 +42,33 @@ height: 100vh;
 
 .nav {
   grid-area: 1 / 1 / 2 / 3;
-  height: 15vh;
-  margin: 0 auto;
-  width: 80vw;
+  height: 5vh;
+  background-color: #525252;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  text-decoration: underline;
+  padding: 1rem;
+  font-size: 1rem;
 }
+.fa-search {
+  margin-top: .5rem;
+  margin-left: .5rem;
+  color: white;
+  cursor: pointer;
+}
+.fa-search:hover {
+  opacity: 70%;
+}
+
+.prod-search {
+  background-color: #525252;
+  border-style: none;
+  border-bottom: 1px white solid;
+  color: white;
+}
+
 
 #overview-body {
   position: relative;
