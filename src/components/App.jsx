@@ -1,6 +1,6 @@
 import React from 'react';
 import API_KEY from '../../config.js';
-import OverviewContainer from '../containers/overview/OVerviewContainer';
+import OverviewContainer from '../containers/overview/OverviewContainer';
 import Products from './products';
 import Questions from './questions';
 import Reviews from './reviews';

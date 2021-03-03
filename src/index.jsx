@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from './components/App.jsx';
 import {Provider} from 'react-redux';
 import store from './store/store.js';
+import imageZoom from './components/overview/imageZoom.js'
 
 ReactDOM.render(
   <Provider store={store}>

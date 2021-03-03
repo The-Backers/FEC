@@ -1,8 +1,11 @@
+* {box-sizing: border-box;
+  }
 body {
   background-color: white;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+
 }
 p, h1, h2, h3, h4, h5 {
   margin: 0;
@@ -41,10 +44,9 @@ width: 80vw;
   height: 15vh;
 }
 
-.overview-body {
+#overview-body {
   position: relative;
   grid-area: 2 / 1 / 3 / 3;
-  border: 3px solid black;
   display: flex;
   height: 80vh;
   flex-flow: row;
@@ -54,10 +56,11 @@ width: 80vw;
 
 .fa-expand {
   position: absolute;
-  top: 10px;
-  right: 10%;
+  top: 20px;
+  right: 12%;
   z-index: 1;
   color: white;
+  font-size: 2rem;
 }
 
 .fa-expand:hover {
@@ -65,50 +68,77 @@ width: 80vw;
   cursor: pointer;
 }
 
-.overview-body-image {
+#overview-body-image {
   background-color: #525252;
   position: relative;
-  width: 50%;
+  width: 60%;
   min-height: 600px;
   max-width: 100%;
   height: 100%;
-  justify-content: center;
   text-align: center;
+  justify-content: center;
+  overflow: hidden;
 
 }
 
-.overview-body-image img {
+#overview-body-image img {
   height: auto;
   object-fit: cover;
   max-width: 100%;
   height: 100%;
+
 }
 
+#overview-body-image img:hover {
+  cursor: zoom-in;
+}
+
+#img-magnifier-glass {
+  position: absolute;
+  border: 2px solid rgb(173, 171, 171);
+  cursor: none;
+  /* border-radius: 50%; */
+  width: 8rem;
+  height: 8rem;
+}
+
+
 .overview-body-interaction {
-  width: 40%;
+  width: 100%;
   height: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  font-size: 1.5rem;
+  font-size: 4rem;
   padding-left: 1rem;
   margin-left: 2rem;
 }
 .overview-body-interaction h2, p {
   margin-bottom: 0.5rem;
 }
+.expanded-image {
+  width: 100vw;
+  max-width: 100vw;
+}
+
+.expanded {
+  display: none;
+}
+
 .checked {
   color: orange;
 }
 
 .product-info {
+
   grid-area: 1 / 1 / 2 / 2;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
+
 
 .current-stars {
   margin: 1rem 0 0.5rem 0;
@@ -142,7 +172,7 @@ width: 80vw;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-right: 1.9rem;
+  margin-right: 7rem;
   align-items: flex-start
 
 }
@@ -177,10 +207,10 @@ width: 80vw;
 
 
 /* Extra small devices (phones, 600px and down) */
-@media (max-width: 869px) {
+@media (max-width: 905px) {
   .individual-styles {
-    height: 4rem;
-    width: 4rem;
+    height: 5rem;
+    width: 5rem;
   }
   .width {
     width: 100vw;
@@ -190,17 +220,17 @@ width: 80vw;
   .nav {
     height: 10vh;
   }
-  .overview-body {
+  #overview-body {
 
     grid-area: 2 / 1 / 3 / 3;
     display: flex;
     flex-direction: column;
   }
-  .overview-body-image {
+  #overview-body-image {
     width: 100%;
     height: 100%;
   }
-  .overview-body-image img {
+  #overview-body-image img {
     object-fit: cover;
 
     width: 100%;
@@ -213,25 +243,26 @@ width: 80vw;
 
   }
 }
-@media (min-width: 869px) and (max-width:992px) {
+@media (min-width: 905px) and (max-width:992px) {
   .overview-body-interaction {
     font-size: 1.2rem;
   }
   .individual-styles {
-    height: 3.4rem;
-    width: 3.4rem;
+    height: 4rem;
+    width: 4rem;
   }
 }
 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1115px) {
+
   .overview-body-interaction {
     font-size: 1.3rem;
   }
   .individual-styles {
-    height: 3.8rem;
-    width: 3.8rem;
+    height: 4.8rem;
+    width: 4.8rem;
   }
 }
 
@@ -241,26 +272,35 @@ width: 80vw;
     font-size: 1.4rem;
   }
   .individual-styles {
-    height: 4.6rem;
-    width: 4.6rem;
-  }
-}
-
-@media (min-width: 1308px) {
-  .individual-styles {
     height: 5.6rem;
     width: 5.6rem;
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media (min-width: 1577px) {
-  .overview-body-interaction {
-    font-size: 1.7rem;
+@media (min-width: 1308px) {
+  .product-styles {
+    margin-right: 11rem;
   }
   .individual-styles {
-    height: 6.9rem;
-    width: 6.9rem;
+    height: 5.6;
+    width: 5.6;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media (min-width: 1577px) {
+  .product-styles {
+    margin-right: 16rem;
+  }
+  .overview-body-interaction {
+    font-size: 1.9rem;
+  }
+  .individual-styles {
+    height: 5.6rem;
+    width: 5.6rem;
+  }
+  .fa-expand {
+    right: 20%;
   }
 
 }

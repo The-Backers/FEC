@@ -1,6 +1,7 @@
 import React from 'react';
 import Gallery from './Gallery';
 
+
 const Overview = () =>(
   <div className="parent-overview width">
 <nav className='nav'>
@@ -10,6 +11,7 @@ const Overview = () =>(
 <div className='overview-description'>
   <h2>product description will go here</h2>
 </div>
+
   </div>
 )
 
