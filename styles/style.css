@@ -1,5 +1,4 @@
 * {box-sizing: border-box;
-
 }
 
 body {
@@ -36,13 +35,14 @@ grid-area: 1 / 1 / 1 / 2;
 grid-template-columns: repeat(2, 1fr);
 grid-template-rows: repeat(3, 1fr);
 grid-column-gap: 0px;
-grid-row-gap: 0px;
+grid-row-gap: 20px;
 height: 100vh;
 }
 
 .nav {
+  margin: 0 auto;
   grid-area: 1 / 1 / 2 / 3;
-  height: 5vh;
+  height: 10vh;
   background-color: #525252;
   display: flex;
   align-items: center;
@@ -51,6 +51,8 @@ height: 100vh;
   text-decoration: underline;
   padding: 1rem;
   font-size: 1rem;
+  width: 80vw;
+
 }
 .fa-search {
   margin-top: .5rem;
@@ -63,6 +65,7 @@ height: 100vh;
 }
 
 .prod-search {
+  outline: none;
   background-color: #525252;
   border-style: none;
   border-bottom: 1px white solid;

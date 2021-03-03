@@ -16,7 +16,10 @@ const Overview = () => {
   return (
 <div id="parent-overview">
   <nav className='nav'>
-    <h1>Nav bar will go here</h1>
+    <h1>Logo</h1>
+    <div> <input className='prod-search'></input>
+    <i className="fas fa-search"></i></div>
+
   </nav>
   <Gallery />
   <div className='overview-description'>
