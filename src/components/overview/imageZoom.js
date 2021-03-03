@@ -4,7 +4,6 @@ var imageZoom = function(imgID, zoom) {
   var img = document.getElementById(imgID);
   var containerDiv = document.getElementById('overview-body-image');
 
-  var widthToAccount = (containerDiv.offsetWidth - img.width) / 2;
   // container increases in size, grab the w of the container subtracted by the image width, divide it by 2 and you get the width of how much space is generated from the left of the centered image
   /* Create magnifier glass: */
   glass =  document.getElementById("img-magnifier-glass");
@@ -37,17 +36,17 @@ var imageZoom = function(imgID, zoom) {
     x = pos.x;
     y = pos.y;
     /* Prevent the magnifier glass from being positioned outside the image: */
-    if (x > containerDiv.offsetWidth - (w / zoom)) {x = containerDiv.offsetWidth - (w / zoom);}
+    if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
     if (x < w / zoom) {x = w / zoom;}
-    if (y > containerDiv.offsetHeight - (h / zoom)) {y = containerDiv.offsetHeight - (h / zoom);}
+    if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
     if (y < h / zoom) {y = h / zoom;}
     /* Set the position of the magnifier glass: */
     glass.style.left = (x - w) + "px";
     glass.style.top = (y - h) + "px";
 
-    glass.style.backgroundSize = (containerDiv.width * zoom) + "px " + (containerDiv.height * zoom) + "px";
+    glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
     /* Display what the magnifier glass "sees": */
-    glass.style.backgroundPosition = "-" + (((x * zoom) - w + bw) - widthToAccount) + "px -" + (((y * zoom) - h + bw) ) + "px";
+    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw)  + "px -" + (((y * zoom) - h + bw) ) + "px";
   }
 
 

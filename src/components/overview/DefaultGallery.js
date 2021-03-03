@@ -1,9 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import product from '../../../sample-data/products/get-productId.json';
 import styles from '../../../sample-data/products/get-productId-styles.json';
 
-let ProductInteraction = () => {
-  return (<div className='overview-body-interaction' >
+
+let DefaultGallery = () => {
+  const [expand, setExpand] = useState(false);
+  return (
+    <div  id='overview-body' >
+       <div  id='overview-body-image'>
+  <img   id='overview-zoom-image' src={styles.results[0].photos[2].url} />
+  <div id="myresult" className="img-zoom-result"></div>
+  <div className="fas fa-expand"></div>
+  {/*fa-expand will trigger switch between default and expanded*/ }
+  <div className='current-style-gallery'>
+    {/* create a vertical carousel here */}
+  </div>
+  </div>
+  <div className='overview-body-interaction' >
   <div className='product-info'>
     <div className='current-stars'>
     <span className="fa fa-star checked" />
@@ -22,8 +35,10 @@ let ProductInteraction = () => {
   ))}
   </div>
   <div className='product-buttons'></div>
-</div>)
+</div>
+    </div>
 
+  )
 }
 
-      export default ProductInteraction;
+export default DefaultGallery;
