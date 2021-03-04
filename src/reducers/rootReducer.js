@@ -1,13 +1,16 @@
 import { combineReducers } from 'redux';
-//import currentProduct from './currentProduct';
 
 // we need to import all reducers here
 import fetchRelatedReducer from './outfits/fetchRelatedReducer';
-import fetchProductsReducer from './overview/fetchProductsReducer';
+import expandGalleryReducer from './overview/expandGalleryReducer';
+import fetchProductReducer from './overview/fetchProductReducer';
+import setStylesReducer from './overview/setStyleReducer'
 
 var rootReducer = combineReducers({
-  product: fetchProductsReducer,
-  relatedProducts: fetchRelatedReducer
+  product: fetchProductReducer,
+  expand: expandGalleryReducer,
+  relatedProducts: fetchRelatedReducer,
+  currentStyles: setStylesReducer
 })
 
 export default rootReducer;

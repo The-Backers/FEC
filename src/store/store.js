@@ -11,7 +11,8 @@ var initialSate = {
   reviewMeta: {},
   sessionId: '',
   questions: [],
-  answers: []
+  answers: [],
+  expand: false
 };
 
 var store = createStore (
@@ -20,5 +21,7 @@ var store = createStore (
   applyMiddleware(thunk)
 );
 
-console.log(store.getState());
+
+
 export default store;
+export {initialSate};

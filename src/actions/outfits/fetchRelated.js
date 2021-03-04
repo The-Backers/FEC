@@ -4,7 +4,7 @@ import mapRelated from './mapRelated.js';
 import store from '../../store/store.js'
 import thunk from 'redux-thunk';
 
-var fetchRelated = (dispatch) => { // need to pass in a product id? maybe fetchProducts dispatches product id
+var fetchRelated = (dispatch) => { // need to pass in a product id? maybe fetchProducts dispatches
   // const id = store.getState().product.id;
   axios.get('https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/11007/related', {
     headers: {
