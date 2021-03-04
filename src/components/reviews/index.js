@@ -21,10 +21,11 @@ class Reviews extends React.Component  {
     <div className='reviews-ratings'>
 
 
-      <ReviewList reviews = {this.props.reviews.results} />
-     <button onClick={this.props.handleGetReviews}>test get reviews</button>
+
+
  </div>
  <div className='reviews-accordion'>
+ <ReviewList reviews = {this.props.reviews.results} />
  </div>
    </div>
  )

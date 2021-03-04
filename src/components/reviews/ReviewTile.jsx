@@ -27,7 +27,7 @@ class ReviewTile extends React.Component {
       month: parseInt(this.props.review.date.substring(5,7)),
       year: this.props.review.date.substring(0, 4),
       body1: this.props.review.body.substring(0, 250),
-      body2: this.props.review.body.substring(250, this.props.review.body.length),
+      body2: ' blah blah blah',
     }
     this.more = React.createRef();
     this.showMore = this.showMore.bind(this);
@@ -68,19 +68,18 @@ render() {
   return (
     <div className = 'review-tile'>
       <h3 className = 'review-summary'>{this.props.review.summary}</h3>
-      <p>{this.props.review.reviewer_name}</p>
-      <p className = 'review-date'>{date}</p>
-      <p>{this.state.body1}
+      <p className = 'review-user-date'>{this.props.review.reviewer_name}: {date}</p>
 
+      <p className = 'review-body'>{this.state.body1}
           <span className = 'review-body-more' ref = {this.more}>{this.state.body2}</span>
-      </p>
       {
       (() => {
         if (this.state.body2.length > 0) {
-        return (<button onClick = {this.showMore}>Show More</button>)
+        return (<button className = 'review-show-more' onClick = {this.showMore}>Show More</button>)
           }
         })()
       }
+      </p>
       {
       (() => {
         if (this.props.review.recommend) {
@@ -89,6 +88,13 @@ render() {
         })()
       }
       <div className = 'review-photos'>
+      {
+      (() => {
+        if (this.props.review.photos.length !== 0) {
+        return (<p>Photos:</p>)
+          }
+        })()
+      }
         {this.props.review.photos.map((element) =>
         {
           return (
@@ -100,7 +106,13 @@ render() {
             }
           )
         }
-      </div>
+        </div>
+      <p className = 'review-helpful'>Helpful? <span >Yes</span> ({this.props.review.helpfulness}) </p>
+      <p className = 'review-report'>
+       <span>Report</span>
+      </p>
+
+
     </div>
   )
 }

@@ -87,5 +87,84 @@ width: 80vw;
 
 
 /* review tiles styles start */
+.review-tile {
+  border: solid blue 2px;
+
+  display: grid;
+  grid-template-columns: .2fr 1fr 1fr 1fr 1fr .2fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". sum sum . user. "
+    ". bod bod . rec ."
+    ". hel rep pho pho ."
+    ". resp resp resp . .";
+}
+
+.review-summary {
+  grid-area: sum
+}
+
+.review-user-date {
+  grid-area: user
+}
+
+.review-body {
+  grid-area: bod
+}
+
+.review-show-more {
+  grid-area: mor
+}
+
+.review-photos {
+  grid-area: pho;
+display: flex;
+}
+
+.review-photo {
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.review-photo:hover {
+  opacity: .7;
+}
+
+.review-recommend {
+  grid-area: rec
+}
+
+.review-helpful {
+  grid-area: hel
+}
+
+.review-helpful span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.review-helpful span:hover {
+  color: green;
+}
+
+.review-report {
+  grid-area: rep;
+  text-decoration: underline;
+
+}
+
+.review-report span {
+  cursor: pointer;
+}
+
+.review-report span:hover {
+  color: red;
+}
+
+.review-response {
+  grid-area: resp;
+}
+
 
 /* review tiles styles end */
