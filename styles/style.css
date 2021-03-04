@@ -3,7 +3,7 @@
 
 body {
 
-  background-color: white;
+  background-color: blanchedalmond;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -30,6 +30,7 @@ height: 100%;
 
 
 #parent-overview {
+
 display: grid;
 grid-area: 1 / 1 / 1 / 2;
 grid-template-columns: repeat(2, 1fr);
@@ -74,6 +75,7 @@ height: 100vh;
 
 
 #overview-body {
+
   position: relative;
   margin: 0 auto;
   grid-area: 2 / 1 / 3 / 3;
@@ -85,15 +87,18 @@ height: 100vh;
 }
 
 #overview-body-expanded {
-  grid-area: 1/1/1/1;
-  margin: 0;
+  display: flex;
+  justify-content: center;
   text-align: center;
-  position: relative;
-  height: 80vh;
-  width: 100vh;
+  position: absolute;
+  height: 500%;
+  width: 500%;
+  background-color: blanchedalmond;
 }
 
-.fa-expand {
+
+
+.button-expander {
   position: absolute;
   top: 30px;
   right: 15%;
@@ -102,17 +107,16 @@ height: 100vh;
   font-size: 2rem;
 }
 
-.fa-expand:hover {
+
+.button-expander:hover {
   opacity: 80%;
   color:black;
   cursor: pointer;
 }
 
 #overview-body-image {
-
   position: relative;
   width: 100%;
-  min-height: 600px;
   min-width: 400px;
   max-width: 100%;
   height: 100%;
@@ -122,10 +126,14 @@ height: 100vh;
 
 }
 #overview-body-image-expanded {
-  height: 100vh;
+  height: auto;
   width: 100vh;
   text-align: center;
   overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 
@@ -136,16 +144,21 @@ height: 100vh;
   max-width: 100%;
   height: 100%;
 
+
 }
 
 #overview-body-image-expanded img {
-  object-fit: cover;
-  height: auto;
+  object-fit: fill;
+  height: 100vh;
   width: 100%;
 }
 
 #overview-body-image img:hover {
   cursor: zoom-in;
+}
+
+#overview-body-image-expanded  img {
+  cursor: crosshair;
 }
 
 #img-magnifier-glass {
@@ -170,20 +183,15 @@ height: 100vh;
   padding-left: 1rem;
   margin-left: 2rem;
 }
+
 .overview-body-interaction h2, p {
   margin-bottom: 0.5rem;
 }
+
 .expanded-image {
   width: 100%;
   height: auto;
   object-fit: cover;
-
-}
-
-
-
-.expanded {
-  display: none;
 }
 
 .checked {
@@ -191,8 +199,6 @@ height: 100vh;
 }
 
 .product-info {
-
-
   grid-area: 1 / 1 / 2 / 2;
   height: 100%;
   display: flex;
@@ -202,10 +208,12 @@ height: 100vh;
 
 .current-stars {
   margin: 1rem 0 0.5rem 0;
-  padding: 0;
+  padding: 1rem;
+  display: flex;
+  flex-flow: row;
 }
-.fa-star {
-  height: .8rem;
+.current-stars p {
+  padding-left: .5rem;
 }
 
 .individual-styles {
@@ -214,6 +222,8 @@ height: 100vh;
     clip-path: circle(50% at 50% 50%);
     text-decoration: none;
     border: none;
+    position: relative;
+    display: inline-block
 }
 
 .individual-styles:hover {
@@ -251,6 +261,7 @@ height: 100vh;
 /* Related Products */
 .related-products {
   grid-area: 2 / 1 / 3 / 2;
+  border: 3px solid black;
   height: 100vh;
   width: 80vw;
   margin: 0 auto;
@@ -281,6 +292,7 @@ height: 100vh;
 /* Questions */
 .parent-questions {
   grid-area: 3 / 1 / 4 / 2;
+  border: 3px solid black;
   height: 100vh;
   width: 80vw;
   margin: 0 auto;
@@ -288,6 +300,7 @@ height: 100vh;
 /* Reviews */
 .parent-reviews {
   grid-area: 4 / 1 / 5 / 2;
+  border: 3px solid black;
   height: 100vh;
   width: 80vw;
   margin: 0 auto;
@@ -299,17 +312,16 @@ height: 100vh;
   .individual-styles {
     height: 5rem;
     width: 5rem;
+
   }
   .width {
     width: 100vw;
   }
-
-
   .nav {
     height: 10vh;
   }
   #overview-body {
-
+    height: 100vh;
     grid-area: 2 / 1 / 3 / 3;
     display: flex;
     flex-direction: column;
@@ -320,7 +332,6 @@ height: 100vh;
   }
   #overview-body-image img {
     object-fit: cover;
-
     width: 100%;
     height: 100%;
   }

@@ -1,14 +1,15 @@
 import { connect, dispatch } from 'react-redux';
-import handleDemoButton from '../../actions/overview/fetchProducts';
+import expandGallery from '../../actions/overview/expandGallery';
 import Overview from '../../components/overview';
 
 var mapStoreToProps = (state) => ({
     product: state.product,
+    expand: state.expand,
 });
 
 var mapDispatchToProps = (dispatch) => ({
-    demoButton: () => {
-      dispatch(handleDemoButton)
+    expandGallery: (boolean) => {
+      dispatch(expandGallery(boolean))
     }
 });
 

@@ -1,33 +1,21 @@
-import React, {useState} from 'react';
-import Gallery from './Gallery';
+import React, {useState, useEffect} from 'react';
 import ExpandedGallery from './ExpandedGallery.js';
 import DefaultGallery from './DefaultGallery.js';
 
-const Overview = () => {
-  let Gallery = () => {
-    const [expand, setExpand] = useState(false);
-    if (expand) {
-      return <ExpandedGallery expand={expand} setExpand={setExpand}/>
-    } else {
-      return <DefaultGallery expand={expand} setExpand={setExpand}/>
-    }
-  }
-
+const Overview = ({expand, expandGallery}) => {
   return (
-<div id="parent-overview">
-  <nav className='nav'>
-    <h1>Logo</h1>
-    <div> <input className='prod-search'></input>
-    <i className="fas fa-search"></i></div>
-
-  </nav>
-  <Gallery />
-  <div className='overview-description'>
-    <h2>product description will go here</h2>
+  <div id="parent-overview">
+    <nav className='nav'>
+      <h1>Logo</h1>
+      <div> <input className='prod-search'></input>
+      <i className="fas fa-search"></i></div>
+    </nav>
+    {expand ? <ExpandedGallery collapseGallery={expandGallery}/> : <DefaultGallery expandGallery={expandGallery}/>}
+    <div className='overview-description'>
+      <h2>product description will go here</h2>
+    </div>
   </div>
-</div>
 )
-
 }
 
 export default Overview;
