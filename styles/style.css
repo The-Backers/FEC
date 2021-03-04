@@ -47,11 +47,17 @@ height: 100vh;
   align-items: center;
   justify-content: space-between;
   color: white;
-  text-decoration: underline;
+  text-decoration: none;
   padding: 1rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
   width: 80vw;
 }
+
+
+.logo:hover {
+  opacity: 80%;
+}
+
 
 .fa-search {
   margin-top: .5rem;
@@ -61,7 +67,7 @@ height: 100vh;
 }
 
 .fa-search:hover {
-  opacity: 70%;
+  opacity: 80%;
 }
 
 .prod-search {
@@ -70,6 +76,11 @@ height: 100vh;
   border-style: none;
   border-bottom: 1px white solid;
   color: white;
+}
+
+.prod-search:hover {
+  border-bottom: 2px white solid;
+  opacity: 80%;
 }
 
 
@@ -92,6 +103,7 @@ height: 100vh;
   height: 500%;
   width: 500%;
   background-color: blanchedalmond;
+  z-index: 10;
 }
 
 
@@ -134,6 +146,7 @@ height: 100vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 100;
 }
 
 #overview-body-image img {

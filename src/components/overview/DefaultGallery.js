@@ -3,8 +3,8 @@ import product from '../../../sample-data/products/get-productId.json';
 import styles from '../../../sample-data/products/get-productId-styles.json';
 import Stars from '../shared/stars.jsx';
 import store from '../../store/store.js'
+
 let DefaultGallery = ({expandGallery}) => {
-  console.log(store.getState())
   return (
     <div  id='overview-body' >
       <div  id='overview-body-image'>

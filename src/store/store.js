@@ -23,5 +23,5 @@ var store = createStore (
 
 
 
-console.log(store.getState());
 export default store;
+export {initialSate};
