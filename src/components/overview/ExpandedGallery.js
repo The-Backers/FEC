@@ -6,16 +6,19 @@ import store from '../../store/store.js'
 
 let ExpandedGallery = ({collapseGallery}) => {
 
-  useEffect(() => {
-  })
+  function collapsedGallery() {
+    window.scrollTo(0, 0);
+    collapseGallery(false)
+  }
+
+
   return (
     <div  id='overview-body-expanded' >
       <div  id='overview-body-image-expanded'>
       <div id='img-magnifier-glass'></div>
         <img  onClick={() => imageZoom('overview-zoom-image-expanded', 2.5)} id='overview-zoom-image-expanded' src={styles.results[0].photos[2].url} />
         <div id="myresult" className="img-zoom-result"></div>
-        <a onClick={() => collapseGallery(false)} ><i  className="fas fa-expand button-expander"></i></a>
-        {/*fa-expand will trigger switch between default and expanded*/ }
+        <a onClick={() => collapsedGallery()} ><i  className="fas fa-expand button-expander"></i></a>
         <div className='current-style-gallery'>
         {/* create a vertical carousel here */}
         </div>

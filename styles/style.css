@@ -103,6 +103,7 @@ height: 100vh;
   z-index: 1;
   color: white;
   font-size: 2rem;
+
 }
 
 
@@ -152,7 +153,7 @@ height: 100vh;
   cursor: zoom-in;
 }
 
-#overview-body-image-expanded  img {
+#overview-body-image-expanded img {
   cursor: crosshair;
 }
 
@@ -189,15 +190,12 @@ height: 100vh;
   object-fit: cover;
 }
 
-.checked {
-  color: orange;
-}
-
 .product-info {
   grid-area: 1 / 1 / 2 / 2;
   height: 100%;
   display: flex;
   flex-direction: column;
+  font-size: 2.5rem;
 }
 
 
@@ -213,6 +211,8 @@ height: 100vh;
 }
 
 .individual-styles {
+    height: 4rem;
+    width: 4rem;
     margin: .2rem;
     object-fit: fill;
     clip-path: circle(50% at 50% 50%);
