@@ -1,16 +1,18 @@
-import React from 'react';
-import Carousel from './Carousel.jsx';
-import ProductCard from './ProductCard.jsx';
-import Comparison from './Comparison.jsx';
+import React, { useState, useEffect } from 'react';
+import CarouselContainer from '../../containers/outfits/CarouselContainer';
 
-const RelatedItems = ({getProducts, relatedProducts}) => {
-  console.log('this is relatedProducts: ', relatedProducts);
+const RelatedItems = ({fetchRelated, relatedProducts}) => {
+
+  useEffect(() => {
+    fetchRelated();
+  }, []);
+
   return (
-    <div className="parent-products">
-      <button onClick={getProducts}>Get Products!</button>
-      <Carousel className="products-related"/>
-      <ProductCard className="products-outfits"/>
-      <Comparison className="comparison-card" />
+    <div className="related-products">
+      <h3 className="related-products-title">Related Products</h3>
+      <CarouselContainer className="carousel" />
+      <h3 className="outfits-title">Your Outfit</h3>
+      <CarouselContainer className="carousel" />
     </div>
   )
 };

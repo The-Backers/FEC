@@ -10,25 +10,24 @@ body {
 }
 
 #overall-container {
-display: grid;
-grid-template-columns: 1fr;
-grid-template-rows: repeat(4, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
 }
 
-
 .parent-overview {
-display: grid;
-grid-area: 1 / 1 / 2 / 2;
-margin: 0 auto;
-grid-template-columns: repeat(2, 1fr);
-grid-template-rows: repeat(3, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-border: 3px solid black;
-height: 100vh;
-width: 80vw;
+  display: grid;
+  grid-area: 1 / 1 / 2 / 2;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  border: 3px solid black;
+  height: 100vh;
+  width: 80vw;
 }
 
 .nav {
@@ -60,13 +59,47 @@ width: 80vw;
   height: 25vh;
 }
 
-.parent-products {
+/* Related Products */
+.related-products {
   grid-area: 2 / 1 / 3 / 2;
   border: 3px solid black;
   height: 100vh;
   width: 80vw;
   margin: 0 auto;
 }
+
+.related-products-title, .outfits-title {
+  margin: 0px;
+}
+
+.carousel {
+  display: flex;
+  justify-content: flex-start;
+  overflow: scroll;
+  margin-right: 10px;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  border: 3px solid black;
+  background-color: white;
+}
+
+.product-name {
+  margin: 0px;
+  overflow: hidden;
+  display: inline-block;
+  font-size: 1.0vw
+}
+
+.product-image {
+  background-color: aliceblue;
+  object-fit: cover;
+}
+
+/* Questions */
 .parent-questions {
   grid-area: 3 / 1 / 4 / 2;
   border: 3px solid black;
@@ -74,6 +107,7 @@ width: 80vw;
   width: 80vw;
   margin: 0 auto;
 }
+/* Reviews */
 .parent-reviews {
   grid-area: 4 / 1 / 5 / 2;
   border: 3px solid black;
@@ -83,6 +117,7 @@ width: 80vw;
 }
 
 
+<<<<<<< HEAD
 /*# sourceMappingURL=style.css.map */
 
 
@@ -168,3 +203,67 @@ display: flex;
 
 
 /* review tiles styles end */
+=======
+/* Component Test Styles Start */
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 10%; /* Full width (cover the whole page) */
+  height: 10%; /* Full height (cover the whole page) */
+  left: 5%;
+  right: 5%;
+  top: 0;
+
+
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  opacity: 0;
+  transition: opacity .5s, width .5s, height .5s, margin .5s, right .5s;
+
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+
+}
+
+
+#outer {
+  width: 100%;
+  height: 100%;
+  background-color: yellow;
+}
+
+#outer2 {
+  width: 100%;
+  height: 100%;
+  background-color: yellowgreen;
+}
+
+
+/* Component Test Styles End */
+
+
+/* Stars Styles Start */
+
+#stars {
+  display: flex;
+  flex-direction: horizontal;
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+
+}
+/* Stars Styles End */
+
+/*# sourceMappingURL=style.css.map */
+>>>>>>> 9d2a6b1a5d84d9c8438a854fd8a174317d873951
