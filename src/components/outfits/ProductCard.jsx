@@ -1,10 +1,14 @@
+/* eslint-disable react/no-unknown-property */
 import React from 'react';
 import Stars from '../shared/Stars.jsx';
 
 const ProductCard = ({product, index}) => {
   return (
     <div className="product-card" key={index}>
-      <img className="product-image" src={product.stylePhoto} alt={product.name} width="auto" height="220"></img>
+      <div className="product-image-container">
+        <img className="product-image" src={product.stylePhoto} alt={product.name} width="auto" height="220"></img>
+        <i class="far fa-star"></i>
+      </div>
       <span className="product-category">{product.category}</span>
       <h4 className="product-name">{product.name}</h4>
       <span className="product-price">${product.default_price}</span>

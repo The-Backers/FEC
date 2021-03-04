@@ -83,7 +83,7 @@ body {
   display: flex;
   flex-direction: column;
   margin: 10px;
-  border: 3px solid black;
+  border: 2px solid black;
   background-color: white;
 }
 
@@ -94,9 +94,23 @@ body {
   font-size: 1.0vw
 }
 
+.product-image-container {
+  position: relative;
+}
+
 .product-image {
+  width: 100%;
+  height: 220;
+  display: block;
   background-color: aliceblue;
   object-fit: cover;
+}
+
+.fa-star {
+  position: absolute;
+  top:0;
+  right:0;
+  color: white;
 }
 
 /* Questions */
