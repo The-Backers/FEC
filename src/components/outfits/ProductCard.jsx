@@ -3,6 +3,7 @@ import React from 'react';
 import Stars from '../shared/Stars.jsx';
 
 const ProductCard = ({product, index}) => {
+  // console.log(product)
   return (
     <div className="product-card" key={index}>
       <div className="product-image-container">
