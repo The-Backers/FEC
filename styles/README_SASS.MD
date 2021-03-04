@@ -8,3 +8,20 @@ Now you can create your .scss file, you can code in your css code there,than cli
 - You can create spare .scss file then import to the style.scss
 - There are many other funtionalities on sass such as create a variable to use in differen classes eg: $PrimaryTextColor
 
+$PrimaryTextColor: red;
+
+header {
+  @include flexCenter();
+  color: PrimaryTextColor
+}
+
+// small little function
+@mixin flexCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+
+
+@import "./variables';

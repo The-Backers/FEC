@@ -14,8 +14,6 @@ var mapDispatchToProps = (dispatch) => ({
       dispatch(handleDemoButton)
     }
 
-
-
 });
 
 var OverviewContainer = connect(mapStoreToProps, mapDispatchToProps)(Overview);
