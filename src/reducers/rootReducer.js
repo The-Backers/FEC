@@ -5,11 +5,13 @@ import { combineReducers } from 'redux';
 import fetchRelatedReducer from './outfits/fetchRelatedReducer';
 import fetchProductsReducer from './overview/fetchProductsReducer';
 import fetchReviewsReducer from './reviews/fetchReviewsReducer';
+import fetchReviewMetaReducer from './reviews/fetchReviewMetaReducer';
 
 var rootReducer = combineReducers({
   product: fetchProductsReducer,
   relatedProducts: fetchRelatedReducer,
-  reviews: fetchReviewsReducer
+  reviews: fetchReviewsReducer,
+  reviewMeta: fetchReviewMetaReducer
 })
 
 export default rootReducer;

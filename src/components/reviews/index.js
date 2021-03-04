@@ -20,7 +20,7 @@ class Reviews extends React.Component  {
    <div className="parent-reviews">
     <div className='reviews-ratings'>
 
-
+    <p>{JSON.stringify(this.props.reviewMeta.ratings)}</p>
 
 
  </div>
