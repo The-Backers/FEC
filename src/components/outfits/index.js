@@ -2,11 +2,6 @@ import React, { useState, useEffect } from 'react';
 import CarouselContainer from '../../containers/outfits/CarouselContainer';
 
 const RelatedItems = ({fetchRelated, relatedProducts}) => {
-
-  useEffect(() => {
-    fetchRelated();
-  }, []);
-
   return (
     <div className="related-products">
       <h3 className="related-products-title">Related Products</h3>

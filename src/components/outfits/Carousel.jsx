@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import ProductCard from './ProductCard.jsx';
 
-const Carousel = ({relatedProducts}) => {
+const Carousel = ({relatedProducts, fetchProduct}) => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
   const children = relatedProducts.map((product, index) => {
     return (
-      <ProductCard key={index} product={product} index={index} style={{ height: 220, background: '#EEE' }}/>
+      <ProductCard key={index} product={product} index={index} fetchProduct={fetchProduct} style={{ height: 220, background: '#EEE' }}/>
     );
   })
   return (

@@ -2,10 +2,10 @@
 import TOKEN from '../../config.js';
 import setProduct from './overview/setProduct.js';
 import fetchStyles from './overview/fetchStyles.js';
+import fetchRelated from './outfits/fetchRelated.js';
 import store from '../store/store.js'
 import thunk from 'redux-thunk';
 import axios from 'axios';
-
 
 var handleProductSelect = (productId) => {
   return (dispatch) => {
@@ -18,8 +18,12 @@ var handleProductSelect = (productId) => {
     // add any dispatches that will re render your component out here. Make sure you chain it with a then if it is doing async request!
     .then(({data}) => {
       dispatch(setProduct(data));
-    }).then(() => {
+    })
+    .then(() => {
       dispatch(fetchStyles(productId));
+    })
+    .then(() => {
+      dispatch(fetchRelated(dispatch));
     })
     .catch((err) => {
       console.log(err);
