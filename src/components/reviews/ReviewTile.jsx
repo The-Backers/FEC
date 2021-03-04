@@ -88,6 +88,7 @@ render() {
         })()
       }
       <div className = 'review-photos'>
+
       {
       (() => {
         if (this.props.review.photos.length !== 0) {
@@ -99,6 +100,7 @@ render() {
         {
           return (
             <div className = 'review-photo'>
+
               {/* <img src = {element.url} style = {{maxWidth: '100px', maxHeight: '100px'}} /> */}
               <ReviewPhoto id = {element.id} url = {element.url} />
             </div>

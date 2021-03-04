@@ -54,11 +54,8 @@
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-hot-loader": "^4.13.0",
-<<<<<<< HEAD
-    "react-modal": "^3.12.1",
-=======
     "react-items-carousel": "^2.8.0",
->>>>>>> 9d2a6b1a5d84d9c8438a854fd8a174317d873951
+    "react-modal": "^3.12.1",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"

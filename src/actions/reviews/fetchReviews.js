@@ -5,7 +5,7 @@ import store from '../../store/store.js';
 
 var fetchReviews = (dispatch) => {
 
-  axios.get('https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews/?product_id=11002&count=2', {
+  axios.get('https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews/?product_id=11002&count=3', {
     headers: {
       'AUTHORIZATION': TOKEN
     }
