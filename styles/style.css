@@ -2,13 +2,13 @@
 }
 
 body {
-
   background-color: blanchedalmond;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 
 }
+
 p, h1, h2, h3, h4, h5 {
   margin: 0;
   padding: 0;
@@ -28,9 +28,7 @@ width: 100vw;
 height: 100%;
 }
 
-
 #parent-overview {
-
 display: grid;
 grid-area: 1 / 1 / 1 / 2;
 grid-template-columns: repeat(2, 1fr);
@@ -53,14 +51,15 @@ height: 100vh;
   padding: 1rem;
   font-size: 1rem;
   width: 80vw;
-
 }
+
 .fa-search {
   margin-top: .5rem;
   margin-left: .5rem;
   color: white;
   cursor: pointer;
 }
+
 .fa-search:hover {
   opacity: 70%;
 }
@@ -75,7 +74,6 @@ height: 100vh;
 
 
 #overview-body {
-
   position: relative;
   margin: 0 auto;
   grid-area: 2 / 1 / 3 / 3;
@@ -125,6 +123,7 @@ height: 100vh;
   overflow: hidden;
 
 }
+
 #overview-body-image-expanded {
   height: auto;
   width: 100vh;
@@ -136,15 +135,11 @@ height: 100vh;
   transform: translate(-50%, -50%);
 }
 
-
-
 #overview-body-image img {
   height: auto;
   object-fit: cover;
   max-width: 100%;
   height: 100%;
-
-
 }
 
 #overview-body-image-expanded img {
@@ -212,6 +207,7 @@ height: 100vh;
   display: flex;
   flex-flow: row;
 }
+
 .current-stars p {
   padding-left: .5rem;
 }
@@ -307,102 +303,8 @@ height: 100vh;
 }
 
 
-/* Extra small devices (phones, 600px and down) */
-@media (max-width: 905px) {
-  .individual-styles {
-    height: 5rem;
-    width: 5rem;
-
-  }
-  .width {
-    width: 100vw;
-  }
-  .nav {
-    height: 10vh;
-  }
-  #overview-body {
-    height: 100vh;
-    grid-area: 2 / 1 / 3 / 3;
-    display: flex;
-    flex-direction: column;
-  }
-  #overview-body-image {
-    width: 100%;
-    height: 100%;
-  }
-  #overview-body-image img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  .overview-body-interaction {
-    font-size: 1rem;
-    width: 100%;
-    height: 50vh;
-
-  }
-}
-@media (min-width: 905px) and (max-width:992px) {
-  .overview-body-interaction {
-    font-size: 1.2rem;
-  }
-  .individual-styles {
-    height: 4rem;
-    width: 4rem;
-  }
-}
 
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1115px) {
-
-  .overview-body-interaction {
-    font-size: 1.3rem;
-  }
-  .individual-styles {
-    height: 4.8rem;
-    width: 4.8rem;
-  }
-}
-
-
-@media (min-width: 1115px) {
-  .overview-body-interaction {
-    font-size: 1.4rem;
-  }
-  .individual-styles {
-    height: 5.6rem;
-    width: 5.6rem;
-  }
-}
-
-@media (min-width: 1308px) {
-  .product-styles {
-    margin-right: 11rem;
-  }
-  .individual-styles {
-    height: 5.6;
-    width: 5.6;
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media (min-width: 1577px) {
-  .product-styles {
-    margin-right: 16rem;
-  }
-  .overview-body-interaction {
-    font-size: 1.9rem;
-  }
-  .individual-styles {
-    height: 5.6rem;
-    width: 5.6rem;
-  }
-  .fa-expand {
-    right: 24%;
-  }
-
-}
 
 
 /* Component Test Styles Start */
@@ -467,3 +369,25 @@ height: 100vh;
 /* Stars Styles End */
 
 /*# sourceMappingURL=style.css.map */
+
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+
+}
+
+@media (min-width: 600px) and (max-width:768px) {
+
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 1025px) and (max-width: 1200){
+
+}
+
+@media (min-width: 1201px) {
+
+}
