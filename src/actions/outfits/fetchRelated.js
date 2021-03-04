@@ -6,7 +6,7 @@ import thunk from 'redux-thunk';
 
 var fetchRelated = (dispatch) => { // need to pass in a product id? maybe fetchProducts dispatches product id
   // const id = store.getState().product.id;
-  axios.get('https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/11001/related', {
+  axios.get('https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/11007/related', {
     headers: {
       'AUTHORIZATION': TOKEN
     }
