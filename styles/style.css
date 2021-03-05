@@ -110,14 +110,21 @@ body {
 /* Reviews */
 .parent-reviews {
   grid-area: 4 / 1 / 5 / 2;
-  border: 3px solid black;
+
   height: 100vh;
   width: 80vw;
   margin: 0 auto;
+
+}
+
+.reviews-content {
+  display: flex;
 }
 
 
 /*# sourceMappingURL=style.css.map */
+
+
 
 
 /* review tiles styles start */
@@ -126,7 +133,7 @@ body {
 
   display: grid;
   grid-template-columns: .2fr 1fr 1fr 1fr 1fr .2fr;
-  grid-template-rows: .5fr .2fr 1fr 1fr 1fr;
+  grid-template-rows: .5fr .2fr 1fr 1fr .4fr;
   gap: 0px 0px;
   grid-template-areas:
     ". sum sum . user. "

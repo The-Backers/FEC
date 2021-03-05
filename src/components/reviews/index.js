@@ -19,16 +19,19 @@ class Reviews extends React.Component  {
 
    return (
    <div className="parent-reviews">
-    <div className='reviews-ratings'>
+     <div className = 'review-title'><h1>Reviews</h1></div>
 
+     <div className = 'reviews-content'>
+        <div className='reviews-ratings'>
 
+          <ReviewStats stats = {this.props.reviewMeta} />
 
- <ReviewStats stats = {this.props.reviewMeta} />
+        </div>
 
- </div>
- <div className='reviews-accordion'>
- <ReviewList reviews = {this.props.reviews.results} />
- </div>
+        <div className='reviews-accordion'>
+            <ReviewList reviews = {this.props.reviews.results} />
+        </div>
+     </div>
    </div>
  )
  }
