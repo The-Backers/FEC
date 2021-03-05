@@ -8,6 +8,7 @@ import AddQuestion from './AddQuestion.jsx'
 
 const QuestionPart = () =>(
   <div className="parent-questions">
+
     <div className="questions-search-bar">
       <QuestionSearch />
     </div>

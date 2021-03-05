@@ -1,7 +1,7 @@
 import TOKEN from '../../../../config.js';
-import axios from 'axios';
-//import showProducts from './showProducts.js';
 import store from '../../../store/store.js';
+import axios from 'axios';
+import showQuestions from './showQuestions.js';
 
 
 
@@ -29,7 +29,7 @@ export const fetchQuestions = () => {
     })
     .then(response => {
       const questions = response.data
-      dispatch(showQuestions(questions))
+      dispatch(showQuestions(questions.results))
     })
     .catch(error => {
       console.error(error)

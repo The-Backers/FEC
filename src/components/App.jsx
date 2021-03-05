@@ -6,7 +6,7 @@ import Reviews from './reviews';
 
 //lin
 import QuestionsContainer from '../containers/questions/QuestionsContainer'
-import Questions from './questions';
+// import Questions from './questions';
 
 var App = () => (
       <div id="overall-container">

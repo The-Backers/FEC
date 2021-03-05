@@ -1,6 +1,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-//import rootReducer from '../reducers/rootReducer.js'
+// import rootReducer from '../reducers/rootReducer.js'
 import fetchProductsReducer from '../reducers/overview/fetchProductsReducer.js';
 
 

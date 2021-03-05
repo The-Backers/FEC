@@ -6,12 +6,12 @@ import fetchRelatedReducer from './outfits/fetchRelatedReducer';
 import fetchProductsReducer from './overview/fetchProductsReducer';
 
 //lin
-import fetchQuestionsReducer from './questions/fetchQuestionsReducer';
+import questionsPratReducer from './questions/questionsPratReducer';
 
 var rootReducer = combineReducers({
   product: fetchProductsReducer,
   relatedProducts: fetchRelatedReducer,
-  questions: fetchQuestionsReducer
+  questionsPart: questionsPratReducer
 })
 
 export default rootReducer;
