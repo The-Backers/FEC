@@ -1,6 +1,7 @@
 import React from 'react';
 import Stars from '../shared/Stars.jsx';
-import ReviewRatingsBar from './ReviewRatingsBar.jsx'
+import ReviewRatingsBar from './ReviewRatingsBar.jsx';
+import ReviewCharacteristics from './ReviewCharacteristics.jsx'
 
 
 class ReviewStats extends React.Component {
@@ -108,6 +109,7 @@ render(){
       </div> */}
       {bars}
       <p>{Math.round((parseInt(this.props.stats.recommended[true]) * 100) /(parseInt(this.props.stats.recommended[true]) + parseInt(this.props.stats.recommended[false])))}% of reviews recommend this product.</p>
+      <ReviewCharacteristics />
     </div>
 
 

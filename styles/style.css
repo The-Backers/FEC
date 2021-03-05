@@ -231,9 +231,6 @@ display: flex;
   background-color: rgb(233, 233, 233);
 }
 
-.review-bar-label{
-
-}
 
 
 .fill{
@@ -242,6 +239,12 @@ display: flex;
 
   bottom: 0;
   background-color: green;
+}
+
+.characteristics-bar hr{
+   width: 80%;
+
+  border-top: 5px solid gray;
 }
 
 
