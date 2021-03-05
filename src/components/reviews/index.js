@@ -1,5 +1,6 @@
 import React from 'react';
-import ReviewList from './ReviewList.jsx'
+import ReviewList from './ReviewList.jsx';
+import ReviewStats from './ReviewStats.jsx';
 
 class Reviews extends React.Component  {
 
@@ -20,8 +21,9 @@ class Reviews extends React.Component  {
    <div className="parent-reviews">
     <div className='reviews-ratings'>
 
-    <p>{JSON.stringify(this.props.reviewMeta.ratings)}</p>
 
+
+ <ReviewStats stats = {this.props.reviewMeta} />
 
  </div>
  <div className='reviews-accordion'>

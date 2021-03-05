@@ -52,6 +52,7 @@ showMore(event) {
 }
 
 componentDidMount() {
+
     this.more.current.style.display = 'none'
   if (this.state.body2.length > 0) {
     var x = this.state.body1 + '...';
