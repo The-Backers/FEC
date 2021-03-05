@@ -204,15 +204,14 @@ display: flex;
 
 
 /* review stats styles start */
-#bar-1, #bar-2{
+.outer-bar{
   position: relative;
   width: 80px;
   height: 10px;
   border: solid black 2px;
   background-color: rgb(233, 233, 233);
 }
-
-#bar-1 .fill{
+.fill{
   position: absolute;
   height: 10px;
 
@@ -220,13 +219,7 @@ display: flex;
   background-color: green;
 }
 
-#bar-2 .fill{
-  position: absolute;
-  height: 10px;
-  width: 16px;
-  bottom: 0;
-  background-color: green;
-}
+
 
 
 

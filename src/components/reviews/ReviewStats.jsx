@@ -7,11 +7,35 @@ class ReviewStats extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state = {};
+    this.state = {
+      widths: {}
+    };
     this.averageFinder = this.averageFinder.bind(this);
     this.widthFinder = this.widthFinder.bind(this);
   }
 
+
+
+  widthFinder(value, total) {
+    console.log(value, this.state.widths)
+    var stats = this.props.stats;
+    var x = this.state.widths
+    if (stats.ratings[value] !== undefined) {
+
+      // console.log((stats.ratings[value] * 80 / this.state.total) + ' px')
+      x[value] = (stats.ratings[value] * 80 / total) + 'px';
+      this.setState({widths: x});
+      return (stats.ratings[value] * 80 / total) + 'px';
+
+    } else {
+
+      x[value] = '0'
+      this.setState({widths: x});
+      return '0'
+    }
+
+
+  }
 
 averageFinder() {
 
@@ -24,16 +48,19 @@ averageFinder() {
   for (var key in stats.ratings) {
     average += parseInt(key) * stats.ratings[key];
     total += parseInt(stats.ratings[key]);
+
   }
 
+  var values = ['1', '2', '3', '4', '5']
+
+  for (var key of values) {
+    this.widthFinder(key, total)
+
+  }
   average /= total;
-  console.log(average, total, stats)
 
   this.setState({average: average, total: total})
 
-}
-
-widthFinder() {
 
 }
 
@@ -41,16 +68,36 @@ componentDidUpdate() {
 if (this.state.average === undefined) {
   if (Object.keys(this.props.stats).length !== 0) {
     this.averageFinder()
-    console.log(this.state.average)
+    this.averageFinder()
+
   }
 }
-}
 
+}
 
 
 render(){
+
+
+
+  var bars;
+
   if ( Object.keys(this.props.stats).length !== 0) {
 
+
+
+      if (Object.keys(this.state.widths).length === 5) {
+        console.log(this.state.widths)
+        bars =   <div>
+        <ReviewRatingsBar value = '1' ratings = {this.props.stats.ratings} width = {this.state.widths['1']}  />
+        <ReviewRatingsBar value = '2' ratings = {this.props.stats.ratings} width = {this.state.widths['2']}  />
+        <ReviewRatingsBar value = '3' ratings = {this.props.stats.ratings} width = {this.state.widths['3']}  />
+        <ReviewRatingsBar value = '4' ratings = {this.props.stats.ratings} width = {this.state.widths['4']}  />
+        <ReviewRatingsBar value = '5' ratings = {this.props.stats.ratings} width = {this.state.widths['5']} />
+        </div>
+      } else {
+        bars = <p>hi</p>
+      }
     return (
 
     <div className = 'review-stats'>
@@ -60,8 +107,7 @@ render(){
         <div id = 'fill'></div>
       </div> */}
 
-      <ReviewRatingsBar value = '1' ratings = {this.props.stats.ratings} total = {this.state.total}  />
-      <ReviewRatingsBar value = '2' ratings = {this.props.stats.ratings} total = {this.state.total}  />
+      {bars}
     </div>
 
 
