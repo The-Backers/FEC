@@ -337,6 +337,28 @@ height: 100vh;
   right: 0;
 }
 
+tr td, tr th{
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+}
+
+tr th {
+  border-bottom: 2px dotted black;
+}
+
+.table-product {
+  border-right: 2px dotted black;
+}
+
+.table-currentProduct {
+  border-left: 2px dotted black;
+}
+
+.table-feature {
+  font-weight: 600;
+}
+
 /* Questions */
 .parent-questions {
   grid-area: 3 / 1 / 4 / 2;

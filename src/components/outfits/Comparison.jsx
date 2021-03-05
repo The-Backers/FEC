@@ -1,17 +1,31 @@
 import React from 'react';
+import getFeatures from './utils.js';
 
-const Comparison = ({product, currentProduct}) => { // needs the product and the current product!
+const Comparison = ({product, currentProduct}) => {
+  console.log('this is the product ', product);
+  const features = getFeatures(product.features, currentProduct.features)
   return (
-    <table>
-      <tbody>
-        <tr>
-          <th>{product.name}</th>
-          <th>&nbsp;</th>
-          <th>{currentProduct.name}</th>
-        </tr>
-        {/* map the features! */}
-      </tbody>
-    </table>
+    <React.Fragment>
+      <h5>Comparing</h5>
+      <table>
+        <tbody>
+          <tr>
+            <th className="table-product">{product.name}</th>
+            <th>&nbsp;</th>
+            <th className="table-currentProduct">{currentProduct.name}</th>
+          </tr>
+          {features.map((feature, index) => {
+            return (
+              <tr key={index}>
+                <td className="table-product">{feature.product}</td>
+                <td className="table-feature">{feature.feature}</td>
+                <td className="table-currentProduct">{feature.currentProduct}</td>
+              </tr>
+            )
+          })}
+        </tbody>
+      </table>
+    </React.Fragment>
   );
 }
 
