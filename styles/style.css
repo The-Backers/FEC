@@ -204,13 +204,27 @@ display: flex;
 
 
 /* review stats styles start */
+.review-bar{
+ display: flex;
+
+}
+
+
 .outer-bar{
   position: relative;
+
   width: 80px;
   height: 10px;
+  margin-left: 10px;
   border: solid black 2px;
   background-color: rgb(233, 233, 233);
 }
+
+.review-bar-label{
+
+}
+
+
 .fill{
   position: absolute;
   height: 10px;

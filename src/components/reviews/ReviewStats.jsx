@@ -17,7 +17,7 @@ class ReviewStats extends React.Component {
 
 
   widthFinder(value, total) {
-    console.log(value, this.state.widths)
+
     var stats = this.props.stats;
     var x = this.state.widths
     if (stats.ratings[value] !== undefined) {
@@ -87,7 +87,7 @@ render(){
 
 
       if (Object.keys(this.state.widths).length === 5) {
-        console.log(this.state.widths)
+
         bars =   <div>
         <ReviewRatingsBar value = '1' ratings = {this.props.stats.ratings} width = {this.state.widths['1']}  />
         <ReviewRatingsBar value = '2' ratings = {this.props.stats.ratings} width = {this.state.widths['2']}  />
@@ -102,7 +102,7 @@ render(){
 
     <div className = 'review-stats'>
       <h2>{this.state.average}</h2>
-      <Stars total = '3' />
+      <Stars total = {this.state.average} />
       {/* <div id = 'bar-1'>
         <div id = 'fill'></div>
       </div> */}
