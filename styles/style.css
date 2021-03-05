@@ -126,10 +126,11 @@ body {
 
   display: grid;
   grid-template-columns: .2fr 1fr 1fr 1fr 1fr .2fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: .5fr .2fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-template-areas:
     ". sum sum . user. "
+    ". sta . . . . "
     ". bod bod . rec ."
     ". hel rep pho pho ."
     ". resp resp resp . .";
@@ -137,6 +138,9 @@ body {
 
 .review-summary {
   grid-area: sum
+}
+.review-stars {
+  grid-area: sta
 }
 
 .review-user-date {

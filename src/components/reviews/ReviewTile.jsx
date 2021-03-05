@@ -1,6 +1,6 @@
-import React from 'react'
-import ReviewPhoto from './ReviewPhoto.jsx'
-
+import React from 'react';
+import ReviewPhoto from './ReviewPhoto.jsx';
+import Stars from '../shared/Stars.jsx';
 //assigns month names to numbers
 var months = {
   0: 'January',
@@ -69,6 +69,8 @@ render() {
   return (
     <div className = 'review-tile'>
       <h3 className = 'review-summary'>{this.props.review.summary}</h3>
+      <div className = 'review-stars'><Stars className = 'review-stars' total = {this.props.review.rating} /></div>
+
       <p className = 'review-user-date'>{this.props.review.reviewer_name}: {date}</p>
 
       <p className = 'review-body'>{this.state.body1}
