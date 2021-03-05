@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import Comparison from './Comparison.jsx';
 
 const customStyles = {
   content : {
@@ -14,16 +15,11 @@ const customStyles = {
 
 Modal.setAppElement('#app');
 
-const ModalTest = () => {
+const ComparisonModal = ({product, currentProduct}) => {
   var subtitle;
   const [modalIsOpen,setIsOpen] = React.useState(false);
   function openModal() {
     setIsOpen(true);
-  }
-
-  function afterOpenModal() {
-    // references are now sync'd and can be accessed.
-    subtitle.style.color = '#f00';
   }
 
   function closeModal(){
@@ -32,28 +28,18 @@ const ModalTest = () => {
 
     return (
       <div>
-        <button onClick={openModal} className="comparison-modal"></button>
+        <button onClick={openModal} className="comparison-modal">&nbsp;</button>
         <Modal
           isOpen={modalIsOpen}
-          onAfterOpen={afterOpenModal}
           onRequestClose={closeModal}
           style={customStyles}
           contentLabel="Example Modal"
         >
-
-          <h2 ref={_subtitle => (subtitle = _subtitle)}>Hello</h2>
-          <button onClick={closeModal}>close</button>
-          <div>I am a modal</div>
-          <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
-          </form>
+          <button onClick={closeModal} className="modal-close">X</button>
+          <Comparison product={product} currentProduct={currentProduct}/>
         </Modal>
       </div>
     );
 }
 
-export default ModalTest;
+export default ComparisonModal;

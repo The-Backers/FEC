@@ -1,24 +1,19 @@
 import React from 'react';
 import Stars from '../shared/Stars.jsx';
-import ModalTest from './ModalTest.jsx';
+import ComparisonModal from './ComparisonModal.jsx';
 
-const ProductCard = ({product, index, fetchProduct}) => {
-
+const ProductCard = ({product, index, currentProduct, fetchProduct}) => {
   const handleClick = (id) => {
     fetchProduct(id);
-  }
-
-  const openComparison = () => {
-    console.log('testing comparison!');
   }
 
   return (
     <div className="product-card" key={index}>
       <div className="product-image-container">
         <img className="product-image" src={product.stylePhoto} alt={product.name} width="auto" height="220" onClick={() => handleClick(product.id)}></img>
-        <span onClick={openComparison.bind(this)}>
+        <span>
           <i className="far fa-star"></i>
-          <ModalTest />
+          <ComparisonModal product={product} currentProduct={currentProduct}/>
         </span>
       </div>
       <span className="product-category" onClick={() => handleClick(product.id)}>{product.category}</span>

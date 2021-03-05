@@ -1,8 +1,17 @@
 import React from 'react';
 
-const Comparison = () => {
+const Comparison = ({product, currentProduct}) => { // needs the product and the current product!
   return (
-    <div>Hello this is Comparison!</div>
+    <table>
+      <tbody>
+        <tr>
+          <th>{product.name}</th>
+          <th>&nbsp;</th>
+          <th>{currentProduct.name}</th>
+        </tr>
+        {/* map the features! */}
+      </tbody>
+    </table>
   );
 }
 
