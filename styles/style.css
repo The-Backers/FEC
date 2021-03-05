@@ -314,11 +314,18 @@ height: 100vh;
   object-fit: cover;
 }
 
-.fa-star {
+.fa-star, .comparison-modal {
   position: absolute;
   top:0;
   right:0;
   color: white;
+}
+
+.comparison-modal {
+  border: none;
+  color: none;
+  background: transparent;
+  outline: none;
 }
 
 /* Questions */
