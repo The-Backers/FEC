@@ -1,6 +1,5 @@
-
 import { connect, dispatch } from 'react-redux';
-import fetchQuestions from '../../actions/question/fetchQA/fetchQuestions';
+import {fetchQuestions} from '../../actions/question/fetchQA/fetchQuestions';
 import Questions from '../../components/questions';
 
 
@@ -13,7 +12,6 @@ var mapDispatchToProps = (dispatch) => ({
     getQuestions: () => {
       dispatch(fetchQuestions)
     }
-
 });
 
 var QuestionsContainer = connect(mapStoreToProps, mapDispatchToProps)(Questions);
