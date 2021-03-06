@@ -9,6 +9,7 @@ import thunk from 'redux-thunk';
 import axios from 'axios';
 
 var handleProductSelect = (productId) => {
+
   return (dispatch) => {
 
     return axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/${productId}`, {
@@ -16,15 +17,17 @@ var handleProductSelect = (productId) => {
         'AUTHORIZATION': TOKEN
       }
     })
-    // add any dispatches that will re render your component out here. Make sure you chain it with a then if it is doing async request!
+    // add any dispatches that will re render your component after a product change here. Make sure you chain it with a then if it is doing async request! chain after the initial then which handles the initial store change.
+
     .then(({data}) => {
       dispatch(setProduct(data));
     })
     .then(() => {
-      dispatch(fetchStyles(productId));
+      dispatch(fetchRelated(dispatch));
+
     })
     .then(() => {
-      dispatch(fetchRelated(dispatch));
+       dispatch(fetchStyles(productId));
     })
     .then(() => {
       dispatch(fetchOutfit(dispatch));

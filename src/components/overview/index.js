@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import ExpandedGallery from './ExpandedGallery.js';
 import DefaultGallery from './DefaultGallery.js';
+// hold current style at a local level
 
 const Overview = ({styles, expand, expandGallery, product, fetchProduct}) => {
+
+
   return (
   <div id="parent-overview">
     <nav className='nav'>
@@ -10,7 +13,8 @@ const Overview = ({styles, expand, expandGallery, product, fetchProduct}) => {
       <div> <input className='prod-search'></input>
       <i className="fas fa-search"></i></div>
     </nav>
-    {expand ? <ExpandedGallery styles={styles} collapseGallery={expandGallery} product={product}/> : <DefaultGallery styles={styles} expandGallery={expandGallery} product={product} />}
+    {expand ? <ExpandedGallery expand={expand} styles={styles} collapseGallery={expandGallery} product={product}/> : <DefaultGallery expand={expand} styles={styles} expandGallery={expandGallery} product={product} />}
+
     <div className='overview-description'>
       <h2>{product.description}</h2>
     </div>

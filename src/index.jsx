@@ -9,5 +9,5 @@ import handleProductSelect from './actions/handleProductSelect';
 ReactDOM.render(
   <Provider store={store}>
   <App />
-  </Provider>, document.getElementById('app'), () => handleProductSelect('11007')(store.dispatch)
+  </Provider>, document.getElementById('app'), () => handleProductSelect('11001')(store.dispatch)
 );
