@@ -27,7 +27,7 @@ class ReviewTile extends React.Component {
       month: parseInt(this.props.review.date.substring(5,7)),
       year: this.props.review.date.substring(0, 4),
       body1: this.props.review.body.substring(0, 250),
-      body2: ' blah blah blah',
+      body2: this.props.review.body.substring(251, this.props.review.body.length),
     }
     this.more = React.createRef();
     this.showMore = this.showMore.bind(this);
@@ -112,10 +112,12 @@ render() {
           )
         }
         </div>
-      <p className = 'review-helpful'>Helpful? <span >Yes</span> ({this.props.review.helpfulness}) </p>
-      <p className = 'review-report'>
-       <span>Report</span>
-      </p>
+      <div className = 'review-actions'>
+        <p className = 'review-helpful'>Helpful? <span >Yes</span> ({this.props.review.helpfulness}) </p>
+        <p className = 'review-report'>
+           <span>Report</span>
+        </p>
+      </div>
 
 
     </div>

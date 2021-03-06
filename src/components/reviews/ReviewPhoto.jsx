@@ -42,7 +42,7 @@ class ReviewPhoto extends React.Component{
          contentLabel="Review Photo"
          style = {{position: 'relative'}}
       >
-        <button style = {{position: 'sticky', top: '0', float: 'right'}} onClick={this.handleClosePhoto}>Close</button>
+        <button style = {{position: 'sticky', top: '0', left: '0'}} onClick={this.handleClosePhoto}>Close</button>
         <img src = {this.props.url} />
       </ReactModal>
     </div>

@@ -102,7 +102,8 @@ render(){
     return (
 
     <div className = 'review-stats'>
-      <h2>{Math.round(this.state.average * 10) / 10}</h2>
+      <h2>Review Breakdown</h2>
+      <h3>{Math.round(this.state.average * 10) / 10}</h3>
       <Stars total = {this.state.average} />
       {/* <div id = 'bar-1'>
         <div id = 'fill'></div>
