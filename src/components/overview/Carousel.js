@@ -20,13 +20,14 @@ const Carousel = ({styles}) => {
       <img style={imageStyle} key={index} src={photo.url} />
     );
   })
+
   return (
     <div style={{ padding: `0 ${chevronWidth}px` }}>
       <ItemsCarousel
         className="gallery-carousel"
         requestToChangeActive={setActiveItemIndex}
         activeItemIndex={activeItemIndex}
-        numberOfCards={1}
+        numberOfCards={4}
         gutter={0}
         leftChevron={<button className="chevron fas fa-chevron-left"></button>}
         rightChevron={<button className="chevron fas fa-chevron-right"></button>}

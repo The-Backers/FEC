@@ -9,6 +9,8 @@ var initialSate = {
   product: product,
   currentStyles: styles.results,
   relatedProducts: [],
+  currentStyle: '',
+  currentImage: '',
   outfits: [],
   reviews: [],
   reviewMeta: {},

@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: blanchedalmond;
+  background-color: white;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -89,6 +89,27 @@ height: 100vh;
   opacity: 80%;
 }
 
+.check {
+  position: relative;
+
+}
+
+input[type="checkbox"] {
+  display: none;
+  margin: 0;
+}
+
+input[type="checkbox"]:checked {
+  position: relative;
+  margin: 0;
+  right: 1rem;
+  float: right;
+  display: initial;
+  pointer-events: none;
+}
+
+
+
 
 #overview-body {
   position: relative;
@@ -108,7 +129,7 @@ height: 100vh;
   position: absolute;
   height: 500%;
   width: 500%;
-  background-color: blanchedalmond;
+  background-color: white;
   z-index: 10;
 }
 
@@ -129,6 +150,11 @@ height: 100vh;
   opacity: 80%;
   color:black;
   cursor: pointer;
+}
+.carousel-photos-thumbnail {
+  position: relative;
+  height: 200px;
+  width: 400px;
 }
 
 #overview-body-image {
@@ -242,7 +268,7 @@ height: 100vh;
 .individual-styles {
     height: 4rem;
     width: 4rem;
-    margin: .2rem;
+    margin: .5rem;
     object-fit: fill;
     clip-path: circle(50% at 50% 50%);
     text-decoration: none;
@@ -268,7 +294,8 @@ height: 100vh;
   display: flex;
   flex-wrap: wrap;
   margin-right: 7rem;
-  align-items: flex-start
+  align-items: flex-start;
+  width: 100%;
 
 }
 
