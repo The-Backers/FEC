@@ -7,7 +7,7 @@ const getUnique = (value, index, array) => {
   return array.indexOf(value) === index;
 }
 
-var mapRelated = (dispatch, data) => {
+var mapRelated = (dispatch, data, outfits) => {
   var unique = data.filter(getUnique);
   return dispatch => {
     var items = unique.map((id) => {
@@ -24,7 +24,7 @@ var mapRelated = (dispatch, data) => {
     })
     Promise.all(items)
       .then((products) => {
-        dispatch(addPhotos(dispatch, products));
+        dispatch(addPhotos(dispatch, products, outfits));
       })
       .catch((error) => {
         console.error(error);

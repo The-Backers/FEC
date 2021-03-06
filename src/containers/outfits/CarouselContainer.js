@@ -5,6 +5,7 @@ import handleProductSelect from '../../actions/handleProductSelect';
 var mapStoreToProps = (state) => ({
   relatedProducts: state.relatedProducts,
   currentProduct: state.product,
+  outfitProducts: state.outfits
 });
 
 var mapDispatchToProps = (dispatch) => ({

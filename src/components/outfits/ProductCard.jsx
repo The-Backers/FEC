@@ -2,7 +2,7 @@ import React from 'react';
 import Stars from '../shared/Stars.jsx';
 import ComparisonModal from './ComparisonModal.jsx';
 
-const ProductCard = ({product, index, currentProduct, fetchProduct}) => {
+const ProductCard = ({product, index, currentProduct, fetchProduct, outfits}) => {
   const handleClick = (id) => {
     fetchProduct(id);
   }
@@ -11,10 +11,15 @@ const ProductCard = ({product, index, currentProduct, fetchProduct}) => {
     <div className="product-card" key={index}>
       <div className="product-image-container">
         <img className="product-image" src={product.stylePhoto} alt={product.name} width="auto" height="220" onClick={() => handleClick(product.id)}></img>
-        <span>
-          <i className="far fa-star"></i>
-          <ComparisonModal product={product} currentProduct={currentProduct}/>
-        </span>
+        {!outfits &&
+          <span>
+            <i className="far fa-star"></i>
+            <ComparisonModal product={product} currentProduct={currentProduct}/>
+          </span>
+        }
+        {outfits &&
+          <button className="outfits-x">X</button>
+        }
       </div>
       <span className="product-category" onClick={() => handleClick(product.id)}>{product.category}</span>
       <h4 className="product-name" onClick={() => handleClick(product.id)}>{product.name}</h4>

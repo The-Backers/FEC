@@ -1,10 +1,11 @@
 import TOKEN from '../../../config.js';
 import axios from 'axios';
 import showRelated from './showRelated.js';
+import showOutfit from './showOutfit.js';
 import store from '../../store/store.js'
 import getAverage from '../utils.js';
 
-var addStars = (dispatch, products) => {
+var addStars = (dispatch, products, outfits) => {
   return dispatch => {
     var items = JSON.parse(JSON.stringify(products))
     var test = items.map((product) => {
@@ -21,7 +22,11 @@ var addStars = (dispatch, products) => {
     )})
     Promise.all(test)
       .then((data) => {
-        dispatch(showRelated(data));
+        if (outfits) {
+          dispatch(showOutfit(data));
+        } else {
+          dispatch(showRelated(data));
+        }
       })
       .catch((error) => {
         console.error(error);

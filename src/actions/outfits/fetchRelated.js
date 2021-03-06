@@ -13,7 +13,7 @@ var fetchRelated = (dispatch) => {
       }
     })
       .then(({data}) => {
-        dispatch(mapRelated(dispatch, data))
+        dispatch(mapRelated(dispatch, data, false))
       })
       .catch((error) => {
         console.error(error)

@@ -295,6 +295,25 @@ height: 100vh;
   background-color: white;
 }
 
+#outfits-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#outfits-add-text {
+  text-align: center;
+}
+
+#outfits-add {
+  font-size: 10vw;
+}
+
+#outfits-add:hover, .outfits-x:hover {
+  color:darkgoldenrod;
+}
+
 .product-name {
   margin: 0px;
   overflow: hidden;
@@ -314,19 +333,23 @@ height: 100vh;
   object-fit: cover;
 }
 
-.fa-star, .comparison-modal {
+.fa-star, .comparison-modal, .outfits-x {
   position: absolute;
   top:0;
   right:0;
   color: white;
-  cursor: pointer;
 }
 
-.comparison-modal {
+.comparison-modal, .outfits-x, #outfits-add {
   border: none;
   color: none;
   background: transparent;
   outline: none;
+  cursor: pointer;
+}
+
+.outfits-x {
+  color: white;
 }
 
 .modal-close {
