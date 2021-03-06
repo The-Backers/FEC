@@ -10,11 +10,12 @@ let ExpandedGallery = ({ styles, product, collapseGallery}) => {
     window.scrollTo(0, 0);
     collapseGallery(false)
   }
+
   return (
     <div  id='overview-body-expanded' >
       <div  id='overview-body-image-expanded'>
-      <div id='img-magnifier-glass'></div>
-        <img  onClick={() => imageZoom('overview-zoom-image-expanded', 2.5)} id='overview-zoom-image-expanded' src={styles[0].photos[0].url} />
+
+        <img  onClick={() => imageZoom('overview-zoom-image-expanded', 2.5)} id='overview-zoom-image-expanded' src={styles[3].photos[2].url} />
         <div id="myresult" className="img-zoom-result"></div>
         <a onClick={() => collapsedGallery()} ><i  className="fas fa-expand button-expander"></i></a>
         <div className='current-style-gallery'>

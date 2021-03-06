@@ -2,13 +2,13 @@ import React, {useState} from 'react';
 import product from '../../../sample-data/products/get-productId.json';
 import styles from '../../../sample-data/products/get-productId-styles.json';
 import Stars from '../shared/stars.jsx';
-import store from '../../store/store.js'
+import store from '../../store/store.js';
 
 let DefaultGallery = ({ styles, product, expandGallery}) => {
 
   const [currentStyle, setCurrentStyle] = useState(0);
   const [currentPhoto, setCurrentPhoto] = useState(0);
-  let scrollToReviews = document.documentElement.clientHeight * 3;
+  let scrollToReviews = document.documentElement.clientHeight * 2;
 
   function handleClick(e) {
     for(var i = 0; i < styles.length; i++) {

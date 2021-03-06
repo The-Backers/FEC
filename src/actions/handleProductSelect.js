@@ -9,6 +9,7 @@ import thunk from 'redux-thunk';
 import axios from 'axios';
 
 var handleProductSelect = (productId) => {
+
   return (dispatch) => {
 
     return axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/${productId}`, {
@@ -22,10 +23,11 @@ var handleProductSelect = (productId) => {
       dispatch(setProduct(data));
     })
     .then(() => {
-      dispatch(fetchStyles(productId));
+      dispatch(fetchRelated(dispatch));
+
     })
     .then(() => {
-      dispatch(fetchRelated(dispatch));
+       dispatch(fetchStyles(productId));
     })
     .then(() => {
       dispatch(fetchOutfit(dispatch));
