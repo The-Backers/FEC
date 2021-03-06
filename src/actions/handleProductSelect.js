@@ -2,10 +2,11 @@
 import TOKEN from '../../config.js';
 import setProduct from './overview/setProduct.js';
 import fetchStyles from './overview/fetchStyles.js';
+import fetchRelated from './outfits/fetchRelated.js';
+import fetchOutfit from './outfits/fetchOutfit.js';
 import store from '../store/store.js'
 import thunk from 'redux-thunk';
 import axios from 'axios';
-
 
 var handleProductSelect = (productId) => {
   return (dispatch) => {
@@ -19,7 +20,15 @@ var handleProductSelect = (productId) => {
 
     .then(({data}) => {
       dispatch(setProduct(data));
+    })
+    .then(() => {
       dispatch(fetchStyles(productId));
+    })
+    .then(() => {
+      dispatch(fetchRelated(dispatch));
+    })
+    .then(() => {
+      dispatch(fetchOutfit(dispatch));
     })
     .catch((err) => {
       console.log(err);
