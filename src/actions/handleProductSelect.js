@@ -15,10 +15,10 @@ var handleProductSelect = (productId) => {
         'AUTHORIZATION': TOKEN
       }
     })
-    // add any dispatches that will re render your component out here. Make sure you chain it with a then if it is doing async request!
+    // add any dispatches that will re render your component after a product change here. Make sure you chain it with a then if it is doing async request! chain after the initial then which handles the initial store change.
+
     .then(({data}) => {
       dispatch(setProduct(data));
-    }).then(() => {
       dispatch(fetchStyles(productId));
     })
     .catch((err) => {
