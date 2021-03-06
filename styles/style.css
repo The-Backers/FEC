@@ -130,7 +130,7 @@ body {
 /* review tiles styles start */
 .review-tile {
   border: solid blue 2px;
-
+  margin-bottom: 1px;
   display: grid;
   grid-template-columns: .2fr 1fr 1fr 1fr 1fr .2fr;
   grid-template-rows: .5fr .2fr 1fr 1fr .4fr;
@@ -215,6 +215,10 @@ display: flex;
 
 
 /* review stats styles start */
+.reviews-ratings {
+  width: 30vw;
+}
+
 .review-bar{
  display: flex;
 
@@ -223,8 +227,7 @@ display: flex;
 
 .outer-bar{
   position: relative;
-
-  width: 80px;
+  width: 7vw;
   height: 10px;
   margin-left: 10px;
   border: solid black 2px;
@@ -241,12 +244,39 @@ display: flex;
   background-color: green;
 }
 
-.characteristics-bar hr{
-   width: 80%;
-
-  border-top: 5px solid gray;
+.review-characteristic{
+  width: 60%;
 }
 
+.review-characteristic p{
+  margin-bottom: 5px;
+}
+
+.characteristics-bar{
+
+
+   height: 5px;
+   background-color: gray;
+
+}
+
+.characteristics-icon {
+
+  width: 50%;
+  height: 10px;
+  border-right: solid black 4px;
+  margin-bottom: 10px;
+}
+
+.characteristics-labels {
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.characteristics-labels p{
+  margin-top: 0;
+}
 
 
 

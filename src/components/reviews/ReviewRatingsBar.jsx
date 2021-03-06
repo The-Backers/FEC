@@ -8,7 +8,7 @@ const ReviewRatingsBar = ({ratings, value, width}) => {
           <div className = 'review-bar'>
           {value} Stars {
                   <div className = 'outer-bar'>
-                     <div className = 'fill' style ={{width: width + 'px'}}></div>
+                     <div className = 'fill' style ={{width: width + 'vw'}}></div>
                   </div>
                   } ({ratings[value] || 0})
                    </div>

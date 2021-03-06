@@ -24,9 +24,9 @@ class ReviewStats extends React.Component {
     if (stats.ratings[value] !== undefined) {
 
       // console.log((stats.ratings[value] * 80 / this.state.total) + ' px')
-      x[value] = (stats.ratings[value] * 80 / total);
+      x[value] = (stats.ratings[value] * 7 / total);
       this.setState({widths: x});
-      return (stats.ratings[value] * 80 / total);
+      return (stats.ratings[value] * 7 / total);
 
     } else {
 
@@ -109,7 +109,8 @@ render(){
       </div> */}
       {bars}
       <p>{Math.round((parseInt(this.props.stats.recommended[true]) * 100) /(parseInt(this.props.stats.recommended[true]) + parseInt(this.props.stats.recommended[false])))}% of reviews recommend this product.</p>
-      <ReviewCharacteristics />
+
+      {Object.keys(this.props.stats.characteristics).map((element) => <ReviewCharacteristics type = {element} data = {this.props.stats.characteristics[element]} />)}
     </div>
 
 
