@@ -2,9 +2,14 @@ import React from 'react';
 import Stars from '../shared/Stars.jsx';
 import ComparisonModal from './ComparisonModal.jsx';
 
-const ProductCard = ({product, index, currentProduct, fetchProduct, outfits}) => {
+const ProductCard = ({product, index, currentProduct, fetchProduct, removeOutfit, outfits}) => {
   const handleClick = (id) => {
     fetchProduct(id);
+  }
+
+  const handleRemove = (e) => {
+    // console.log('item to be removed: ', e.target.name);
+    removeOutfit(e.target.name);
   }
 
   return (
@@ -18,7 +23,7 @@ const ProductCard = ({product, index, currentProduct, fetchProduct, outfits}) =>
           </span>
         }
         {outfits &&
-          <button className="outfits-x">X</button>
+          <button className="outfits-x" name={product.id} onClick={handleRemove}>X</button>
         }
       </div>
       <span className="product-category" onClick={() => handleClick(product.id)}>{product.category}</span>
