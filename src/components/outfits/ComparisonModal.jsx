@@ -27,8 +27,8 @@ const ComparisonModal = ({product, currentProduct}) => {
   }
 
     return (
-      <div>
-        <button onClick={openModal} className="comparison-modal">&nbsp;</button>
+      <React.Fragment>
+        <button onClick={openModal} className="comparison-modal" aria-label="Compare Product">&nbsp;</button>
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={closeModal}
@@ -38,7 +38,7 @@ const ComparisonModal = ({product, currentProduct}) => {
           <button onClick={closeModal} className="modal-close">X</button>
           <Comparison product={product} currentProduct={currentProduct}/>
         </Modal>
-      </div>
+      </React.Fragment>
     );
 }
 

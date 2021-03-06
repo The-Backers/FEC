@@ -18,7 +18,7 @@ const Carousel = ({relatedProducts, currentProduct, fetchProduct, addToOutfit, r
   }
 
   return (
-    <div style={{ padding: `0 ${chevronWidth}px` }}>
+    <section style={{ padding: `0 ${chevronWidth}px` }} role="row">
       <ItemsCarousel
         requestToChangeActive={setActiveItemIndex}
         activeItemIndex={activeItemIndex}
@@ -30,14 +30,14 @@ const Carousel = ({relatedProducts, currentProduct, fetchProduct, addToOutfit, r
         chevronWidth={chevronWidth}
       >
         {outfits &&
-          <div className="product-card" id="outfits-card" style={{height: 290}} onClick={addOutfit}>
+          <div className="product-card" id="outfits-card" style={{height: 290}} onClick={addOutfit} role="cell">
             <h3 id="outfits-add-text" name={currentProduct.id}>Add to Outfit</h3>
             <button id="outfits-add" name={currentProduct.id}>+</button>
           </div>
         }
         {children}
       </ItemsCarousel>
-    </div>
+    </section>
   );
 }
 
