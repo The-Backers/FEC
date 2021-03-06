@@ -6,7 +6,7 @@ const ReviewRatingsBar = ({ratings, value, width}) => {
 
   return (
           <div className = 'review-bar'>
-          {value} Stars {
+          <div className = 'bar-label'>{value} Stars</div> {
                   <div className = 'outer-bar'>
                      <div className = 'fill' style ={{width: width + 'vw'}}></div>
                   </div>

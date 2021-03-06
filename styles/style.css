@@ -151,7 +151,7 @@ h1, h2, h3, h4 {
 
 .review-tile {
   padding: 0 10px 0 10px;
-  border: solid blue 2px;
+  border: solid #7B9EB3 2px;
   margin-bottom: 1px;
   display: grid;
   grid-template-columns:  repeat( auto-fit, minmax(12vw, 1fr) ) ;
@@ -161,7 +161,7 @@ h1, h2, h3, h4 {
     " sum sum . user "
     " sta . rec rec  "
     " bod bod bod bod "
-    " hel pho pho pho "
+    " hel . pho pho "
     " resp resp resp . ";
 }
 
@@ -209,7 +209,7 @@ h1, h2, h3, h4 {
 }
 
 .review-helpful {
-
+  padding-right: 5%;
   font-size: 12px;
 }
 
@@ -263,7 +263,9 @@ h1, h2, h3, h4 {
 
 }
 
-
+.bar-label {
+  width: 60px;
+}
 .outer-bar {
   position: relative;
   width: 7vw;
