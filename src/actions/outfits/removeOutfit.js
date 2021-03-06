@@ -1,6 +1,6 @@
 import TOKEN from '../../../config.js';
 import axios from 'axios';
-import store from '../../store/store.js'
+import {store} from '../../store/store.js'
 import thunk from 'redux-thunk';
 
 var removeOutfit = (productId) => {

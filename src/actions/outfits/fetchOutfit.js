@@ -2,7 +2,7 @@ import TOKEN from '../../../config.js';
 import axios from 'axios';
 import mapRelated from './mapRelated.js';
 import showOutfit from './showOutfit.js';
-import store from '../../store/store.js'
+import {store} from '../../store/store.js'
 import thunk from 'redux-thunk';
 
 var fetchOutfit = (productId, dispatch) => {
