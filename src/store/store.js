@@ -1,10 +1,13 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
-import rootReducer from '../reducers/rootReducer.js'
+import rootReducer from '../reducers/rootReducer.js';
+import styles from '../../sample-data/products/get-productId-styles.json';
+import product from '../../sample-data/products/get-productId.json';
+
 
 var initialSate = {
-  product: {},
-  currentStyles: [],
+  product: product,
+  currentStyles: styles.results,
   relatedProducts: [],
   outfits: [],
   reviews: [],

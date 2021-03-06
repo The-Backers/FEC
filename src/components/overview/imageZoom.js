@@ -6,7 +6,8 @@ var imageZoom = function(imgID, zoom) {
 
   // container increases in size, grab the w of the container subtracted by the image width, divide it by 2 and you get the width of how much space is generated from the left of the centered image
   /* Create magnifier glass: */
-  glass =  document.getElementById("img-magnifier-glass");
+  glass = document.createElement("DIV");
+  glass.setAttribute("id", "img-magnifier-glass");
 
   /* Insert magnifier glass: */
   img.parentElement.insertBefore(glass, img);
