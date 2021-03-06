@@ -7,9 +7,6 @@ const Answers = () => {
       Hello this is Answers!
       <br />
       ---by username, date--- | Helpful? <button> YES(2) </button>| <button> Report </button>
-
-
-
     </div>
   );
 }

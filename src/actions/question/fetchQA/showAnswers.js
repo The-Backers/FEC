@@ -1,8 +1,7 @@
 var showAnswers = (answers) => {
-  console.log('those are answers', answers)
   return {
-  type: 'SHOW_ANSWER',
-  payload: answers
+  type: 'SHOW_ANSWERS',
+  answers: answers
 }}
 
 

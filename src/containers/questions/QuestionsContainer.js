@@ -6,7 +6,7 @@ import Questions from '../../components/questions';
 
 
 var mapStoreToProps = (state) => ({
-    questions: state.questions,
+    questions: state.questionsPart,
 });
 
 var mapDispatchToProps = (dispatch) => ({
