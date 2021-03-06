@@ -4,7 +4,7 @@ import styles from '../../../sample-data/products/get-productId-styles.json';
 import imageZoom from './imageZoom.js';
 import store from '../../store/store.js';
 
-let ExpandedGallery = ({ styles, product, collapseGallery}) => {
+let ExpandedGallery = ({expand, styles, product, collapseGallery}) => {
 
   function collapsedGallery() {
     window.scrollTo(0, 0);

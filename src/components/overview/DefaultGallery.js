@@ -4,7 +4,7 @@ import styles from '../../../sample-data/products/get-productId-styles.json';
 import Stars from '../shared/stars.jsx';
 import store from '../../store/store.js';
 
-let DefaultGallery = ({ styles, product, expandGallery}) => {
+let DefaultGallery = ({expand, styles, product, expandGallery}) => {
 
   const [currentStyle, setCurrentStyle] = useState(0);
   const [currentPhoto, setCurrentPhoto] = useState(0);
