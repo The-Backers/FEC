@@ -90,6 +90,7 @@ render(){
       if (Object.keys(this.state.widths).length === 5) {
 
         bars =   <div>
+        <ReviewRatingsBar value = '0' ratings = {this.props.stats.ratings} width = {this.state.widths['0']}  />
         <ReviewRatingsBar value = '1' ratings = {this.props.stats.ratings} width = {this.state.widths['1']}  />
         <ReviewRatingsBar value = '2' ratings = {this.props.stats.ratings} width = {this.state.widths['2']}  />
         <ReviewRatingsBar value = '3' ratings = {this.props.stats.ratings} width = {this.state.widths['3']}  />

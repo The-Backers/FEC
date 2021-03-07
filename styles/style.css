@@ -433,6 +433,11 @@ tr th {
 
 .review-list {
   width: 58vw;
+
+
+}
+
+.review-tiles {
   height: 90vh;
   overflow: auto;
 }

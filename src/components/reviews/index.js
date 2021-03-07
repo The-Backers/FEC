@@ -29,7 +29,7 @@ class Reviews extends React.Component  {
         </div>
 
         <div className='reviews-accordion'>
-            <ReviewList display = {this.props.reviews.done} product = {this.props.reviews.product} reviews = {this.props.reviews.results} more = {this.props.handleGetReviews} />
+            <ReviewList sort = {this.props.reviews.sort} display = {this.props.reviews.done} product = {this.props.reviews.product} reviews = {this.props.reviews.results} more = {this.props.handleGetReviews} />
 
         </div>
      </div>
