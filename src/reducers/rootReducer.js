@@ -4,14 +4,16 @@ import fetchRelatedReducer from './outfits/fetchRelatedReducer';
 import expandGalleryReducer from './overview/expandGalleryReducer';
 import fetchProductReducer from './overview/fetchProductReducer';
 import fetchOutfitReducer from './outfits/fetchOutfitReducer';
-import setStylesReducer from './overview/setStyleReducer'
+import setStylesReducer from './overview/setStyleReducer';
+import setCurrentStyleReducer from './overview/setCurrentStyleReducer';
 
 var rootReducer = combineReducers({
   product: fetchProductReducer,
   expand: expandGalleryReducer,
   relatedProducts: fetchRelatedReducer,
   currentStyles: setStylesReducer,
-  outfits: fetchOutfitReducer
+  outfits: fetchOutfitReducer,
+  currentStyle: setCurrentStyleReducer
 })
 
 export default rootReducer;

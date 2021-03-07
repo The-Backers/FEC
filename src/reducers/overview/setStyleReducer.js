@@ -1,6 +1,6 @@
 import Redux from 'redux';
 
-var setStyleReducer = (state=[], action) => {
+var setStylesReducer = (state=[], action) => {
   if (action.type === 'SET_STYLES') {
     return action.payload || []
   } else {
@@ -9,4 +9,4 @@ var setStyleReducer = (state=[], action) => {
 };
 
 
-export default setStyleReducer;
+export default setStylesReducer;
