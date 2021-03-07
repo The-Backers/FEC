@@ -6,6 +6,9 @@ import fetchProductReducer from './overview/fetchProductReducer';
 import fetchOutfitReducer from './outfits/fetchOutfitReducer';
 import setStylesReducer from './overview/setStyleReducer';
 import setCurrentStyleReducer from './overview/setCurrentStyleReducer';
+import fetchReviewsReducer from './reviews/fetchReviewsReducer';
+import fetchReviewMetaReducer from './reviews/fetchReviewMetaReducer';
+
 
 var rootReducer = combineReducers({
   product: fetchProductReducer,
@@ -13,7 +16,9 @@ var rootReducer = combineReducers({
   relatedProducts: fetchRelatedReducer,
   currentStyles: setStylesReducer,
   outfits: fetchOutfitReducer,
-  currentStyle: setCurrentStyleReducer
+  currentStyle: setCurrentStyleReducer,
+  reviews: fetchReviewsReducer,
+  reviewMeta: fetchReviewMetaReducer
 })
 
 export default rootReducer;

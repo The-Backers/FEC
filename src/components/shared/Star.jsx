@@ -17,7 +17,7 @@ var Star = (props) => {
 
   //if the stars value is less than the total score, it gets filled completely
   if (props.total >= props.value) {
-    fillValue = 'green';
+    fillValue = '#487DB8';
     //if the value is 1 or more than the total, its completetly blank
   } else if (props.value - props.total >= 1) {
     fillValue = 'none';
@@ -43,10 +43,10 @@ var Star = (props) => {
     return (
       <defs>
   <linearGradient id = 'partial' x1='0%' y1='0%' x2='100%' y2='0%'>
-    <stop offset = '0%' style = {{'stopColor': 'green', 'stopOpacity': '1'}} />
-    <stop offset = {percent + '%'} style = {{'stopColor': 'green', 'stopOpacity': '1'}} />
-    <stop offset = {percent + '%'} style = {{'stopColor': 'green', 'stopOpacity': '0'}} />
-    <stop offset = '100%' style = {{'stopColor': 'red', 'stopOpacity': '0'}} />
+    <stop offset = '0%' style = {{'stopColor': '#487DB8', 'stopOpacity': '1'}} />
+    <stop offset = {percent + '%'} style = {{'stopColor': '#487DB8', 'stopOpacity': '1'}} />
+    <stop offset = {percent + '%'} style = {{'stopColor': '#487DB8', 'stopOpacity': '0'}} />
+    <stop offset = '100%' style = {{'stopColor': '#487DB8', 'stopOpacity': '0'}} />
   </linearGradient>
 </defs>
     )
@@ -62,7 +62,7 @@ var Star = (props) => {
 //this actually puts it togetehr
   return( <svg viewBox = '0 0 40 40' >
       {partial}
-  <polyline stroke = 'green' strokeWidth = '2' fill = {fillValue} points = {starPoints} />
+  <polyline stroke = '#487DB8' strokeWidth = '2' fill = {fillValue} points = {starPoints} />
 </svg>)
 
 }

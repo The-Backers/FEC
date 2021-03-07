@@ -1,13 +1,24 @@
-
-* {box-sizing: border-box;
+@font-face {
+  font-family: 'Montserrat';
+  src: url('fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'VarelaRound';
+  src: url('fonts/Varela_Round/VarelaRound-Regular.ttf') format('truetype');
+}
+
+
 body {
-  background-color: white;
+  background-color: rgb(255, 254, 252);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Montserrat';
+}
 
+h1, h2, h3, h4 {
+  font-family: 'VarelaRound'
 }
 
 
@@ -432,7 +443,199 @@ tr th {
   height: 100vh;
   width: 80vw;
   margin: 0 auto;
+
 }
+
+.reviews-content {
+  display: flex;
+}
+
+
+/*# sourceMappingURL=style.css.map */
+
+
+
+
+/* review tiles styles start */
+
+.reviews-accordion {
+  width: 58vw;
+}
+
+.review-tile {
+  padding: 0 10px 0 10px;
+  border: solid #7B9EB3 2px;
+  margin-bottom: 1px;
+  display: grid;
+  grid-template-columns:  repeat( auto-fit, minmax(12vw, 1fr) ) ;
+  grid-template-rows: .5fr .2fr repeat( auto-fit, minmax(10vh, 1fr) ) .4fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    " sum sum . user "
+    " sta . rec rec  "
+    " bod bod bod bod "
+    " hel . pho pho "
+    " resp resp resp . ";
+}
+
+.review-summary {
+  grid-area: sum
+}
+.review-stars {
+  grid-area: sta
+}
+
+.review-user-date {
+  grid-area: user
+}
+
+.review-body {
+  grid-area: bod
+}
+
+.review-show-more {
+  grid-area: mor
+}
+
+.review-photos {
+  grid-area: pho;
+  display: flex;
+
+}
+
+.review-photo {
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+.review-photo:hover {
+  opacity: .7;
+}
+
+.review-recommend {
+  grid-area: rec
+}
+
+.review-actions {
+  display: flex;
+  grid-area: hel;
+}
+
+.review-helpful {
+  padding-right: 5%;
+  font-size: 12px;
+}
+
+.review-helpful span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.review-helpful span:hover {
+  color: green;
+}
+
+.review-report {
+
+  text-decoration: underline;
+  font-size: 12px;;
+
+}
+
+.review-report span {
+  cursor: pointer;
+}
+
+.review-report span:hover {
+  color: red;
+}
+
+.review-response {
+  grid-area: resp;
+}
+
+/* review tiles styles end */
+
+
+/* review stats styles start */
+
+.review-stats h3 {
+  margin-bottom: 5px;
+}
+
+.review-stats .stars {
+  margin-bottom: 10px;
+}
+
+.reviews-ratings {
+  width: 30vw;
+}
+
+.review-bar {
+ display: flex;
+
+}
+
+.bar-label {
+  width: 60px;
+}
+.outer-bar {
+  position: relative;
+  width: 7vw;
+  height: 10px;
+  margin-left: 10px;
+  border: solid black 2px;
+  background-color: rgb(233, 233, 233);
+}
+
+
+
+.fill{
+  position: absolute;
+  height: 10px;
+
+  bottom: 0;
+  background-color: #487DB8;
+}
+
+.review-characteristic{
+  width: 60%;
+}
+
+.review-characteristic p {
+  margin-bottom: 5px;
+}
+
+.characteristics-bar {
+
+
+   height: 5px;
+   background-color: gray;
+
+}
+
+.characteristics-icon {
+
+  width: 50%;
+  height: 10px;
+  border-right: solid black 4px;
+  margin-bottom: 10px;
+}
+
+.characteristics-labels {
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.characteristics-labels p{
+  margin-top: 0;
+}
+
+
+
+
+/* review stats styles end */
 
 
 
@@ -488,7 +691,7 @@ tr th {
 
 /* Stars Styles Start */
 
-#stars {
+.stars {
   display: flex;
   flex-direction: horizontal;
 }

@@ -2,7 +2,6 @@ import React from 'react';
 import getFeatures from './utils.js';
 
 const Comparison = ({product, currentProduct}) => {
-  console.log('this is the product ', product);
   const features = getFeatures(product.features, currentProduct.features)
   return (
     <React.Fragment>
