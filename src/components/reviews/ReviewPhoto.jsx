@@ -36,7 +36,7 @@ class ReviewPhoto extends React.Component{
 
     return(
       <div>
-      <img id = {this.props.id} src = {this.props.url} onClick={this.handleOpenPhoto} style = {{width: '5vw', height: '5vw'}} />
+      <img id = {this.props.id} alt = 'review photo' src = {this.props.url} onClick={this.handleOpenPhoto} style = {{width: '5vw', height: '5vw'}} />
       <ReactModal
          isOpen={this.state.showPhoto}
          contentLabel="Review Photo"

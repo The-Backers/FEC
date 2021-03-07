@@ -6,7 +6,8 @@ import Reviews from '../../components/reviews'
 
 var mapStoreToProps = (state) => ({
   reviews: state.reviews,
-  reviewMeta: state.reviewMeta
+  reviewMeta: state.reviewMeta,
+  product: state.product
 });
 
 var mapDispatchToProps = (dispatch) => ({
