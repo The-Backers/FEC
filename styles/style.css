@@ -431,8 +431,10 @@ tr th {
 
 /* review tiles styles start */
 
-.reviews-accordion {
+.review-list {
   width: 58vw;
+  height: 90vh;
+  overflow: auto;
 }
 
 .review-tile {
@@ -566,7 +568,6 @@ tr th {
 .fill{
   position: absolute;
   height: 10px;
-
   bottom: 0;
   background-color: #487DB8;
 }
