@@ -3,19 +3,20 @@ import axios from 'axios';
 import showReviews from './showReviews.js';
 import store from '../../store/store.js';
 
-var fetchReviews = (dispatch) => {
-
-  axios.get('https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews/?product_id=11970&count=5', {
-    headers: {
-      'AUTHORIZATION': TOKEN
-    }
-  })
-    .then(({data}) => {
-      dispatch(showReviews(data))
+var fetchReviews = (productId) => {
+  return (dispatch) => {
+    axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews/?product_id=${productId}&count=2`, {
+      headers: {
+        'AUTHORIZATION': TOKEN
+      }
     })
-    .catch((err) => {
-      console.log(err)
-    });
+      .then(({data}) => {
+        dispatch(showReviews(data))
+      })
+      .catch((err) => {
+        console.log(err)
+      });
+  }
 }
 
 

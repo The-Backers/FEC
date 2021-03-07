@@ -10,7 +10,7 @@ class Reviews extends React.Component  {
 
 
   componentDidMount() {
-    this.props.handleGetReviews();
+    // this.props.handleGetReviews();
   }
 
 
