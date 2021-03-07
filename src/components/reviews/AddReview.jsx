@@ -18,7 +18,52 @@ class AddReview extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      showForm: false
+      showForm: false,
+      characteristics: {
+        Size: {
+          1: 'A size too small',
+          2: '1/2 a size too small',
+          3: 'Perfect',
+          4: '1/2 a size too big',
+          5: 'A size too wide'
+        },
+        Width: {
+          1: 'Too narrow',
+          2: 'Slightly narrow',
+          3: 'Perfect',
+          4: 'Slightly wide',
+          5: 'Too wide'
+        },
+        Comfort: {
+          1: 'Uncomfortable',
+          2: 'Slightly Uncomfortable',
+          3: 'Okay',
+          4: 'Comfortable',
+          5: 'Perfect'
+        },
+        Quality: {
+          1: 'Poor',
+          2: 'Below average',
+          3: 'What I expected',
+          4: 'Pretty great',
+          5: 'Perfect'
+        },
+        Length: {
+          1: 'Runs short',
+          2: 'Runs slightly short',
+          3: 'Perfect',
+          4: 'Runs slightly long',
+          5: 'Runs long'
+        },
+        Fit: {
+          1: 'Runs tight',
+          2: 'Runs slightly tight',
+          3: 'Perfect',
+          4: 'Runs slightly long',
+          5: 'Runs long'
+        }
+
+      }
     }
     this.handleOpenForm = this.handleOpenForm.bind(this);
     this.handleCloseForm = this.handleCloseForm.bind(this);
@@ -34,7 +79,44 @@ class AddReview extends React.Component {
 
 
 
+
+
+
   render() {
+
+    var x = [];
+    (() => {
+
+      if (this.props.characteristics) {
+        Object.keys(this.props.characteristics).map((element) => {
+
+  x.push( (
+    <div>
+       <br></br>
+      <p>{element}</p>
+      <input id = {`${element}-1`} type = 'radio' name = {element} value = '1' required></input>
+      <label htmlFor = {`${element}-1`} >{this.state.characteristics[element]['1']}</label>
+
+      <input id = {`${element}-2`} type = 'radio' name = {element} value = '2' required></input>
+      <label htmlFor = {`${element}-2`} >{this.state.characteristics[element]['2']}</label>
+
+      <input id = {`${element}-3`} type = 'radio' name = {element} value = '3' required></input>
+      <label htmlFor = {`${element}-3`} >{this.state.characteristics[element]['3']}</label>
+
+      <input id = {`${element}-4`} type = 'radio' name = {element} value = '4' required></input>
+      <label htmlFor = {`${element}-4`} >{this.state.characteristics[element]['4']}</label>
+
+      <input id = {`${element}-5`} type = 'radio' name = {element} value = '5' required></input>
+      <label htmlFor = {`${element}-5`} >{this.state.characteristics[element]['5']}</label>
+
+    </div>
+  ))
+        })
+      }
+    })()
+
+
+
 
     return (
       <div>
@@ -49,8 +131,34 @@ class AddReview extends React.Component {
         <h3>Write Your Review</h3>
         <h4>About the {this.props.name}</h4>
         <form id = 'add-review-form' className = 'add-review-form'>
+            <label htmlFor = 'overall-rating'>Overall Rating:</label>
+            <ClickableStars id = 'overall-rating' required/>
 
-            <ClickableStars id = 'overall-rating' />
+            <p>Do you recommend this product?</p>
+
+              <input type = 'radio' id='recommend' name = 'recommend' value = 'true' required></input>
+              <label htmlFor = 'recommend'>Yes</label>
+              <input type = 'radio' id='no-recommend' name = 'recommend'  value = 'false'></input>
+              <label htmlFor = 'no-recommend'>No</label>
+
+
+            <br></br>
+
+            <div>
+
+            {x.map((element) => element)}
+            {/* {
+              if (this.props.characteristics) {
+                Object.keys(this.props.characteristics).map((element) => {
+                  console.log(element)
+                  return (<div>
+                    <p>hi</p> </div>)
+                })
+              }
+
+            } */}
+            </div>
+
             <label htmlFor = 'nickname'>Nickname: </label>
             <input id = 'nickname' type = 'text' required />
 
@@ -65,3 +173,23 @@ class AddReview extends React.Component {
 
 
 export default AddReview;
+
+// return (
+//   <div>
+//     <p>{element}</p>
+//     <input id = {`${element}-1`} type = 'radio' name = {element} value = '1' required></input>
+//     <label htmlFor = {`${element}-1`} >{this.state.characteristics[element]['1']}</label>
+
+//     <input id = {`${element}-2`} type = 'radio' name = {element} value = '2' required></input>
+//     <label htmlFor = {`${element}-2`} >{this.state.characteristics[element]['2']}</label>
+
+//     <input id = {`${element}-3`} type = 'radio' name = {element} value = '3' required></input>
+//     <label htmlFor = {`${element}-3`} >{this.state.characteristics[element]['3']}</label>
+
+//     <input id = {`${element}-4`} type = 'radio' name = {element} value = '4' required></input>
+//     <label htmlFor = {`${element}-4`} >{this.state.characteristics[element]['4']}</label>
+
+//     <input id = {`${element}-5`} type = 'radio' name = {element} value = '5' required></input>
+//     <label htmlFor = {`${element}-5`} >{this.state.characteristics[element]['5']}</label>
+//   </div>
+// )
