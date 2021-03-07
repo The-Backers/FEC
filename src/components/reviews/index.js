@@ -10,7 +10,7 @@ class Reviews extends React.Component  {
 
 
   componentDidMount() {
-    // this.props.handleGetReviews();
+    //  this.props.handleGetReviews('11004', 4);
   }
 
 
@@ -29,7 +29,8 @@ class Reviews extends React.Component  {
         </div>
 
         <div className='reviews-accordion'>
-            <ReviewList reviews = {this.props.reviews.results} />
+            <ReviewList display = {this.props.reviews.done} product = {this.props.reviews.product} reviews = {this.props.reviews.results} more = {this.props.handleGetReviews} />
+
         </div>
      </div>
    </div>

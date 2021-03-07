@@ -10,6 +10,7 @@ const ReviewList = (props) => {
     return (
       <div>
          {props.reviews.map((element) => <ReviewTile review = {element} />)}
+         <button onClick = {() => {props.more(props.product, props.reviews.length + 2)}} style = {{display: props.display}}  >More reviews</button>
       </div>
 
   )

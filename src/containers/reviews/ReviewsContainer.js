@@ -10,8 +10,10 @@ var mapStoreToProps = (state) => ({
 });
 
 var mapDispatchToProps = (dispatch) => ({
-  handleGetReviews: () => {
-    dispatch(fetchReviews)
+  handleGetReviews: (productId, count) => {
+    dispatch(fetchReviews(productId, count))
+  },
+  handleGetReviewMeta: () => {
     dispatch(fetchReviewMeta)
   }
 });
