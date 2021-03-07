@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ComparisonModal ComparisonModal Snapshot 1`] = `
+<Fragment>
+  <button
+    aria-label="Compare Product"
+    className="comparison-modal"
+    onClick={[Function]}
+  >
+     
+  </button>
+  <Modal
+    ariaHideApp={true}
+    bodyOpenClassName="ReactModal__Body--open"
+    closeTimeoutMS={0}
+    contentElement={[Function]}
+    contentLabel="Example Modal"
+    isOpen={false}
+    onRequestClose={[Function]}
+    overlayElement={[Function]}
+    parentSelector={[Function]}
+    portalClassName="ReactModalPortal"
+    preventScroll={false}
+    role="dialog"
+    shouldCloseOnEsc={true}
+    shouldCloseOnOverlayClick={true}
+    shouldFocusAfterRender={true}
+    shouldReturnFocusAfterClose={true}
+    style={
+      Object {
+        "content": Object {
+          "bottom": "auto",
+          "left": "50%",
+          "marginRight": "-50%",
+          "right": "auto",
+          "top": "50%",
+          "transform": "translate(-50%, -50%)",
+        },
+      }
+    }
+  >
+    <button
+      className="modal-close"
+      onClick={[Function]}
+    >
+      X
+    </button>
+    <Comparison />
+  </Modal>
+</Fragment>
+`;

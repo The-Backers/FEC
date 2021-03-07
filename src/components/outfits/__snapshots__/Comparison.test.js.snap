@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Comparison Comparison Snapshot 1`] = `
+<Fragment>
+  <h5>
+    Comparing
+  </h5>
+  <table>
+    <tbody>
+      <tr>
+        <th
+          className="table-product"
+        >
+          Camo Onesie
+        </th>
+        <th>
+           
+        </th>
+        <th
+          className="table-currentProduct"
+        >
+          Camo Onesie
+        </th>
+      </tr>
+      <tr
+        key="0"
+      >
+        <td
+          className="table-product"
+        >
+          Canvas
+        </td>
+        <td
+          className="table-feature"
+        >
+          Fabric
+        </td>
+        <td
+          className="table-currentProduct"
+        >
+          Canvas
+        </td>
+      </tr>
+      <tr
+        key="1"
+      >
+        <td
+          className="table-product"
+        >
+          Brass
+        </td>
+        <td
+          className="table-feature"
+        >
+          Buttons
+        </td>
+        <td
+          className="table-currentProduct"
+        >
+          Brass
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</Fragment>
+`;
