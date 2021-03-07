@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import product from '../../../sample-data/products/get-productId.json';
 import styles from '../../../sample-data/products/get-productId-styles.json';
-import Stars from '../shared/stars.jsx';
+import Stars from '../shared/Stars.jsx';
 import store from '../../store/store.js';
 
 let DefaultGallery = ({ styles, product, expandGallery}) => {
