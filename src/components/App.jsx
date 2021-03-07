@@ -10,7 +10,6 @@ var App = () => (
   <div id="overall-container">
     <OverviewContainer />
     <OutfitsContainer />
-    <Questions />
     <ReviewsContainer />
   </div>
 );
