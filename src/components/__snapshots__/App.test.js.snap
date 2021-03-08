@@ -6,6 +6,6 @@ exports[`App App Snapshot 1`] = `
 >
   <Connect(Overview) />
   <Connect(RelatedItems) />
-  <Reviews />
+  <Connect(Reviews) />
 </div>
 `;
