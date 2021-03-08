@@ -19,7 +19,7 @@ class AddReview extends React.Component {
     super(props)
     this.state = {
       showForm: false,
-      files: {},
+      files: [],
       characteristics: {
         Size: {
           1: 'A size too small',
@@ -82,7 +82,7 @@ class AddReview extends React.Component {
   handlePhoto(event) {
 
     var reader = new FileReader();
-    const preview = document.getElementById('image-preview');
+    var parent = this;
     var file = event.target.files[0];
     console.log(event.target.files[0])
 
@@ -90,13 +90,14 @@ class AddReview extends React.Component {
 
     reader.addEventListener("load", function () {
       // convert image file to base64 string
-      preview.src = reader.result;
-      console.log(reader.result)
+    var x = parent.state.files;
+    x.push(reader.result);
+    parent.setState({files: x});
     }, false);
 
     if (file) {
       reader.readAsDataURL(file);
-
+      console.log(reader.result)
     }
 
 
@@ -124,38 +125,42 @@ class AddReview extends React.Component {
 
   render() {
 
-    var x = [];
+    var characteristics = [];
     (() => {
 
       if (this.props.characteristics) {
         Object.keys(this.props.characteristics).map((element) => {
 
-  x.push( (
-    <div className = 'characteristic-radio' style ={{display: 'grid'}}>
-       <br></br>
-      <p>{element}:</p>
-      <label htmlFor = {`${element}-1`} >1: {this.state.characteristics[element]['1']}</label>
-      <input id = {`${element}-1`} type = 'radio' name = {element} value = '1' required></input>
+            characteristics.push( (
+              <div className = 'characteristic-radio' style ={{display: 'grid'}}>
+                <br></br>
+                <p>{element}:</p>
+                <label htmlFor = {`${element}-1`} >1: {this.state.characteristics[element]['1']}</label>
+                <input id = {`${element}-1`} type = 'radio' name = {element} value = '1' required></input>
 
-      <label htmlFor = {`${element}-2`} >2: {this.state.characteristics[element]['2']}</label>
-      <input id = {`${element}-2`} type = 'radio' name = {element} value = '2' required></input>
+                <label htmlFor = {`${element}-2`} >2: {this.state.characteristics[element]['2']}</label>
+                <input id = {`${element}-2`} type = 'radio' name = {element} value = '2' required></input>
 
-      <label htmlFor = {`${element}-3`} >3: {this.state.characteristics[element]['3']}</label>
-      <input id = {`${element}-3`} type = 'radio' name = {element} value = '3' required></input>
+                <label htmlFor = {`${element}-3`} >3: {this.state.characteristics[element]['3']}</label>
+                <input id = {`${element}-3`} type = 'radio' name = {element} value = '3' required></input>
 
-      <label htmlFor = {`${element}-4`} >4: {this.state.characteristics[element]['4']}</label>
-      <input id = {`${element}-4`} type = 'radio' name = {element} value = '4' required></input>
+                <label htmlFor = {`${element}-4`} >4: {this.state.characteristics[element]['4']}</label>
+                <input id = {`${element}-4`} type = 'radio' name = {element} value = '4' required></input>
 
-      <label htmlFor = {`${element}-5`} >5: {this.state.characteristics[element]['5']}</label>
-      <input id = {`${element}-5`} type = 'radio' name = {element} value = '5' required></input>
+                <label htmlFor = {`${element}-5`} >5: {this.state.characteristics[element]['5']}</label>
+                <input id = {`${element}-5`} type = 'radio' name = {element} value = '5' required></input>
 
-    </div>
-  ))
+              </div>
+            ))
         })
       }
     })()
 
-
+    var previewPhotos = this.state.files.map((element) => {
+      return (
+        <img src = {element} height = '200' alt = 'image preview' />
+      )
+    })
 
 
     return (
@@ -186,7 +191,7 @@ class AddReview extends React.Component {
 
             <div>
 
-            {x.map((element) => element)}
+            {characteristics.map((element) => element)}
             {/* {
               if (this.props.characteristics) {
                 Object.keys(this.props.characteristics).map((element) => {
@@ -210,7 +215,8 @@ class AddReview extends React.Component {
             <br></br>
 
             <input type = 'file' onChange = {this.handlePhoto}  multiple/>
-            <img src="" id = 'image-preview' height="200" alt="Image preview..."></img>
+            {previewPhotos}
+
 
             <br></br>
 
