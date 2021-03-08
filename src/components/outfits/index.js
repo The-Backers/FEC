@@ -7,7 +7,7 @@ const RelatedItems = ({fetchRelated, relatedProducts}) => {
       <h3 className="related-products-title">Related Products</h3>
       <CarouselContainer className="carousel" outfits={false}/>
       <h3 className="outfits-title">Your Outfit</h3>
-      <CarouselContainer className="carousel" outfits={true}/>
+      <CarouselContainer className="carousel outfits" outfits={true}/>
     </section>
   )
 };
