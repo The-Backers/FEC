@@ -5,7 +5,7 @@ import Stars from '../shared/Stars.jsx';
 import Star from '../shared/Star.jsx';
 import getAverage from '../../actions/utils.js'
 import store from '../../store/store.js';
-import CarouselContainer from '../../containers/overview/CarouselContainer.js'
+// import CarouselContainer from '../../containers/overview/CarouselContainer.js'
 
 let DefaultGallery = ({skus, expand, styles, product, expandGallery, currentStyle, changeCurrentStyle}) => {
 
@@ -49,7 +49,7 @@ let DefaultGallery = ({skus, expand, styles, product, expandGallery, currentStyl
 
         {/*fa-expand will trigger switch between default and expanded*/ }
         <div className='current-style-gallery'>
-        <CarouselContainer />
+        {/* <CarouselContainer /> */}
         {/* create a vertical carousel here */}
         </div>
       </div>
@@ -105,7 +105,6 @@ let DefaultGallery = ({skus, expand, styles, product, expandGallery, currentStyl
           }) || <option>Xs</option>}
         </select>
         </div>
-
           <div className='star-add-to-bag-div'>
             <button type='submit' className='add-to-bag'> ADD TO BAG <i className="fas fa-plus"></i> </button>
             <button type='submit' className='star-product'> &#x2606; </button>
