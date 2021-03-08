@@ -19,6 +19,7 @@ class AddReview extends React.Component {
     super(props)
     this.state = {
       showForm: false,
+      body: 'Why did you like the product or not?',
       files: [],
       characteristics: {
         Size: {
@@ -69,6 +70,8 @@ class AddReview extends React.Component {
     this.handleOpenForm = this.handleOpenForm.bind(this);
     this.handleCloseForm = this.handleCloseForm.bind(this);
     this.handlePhoto = this.handlePhoto.bind(this);
+    this.handleBodyChange = this.handleBodyChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleOpenForm() {
@@ -79,13 +82,15 @@ class AddReview extends React.Component {
     this.setState({ showForm: false });
   }
 
+  handleBodyChange(event) {
+    this.setState({body: event.target.value});
+  }
+
   handlePhoto(event) {
 
     var reader = new FileReader();
     var parent = this;
     var file = event.target.files[0];
-    console.log(event.target.files[0])
-
 
 
     reader.addEventListener("load", function () {
@@ -97,29 +102,17 @@ class AddReview extends React.Component {
 
     if (file) {
       reader.readAsDataURL(file);
-      console.log(reader.result)
+
     }
-
-
-      // for (let i = 0; i < files.length; i++) {
-      //   const file = files[i];
-
-      //   if (!file.type.startsWith('image/')){ continue }
-
-      //   const img = document.createElement("img");
-      //   img.classList.add("obj");
-      //   img.file = file;
-      //   preview.appendChild(img); // Assuming that "preview" is the div output where the content will be displayed.
-
-      //   const reader = new FileReader();
-      //   reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
-      //   reader.readAsDataURL(file);
-      // }
 
   }
 
 
-
+handleSubmit(event) {
+  event.preventDefault();
+  var elements = event.target.elements;
+  console.log(elements)
+}
 
 
 
@@ -134,7 +127,7 @@ class AddReview extends React.Component {
             characteristics.push( (
               <div className = 'characteristic-radio' style ={{display: 'grid'}}>
                 <br></br>
-                <p>{element}:</p>
+                <p>{element}*: </p>
                 <label htmlFor = {`${element}-1`} >1: {this.state.characteristics[element]['1']}</label>
                 <input id = {`${element}-1`} type = 'radio' name = {element} value = '1' required></input>
 
@@ -162,6 +155,19 @@ class AddReview extends React.Component {
       )
     })
 
+    var minCharLabel;
+    if (50 - this.state.body.length > 0) {
+      minCharLabel = <label htmlFor ='add-review-body'>Minimum Required Characters Left [{50 - this.state.body.length}]</label>
+    } else {
+      minCharLabel = <label htmlFor ='add-review-body'>Minimum Reached</label>
+    }
+
+    var display;
+    if (this.state.files.length >= 5) {
+      display = 'none';
+    }
+
+
 
     return (
       <div className = 'add-review'>
@@ -175,11 +181,12 @@ class AddReview extends React.Component {
         <button style = {{position: 'sticky', top: '0', float: 'right'}} onClick={this.handleCloseForm}>Close</button>
         <h3>Write Your Review</h3>
         <h4>About the {this.props.name}</h4>
-        <form id = 'add-review-form' className = 'add-review-form'>
+        <h5>* = required</h5>
+        <form id = 'add-review-form' className = 'add-review-form' onSubmit = {this.handleSubmit}>
             <label htmlFor = 'overall-rating'>Overall Rating:</label>
             <ClickableStars id = 'overall-rating' required/>
 
-            <p>Do you recommend this product?</p>
+            <p>Do you recommend this product?*</p>
 
               <input type = 'radio' id='recommend' name = 'recommend' value = 'true' required></input>
               <label htmlFor = 'recommend'>Yes</label>
@@ -209,19 +216,30 @@ class AddReview extends React.Component {
 
             <br></br>
 
-            <label htmlFor = 'add-review-body'>Review Body: </label>
-            <input id = 'add-review-body' type = 'text' maxLength = '1000' minLength = '50' defaultValue = 'Why did you like the product or not?'  required />
+            <label htmlFor = 'add-review-body'>Review Body*: </label>
+            <input id = 'add-review-body' type = 'text' maxLength = '1000' minLength = '50' onChange = {this.handleBodyChange} value = {this.state.body}  required />
+            <br></br>
+            {minCharLabel}
 
             <br></br>
-
-            <input type = 'file' onChange = {this.handlePhoto}  multiple/>
+            <label htmlFor = 'add-review-photos'>Upload Photos (Maximum 5): </label>
+            <input type = 'file' id = 'add-review-photos' onChange = {this.handlePhoto} style = {{display: display}}  />
             {previewPhotos}
 
 
             <br></br>
 
-            <label htmlFor = 'add-review-nickname'>Nickname: </label>
+            <label htmlFor = 'add-review-nickname'>Nickname*: </label>
             <input id = 'add-review-nickname' type = 'text' required />
+
+            <br></br>
+
+            <label htmlFor = 'add-review-email'>Email*: </label>
+            <input id = 'add-review-email' type = 'email' required />
+
+            <br></br>
+
+            <input type = 'submit' />
 
         </form>
       </ReactModal>
@@ -235,22 +253,3 @@ class AddReview extends React.Component {
 
 export default AddReview;
 
-// return (
-//   <div>
-//     <p>{element}</p>
-//     <input id = {`${element}-1`} type = 'radio' name = {element} value = '1' required></input>
-//     <label htmlFor = {`${element}-1`} >{this.state.characteristics[element]['1']}</label>
-
-//     <input id = {`${element}-2`} type = 'radio' name = {element} value = '2' required></input>
-//     <label htmlFor = {`${element}-2`} >{this.state.characteristics[element]['2']}</label>
-
-//     <input id = {`${element}-3`} type = 'radio' name = {element} value = '3' required></input>
-//     <label htmlFor = {`${element}-3`} >{this.state.characteristics[element]['3']}</label>
-
-//     <input id = {`${element}-4`} type = 'radio' name = {element} value = '4' required></input>
-//     <label htmlFor = {`${element}-4`} >{this.state.characteristics[element]['4']}</label>
-
-//     <input id = {`${element}-5`} type = 'radio' name = {element} value = '5' required></input>
-//     <label htmlFor = {`${element}-5`} >{this.state.characteristics[element]['5']}</label>
-//   </div>
-// )
