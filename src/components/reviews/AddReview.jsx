@@ -19,6 +19,7 @@ class AddReview extends React.Component {
     super(props)
     this.state = {
       showForm: false,
+      files: {},
       characteristics: {
         Size: {
           1: 'A size too small',
@@ -67,6 +68,7 @@ class AddReview extends React.Component {
     }
     this.handleOpenForm = this.handleOpenForm.bind(this);
     this.handleCloseForm = this.handleCloseForm.bind(this);
+    this.handlePhoto = this.handlePhoto.bind(this);
   }
 
   handleOpenForm() {
@@ -75,6 +77,44 @@ class AddReview extends React.Component {
 
   handleCloseForm() {
     this.setState({ showForm: false });
+  }
+
+  handlePhoto(event) {
+
+    var reader = new FileReader();
+    const preview = document.getElementById('image-preview');
+    var file = event.target.files[0];
+    console.log(event.target.files[0])
+
+
+
+    reader.addEventListener("load", function () {
+      // convert image file to base64 string
+      preview.src = reader.result;
+      console.log(reader.result)
+    }, false);
+
+    if (file) {
+      reader.readAsDataURL(file);
+
+    }
+
+
+      // for (let i = 0; i < files.length; i++) {
+      //   const file = files[i];
+
+      //   if (!file.type.startsWith('image/')){ continue }
+
+      //   const img = document.createElement("img");
+      //   img.classList.add("obj");
+      //   img.file = file;
+      //   preview.appendChild(img); // Assuming that "preview" is the div output where the content will be displayed.
+
+      //   const reader = new FileReader();
+      //   reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(img);
+      //   reader.readAsDataURL(file);
+      // }
+
   }
 
 
@@ -160,12 +200,17 @@ class AddReview extends React.Component {
             </div>
 
             <label htmlFor = 'add-review-summary'>Summary: </label>
-            <input id = 'add-review-summary' value = 'Example: Best purchase ever!' type = 'text'/>
+            <input id = 'add-review-summary' defaultValue = 'Example: Best purchase ever!' type = 'text'/>
 
             <br></br>
 
             <label htmlFor = 'add-review-body'>Review Body: </label>
-            <input id = 'add-review-body' type = 'text' maxLength = '1000' minLength = '50' value = 'Why did you like the product or not?'  required />
+            <input id = 'add-review-body' type = 'text' maxLength = '1000' minLength = '50' defaultValue = 'Why did you like the product or not?'  required />
+
+            <br></br>
+
+            <input type = 'file' onChange = {this.handlePhoto}  multiple/>
+            <img src="" id = 'image-preview' height="200" alt="Image preview..."></img>
 
             <br></br>
 
