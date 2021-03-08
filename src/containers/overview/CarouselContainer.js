@@ -6,7 +6,7 @@ import fetchStyles from '../../actions/overview/fetchStyles';
 
 var mapStoreToProps = (state) => ({
     product: state.product,
-    styles: state.currentStyles
+    styles: state.currentStyle
 });
 
 var mapDispatchToProps = (dispatch) => ({

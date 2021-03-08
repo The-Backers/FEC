@@ -5,7 +5,7 @@ import Stars from '../shared/Stars.jsx';
 import Star from '../shared/Star.jsx';
 import getAverage from '../../actions/utils.js'
 import store from '../../store/store.js';
-// import CarouselContainer from '../../containers/overview/CarouselContainer.js'
+import CarouselContainer from '../../containers/overview/CarouselContainer.js'
 
 let DefaultGallery = ({skus, expand, styles, product, expandGallery, currentStyle, changeCurrentStyle}) => {
 
@@ -42,14 +42,12 @@ let DefaultGallery = ({skus, expand, styles, product, expandGallery, currentStyl
 
   return (
     <div  id='overview-body' >
-      <div  id='overview-body-image'>
-        <img id='overview-zoom-image' src={currentStyle?.photos[currentPhoto]?.url} />
+      <div id='overview-body-image' >
+      <CarouselContainer />
         <div id="myresult" className="img-zoom-result"></div>
         <a onClick={() => expandGallery(true)}><i className="fas fa-expand button-expander"></i></a>
-
-        {/*fa-expand will trigger switch between default and expanded*/ }
         <div className='current-style-gallery'>
-        {/* <CarouselContainer /> */}
+
         {/* create a vertical carousel here */}
         </div>
       </div>
