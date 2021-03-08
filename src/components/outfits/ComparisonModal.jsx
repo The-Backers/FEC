@@ -13,8 +13,6 @@ const customStyles = {
   }
 };
 
-Modal.setAppElement('#app');
-
 const ComparisonModal = ({product, currentProduct}) => {
   var subtitle;
   const [modalIsOpen,setIsOpen] = React.useState(false);
