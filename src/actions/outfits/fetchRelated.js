@@ -4,6 +4,11 @@ import mapRelated from './mapRelated.js';
 import {store} from '../../store/store.js'
 import thunk from 'redux-thunk';
 
+const getUnique = (value, index, array) => {
+  const id = store.getState().product.id;
+  return array.indexOf(value) === index && value !== id;
+}
+
 var fetchRelated = (dispatch) => {
   const id = store.getState().product.id;
   return dispatch => {
@@ -13,7 +18,10 @@ var fetchRelated = (dispatch) => {
       }
     })
       .then(({data}) => {
-        dispatch(mapRelated(dispatch, data, false))
+        console.log('this is data: ', data);
+        var unique = data.filter(getUnique);
+        console.log('this is unique: ', unique);
+        dispatch(mapRelated(dispatch, unique, false))
       })
       .catch((error) => {
         console.error(error)
