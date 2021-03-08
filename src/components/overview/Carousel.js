@@ -15,18 +15,19 @@ const Carousel = ({styles}) => {
   }
   //children will be an array of images
 
-  const children = styles[0].photos.map((photo, index) => {
+  const children = styles[0]?.photos?.map((photo, index) => {
     return (
-      <img style={imageStyle} key={index} src={photo.url} />
+      <img style={imageStyle} key={index} src={photo?.url} />
     );
   })
+
   return (
     <div style={{ padding: `0 ${chevronWidth}px` }}>
       <ItemsCarousel
         className="gallery-carousel"
         requestToChangeActive={setActiveItemIndex}
         activeItemIndex={activeItemIndex}
-        numberOfCards={1}
+        numberOfCards={4}
         gutter={0}
         leftChevron={<button className="chevron fas fa-chevron-left"></button>}
         rightChevron={<button className="chevron fas fa-chevron-right"></button>}
