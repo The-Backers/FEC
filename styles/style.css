@@ -760,7 +760,15 @@ tr th {
 
 /* review stats styles end */
 
+/* add review styles start */
 
+.characteristic-radio input {
+  margin-bottom: 1rem;
+}
+
+
+
+/* add review styles end */
 
 
 
@@ -814,7 +822,7 @@ tr th {
 
 /* Stars Styles Start */
 
-#stars {
+.stars {
   display: flex;
   flex-direction: row;
 }

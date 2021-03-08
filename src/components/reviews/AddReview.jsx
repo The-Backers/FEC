@@ -91,23 +91,23 @@ class AddReview extends React.Component {
         Object.keys(this.props.characteristics).map((element) => {
 
   x.push( (
-    <div>
+    <div className = 'characteristic-radio' style ={{display: 'grid'}}>
        <br></br>
-      <p>{element}</p>
+      <p>{element}:</p>
+      <label htmlFor = {`${element}-1`} >1: {this.state.characteristics[element]['1']}</label>
       <input id = {`${element}-1`} type = 'radio' name = {element} value = '1' required></input>
-      <label htmlFor = {`${element}-1`} >{this.state.characteristics[element]['1']}</label>
 
+      <label htmlFor = {`${element}-2`} >2: {this.state.characteristics[element]['2']}</label>
       <input id = {`${element}-2`} type = 'radio' name = {element} value = '2' required></input>
-      <label htmlFor = {`${element}-2`} >{this.state.characteristics[element]['2']}</label>
 
+      <label htmlFor = {`${element}-3`} >3: {this.state.characteristics[element]['3']}</label>
       <input id = {`${element}-3`} type = 'radio' name = {element} value = '3' required></input>
-      <label htmlFor = {`${element}-3`} >{this.state.characteristics[element]['3']}</label>
 
+      <label htmlFor = {`${element}-4`} >4: {this.state.characteristics[element]['4']}</label>
       <input id = {`${element}-4`} type = 'radio' name = {element} value = '4' required></input>
-      <label htmlFor = {`${element}-4`} >{this.state.characteristics[element]['4']}</label>
 
+      <label htmlFor = {`${element}-5`} >5: {this.state.characteristics[element]['5']}</label>
       <input id = {`${element}-5`} type = 'radio' name = {element} value = '5' required></input>
-      <label htmlFor = {`${element}-5`} >{this.state.characteristics[element]['5']}</label>
 
     </div>
   ))
@@ -119,7 +119,7 @@ class AddReview extends React.Component {
 
 
     return (
-      <div>
+      <div className = 'add-review'>
 
       <button onClick = {this.handleOpenForm}>Add Review</button>
         <ReactModal
@@ -159,8 +159,18 @@ class AddReview extends React.Component {
             } */}
             </div>
 
-            <label htmlFor = 'nickname'>Nickname: </label>
-            <input id = 'nickname' type = 'text' required />
+            <label htmlFor = 'add-review-summary'>Summary: </label>
+            <input id = 'add-review-summary' value = 'Example: Best purchase ever!' type = 'text'/>
+
+            <br></br>
+
+            <label htmlFor = 'add-review-body'>Review Body: </label>
+            <input id = 'add-review-body' type = 'text' maxLength = '1000' minLength = '50' value = 'Why did you like the product or not?'  required />
+
+            <br></br>
+
+            <label htmlFor = 'add-review-nickname'>Nickname: </label>
+            <input id = 'add-review-nickname' type = 'text' required />
 
         </form>
       </ReactModal>
