@@ -18,10 +18,12 @@ var initialSate = {
   product: product,
   currentStyles: styles.results,
   relatedProducts: [],
+  currentStyle: styles.results[0],
   outfits: [],
   reviews: [],
   reviewMeta: {},
-  expand: false
+  expand: false,
+  skus: []
 };
 
 export const store = createStore (

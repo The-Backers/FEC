@@ -9,7 +9,7 @@ const Stars = (props) => {
 
 
   return (
-<div id = 'stars'>
+<div className = 'stars'>
   <div className = 'star' >
     <Star total = {props.total} value = '1'/>
   </div>
