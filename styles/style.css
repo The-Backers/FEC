@@ -808,7 +808,7 @@ tr th {
 
 /* Stars Styles Start */
 
-#stars {
+.stars {
   display: flex;
   flex-direction: row;
 }
