@@ -9,7 +9,14 @@ var mapStoreToProps = (state) => ({
     styles: state.currentStyles
 });
 
-
-var CarouselContainer = connect(mapStoreToProps)(Carousel);
+var mapDispatchToProps = (dispatch) => ({
+    expandGallery: (boolean) => {
+      dispatch(expandGallery(boolean))
+    },
+    changeCurrentStyle: (style) => {
+      dispatch(setCurrentStyle(style))
+    }
+});
+var CarouselContainer = connect(mapStoreToProps, mapDispatchToProps)(Carousel);
 
 export default CarouselContainer;

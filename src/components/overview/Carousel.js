@@ -15,9 +15,9 @@ const Carousel = ({styles}) => {
   }
   //children will be an array of images
 
-  const children = styles[0].photos.map((photo, index) => {
+  const children = styles[0]?.photos?.map((photo, index) => {
     return (
-      <img style={imageStyle} key={index} src={photo.url} />
+      <img style={imageStyle} key={index} src={photo?.url} />
     );
   })
 

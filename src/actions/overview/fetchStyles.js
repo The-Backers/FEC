@@ -4,6 +4,7 @@ import thunk from 'redux-thunk';
 import axios from 'axios';
 import TOKEN from '../../../config.js';
 import setCurrentStyle from './setCurrentStyle';
+import setSku from './setSku.js';
 
 var fetchStyles = (productId) => {
 
@@ -14,10 +15,22 @@ var fetchStyles = (productId) => {
     }
   }).then(({data}) => {
     dispatch(setStyles(data));
-    data.results.map((style, i) => {
+    return data;
+
+
+  }) .then((data) => {
+    let alreadyDispatched = false;
+     data.results.map((style, i) => {
       if (style["default?"]) {
-        return dispatch(setCurrentStyle(style))
+        alreadyDispatched = true;
+        dispatch(setCurrentStyle(data.results[i]));
+        dispatch(setSku(data.results[i].skus))
+
+      } else if (!alreadyDispatched && i === data.results.length - 1) {
+        dispatch(setCurrentStyle(data.results[0]))
+        dispatch(setSku(data.results[0].skus))
       }
+
     })
   }).catch((err) => {
     console.log(err);

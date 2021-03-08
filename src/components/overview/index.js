@@ -15,7 +15,13 @@ const Overview = ({styles, expand, expandGallery, product, fetchProduct}) => {
     {expand ? <ExpandedGalleryContainer /> : <DefaultGalleryContainer />}
 
     <div className='overview-description'>
-      <h2>{product.description}</h2>
+      <h2>{product.description || ''}</h2>
+      <div className='social-media-icons'>
+      <div className="facebook fab fa-facebook-square"></div>
+      <div className="twitter fab fa-twitter-square"></div>
+      <div className="pinterest fab fa-pinterest-square"></div>
+      </div>
+
     </div>
   </div>
 )

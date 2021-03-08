@@ -22,7 +22,8 @@ var initialSate = {
   outfits: [],
   reviews: [],
   reviewMeta: {},
-  expand: false
+  expand: false,
+  skus: []
 };
 
 export const store = createStore (
