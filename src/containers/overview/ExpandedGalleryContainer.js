@@ -10,7 +10,8 @@ var mapStoreToProps = (state) => ({
   product: state.product,
   expand: state.expand,
   styles: state.currentStyles,
-  currentStyle: state.currentStyle
+  currentStyle: state.currentStyle,
+  index: state.currentGalleryIndex
 });
 
 var mapDispatchToProps = (dispatch) => ({

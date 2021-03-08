@@ -23,7 +23,8 @@ var initialSate = {
   reviews: [],
   reviewMeta: {},
   expand: false,
-  skus: []
+  skus: [],
+  currentGalleryIndex: 0,
 };
 
 export const store = createStore (
