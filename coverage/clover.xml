@@ -1,6 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <coverage generated="1615214288663" clover="3.2.0">
   <project timestamp="1615214288663" name="All files">
     <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+=======
+<coverage generated="1615146723515" clover="3.2.0">
+  <project timestamp="1615146723515" name="All files">
+    <metrics statements="61" coveredstatements="54" conditionals="26" coveredconditionals="20" methods="20" coveredmethods="17" elements="107" coveredelements="91" complexity="0" loc="61" ncloc="61" packages="2" files="7" classes="7"/>
+    <package name="components">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="App.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/App.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="components.outfits">
+      <metrics statements="59" coveredstatements="52" conditionals="26" coveredconditionals="20" methods="19" coveredmethods="16"/>
+      <file name="Carousel.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/outfits/Carousel.jsx">
+        <metrics statements="9" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="2"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+      </file>
+      <file name="Comparison.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/outfits/Comparison.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+      </file>
+      <file name="ComparisonModal.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/outfits/ComparisonModal.jsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+      </file>
+      <file name="ProductCard.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/outfits/ProductCard.jsx">
+        <metrics statements="12" coveredstatements="10" conditionals="8" coveredconditionals="7" methods="9" coveredmethods="7"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+      </file>
+      <file name="index.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/outfits/index.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+      </file>
+      <file name="utils.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/outfits/utils.js">
+        <metrics statements="26" coveredstatements="22" conditionals="12" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="28" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="36" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="6" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+      </file>
+    </package>
+>>>>>>> b7e07b0ce2ec2a3311cbb234bf590b06f10e4e67
   </project>
 </coverage>
