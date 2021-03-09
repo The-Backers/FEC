@@ -23,7 +23,7 @@ class ClickableStars extends React.Component{
   handleStarClick(event) {
     this.setState({total: event});
     console.log(this)
-    this.props.recommend(event)
+    this.props.rating(event)
   }
 
   render(){
@@ -32,24 +32,24 @@ class ClickableStars extends React.Component{
       <div className = 'clickable-stars' id = {this.props.id}>
         <div className = 'stars' >
           <div className = 'star' >
-            <Star total = {this.state.total} onClick = {this.handleStarClick} value = '1'/>
+            <Star total = {this.state.total} onClick = {this.handleStarClick} value = {1}/>
           </div>
 
 
           <div className = 'star' >
-            <Star total = {this.state.total} onClick = {this.handleStarClick} value = '2'/>
+            <Star total = {this.state.total} onClick = {this.handleStarClick} value = {2} />
           </div>
 
           <div className = 'star' >
-            <Star total = {this.state.total} onClick = {this.handleStarClick} value = '3'/>
+            <Star total = {this.state.total} onClick = {this.handleStarClick} value = {3} />
           </div>
 
           <div className = 'star' >
-            <Star total = {this.state.total} onClick = {this.handleStarClick} value = '4'/>
+            <Star total = {this.state.total} onClick = {this.handleStarClick} value = {4} />
           </div>
 
           <div className = 'star' >
-            <Star total = {this.state.total} onClick = {this.handleStarClick} value = '5'/>
+            <Star total = {this.state.total} onClick = {this.handleStarClick} value = {5} />
           </div>
         </div>
         <p>{this.state.ratings[this.state.total]}</p>

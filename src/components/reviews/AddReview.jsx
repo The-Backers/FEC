@@ -23,8 +23,9 @@ class AddReview extends React.Component {
       email: 'Example: jackson11@email.com',
       nickname: 'Example: jackson11!',
       summary: 'Example: Best purchase ever!',
-      files: [],
-      characteristics: {
+      photos: [],
+      characteristics: {},
+      characteristicLabels: {
         Size: {
           1: 'A size too small',
           2: '1/2 a size too small',
@@ -72,12 +73,14 @@ class AddReview extends React.Component {
     }
     this.handleOpenForm = this.handleOpenForm.bind(this);
     this.handleCloseForm = this.handleCloseForm.bind(this);
-    this.state.handleRecommendChange = this.handleRecommendChange.bind(this);
+    this.handleRatingChange = this.handleRatingChange.bind(this);
+    this.handleRecommendChange = this.handleRecommendChange.bind(this);
     this.handlePhoto = this.handlePhoto.bind(this);
     this.handleBodyChange = this.handleBodyChange.bind(this);
     this.handleSummaryChange = this.handleSummaryChange.bind(this);
     this.handleNicknameChange = this.handleNicknameChange.bind(this);
     this.handleEmailChange = this.handleEmailChange.bind(this);
+    this.handleCharacteristicChange = this.handleCharacteristicChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -89,10 +92,21 @@ class AddReview extends React.Component {
     this.setState({ showForm: false });
   }
 
-  handleRecommendChange(event) {
+  handleRatingChange(event) {
 
-    console.log(this.state.recommend)
-    this.setState({recommend: event});
+
+    this.setState({rating: event});
+  }
+
+  handleRecommendChange(event) {
+    if (event.target.value === 'true') {
+      var x = true;
+    } else {
+      var x = false;
+    }
+
+    console.log(typeof x, x)
+    this.setState({recommend: x})
   }
 
   handleBodyChange(event) {
@@ -109,6 +123,16 @@ class AddReview extends React.Component {
     this.setState({email: event.target.value});
   }
 
+  handleCharacteristicChange(event, element) {
+    var x = this.state.characteristics;
+
+    x[this.props.characteristics[element].id] =  parseInt(event.target.value);
+
+    this.setState({characteristics: x});
+
+
+  }
+
   handlePhoto(event) {
 
     var reader = new FileReader();
@@ -118,9 +142,9 @@ class AddReview extends React.Component {
 
     reader.addEventListener("load", function () {
       // convert image file to base64 string
-    var x = parent.state.files;
+    var x = parent.state.photos;
     x.push(reader.result);
-    parent.setState({files: x});
+    parent.setState({photos: x});
     }, false);
 
     if (file) {
@@ -133,22 +157,26 @@ class AddReview extends React.Component {
 
 handleSubmit(event) {
   event.preventDefault();
-  var elements = document.getElementById('add-review-form').elements;
-  var values = {};
+  // var elements = document.getElementById('add-review-form').elements;
+  // var values = {};
 
-  for (var i = 0; i < elements.length; i++) {
-    var x = elements[i].name
-    console.log(elements[i], x)
-    console.log(elements[x])
-    if (elements[x]) {
+  // for (var i = 0; i < elements.length; i++) {
+  //   var x = elements[i].name
+  //   console.log(elements[i], x)
+  //   console.log(elements[x])
+  //   if (elements[x]) {
 
-      if (elements[x].value) {
-        values[x] = elements[x].value
-      }
-    }
-  }
+  //     if (elements[x].value) {
+  //       values[x] = elements[x].value
+  //     }
+  //   }
+  // }
 
-  console.log(values)
+  var state = this.state
+
+  console.log(this.props.id, this.props.length, this.props.sort, state.rating, state.summary, state.body, state.recommend, state.nickname, state.email, state.photos, state.characteristics)
+  this.props.add(this.props.id, this.props.length, this.props.sort, state.rating, state.summary, state.body, state.recommend, state.nickname, state.email, state.photos, state.characteristics)
+
   // console.log(elements);
 }
 
@@ -166,20 +194,20 @@ handleSubmit(event) {
               <div className = 'characteristic-radio' style ={{display: 'grid'}}>
                 <br></br>
                 <p>{element}*: </p>
-                <label htmlFor = {`${element}-1`} >1: {this.state.characteristics[element]['1']}</label>
-                <input id = {`${element}-1`} type = 'radio' name = {element} value = '1' required></input>
+                <label htmlFor = {`${element}-1`} >  1: {this.state.characteristicLabels[element]['1']}</label>
+                <input id = {`${element}-1`} onChange = {(event) => {this.handleCharacteristicChange(event, element)}} type = 'radio'  name = {element} value = {1} required></input>
 
-                <label htmlFor = {`${element}-2`} >2: {this.state.characteristics[element]['2']}</label>
-                <input id = {`${element}-2`} type = 'radio' name = {element} value = '2' required></input>
+                <label htmlFor = {`${element}-2`} >2: {this.state.characteristicLabels[element]['2']}</label>
+                <input id = {`${element}-2`} onChange = {(event) => {this.handleCharacteristicChange(event, element)}} type = 'radio' name = {element} value = {2} required></input>
 
-                <label htmlFor = {`${element}-3`} >3: {this.state.characteristics[element]['3']}</label>
-                <input id = {`${element}-3`} type = 'radio' name = {element} value = '3' required></input>
+                <label htmlFor = {`${element}-3`} >3: {this.state.characteristicLabels[element]['3']}</label>
+                <input id = {`${element}-3`} onChange = {(event) => {this.handleCharacteristicChange(event, element)}} type = 'radio' name = {element} value = {3} required></input>
 
-                <label htmlFor = {`${element}-4`} >4: {this.state.characteristics[element]['4']}</label>
-                <input id = {`${element}-4`} type = 'radio' name = {element} value = '4' required></input>
+                <label htmlFor = {`${element}-4`} >4: {this.state.characteristicLabels[element]['4']}</label>
+                <input id = {`${element}-4`} onChange = {(event) => {this.handleCharacteristicChange(event, element)}} type = 'radio' name = {element} value = {4} required></input>
 
-                <label htmlFor = {`${element}-5`} >5: {this.state.characteristics[element]['5']}</label>
-                <input id = {`${element}-5`} type = 'radio' name = {element} value = '5' required></input>
+                <label htmlFor = {`${element}-5`} >5: {this.state.characteristicLabels[element]['5']}</label>
+                <input id = {`${element}-5`} onChange = {(event) => {this.handleCharacteristicChange(event, element)}} type = 'radio' name = {element} value = {5} required></input>
 
               </div>
             ))
@@ -187,7 +215,7 @@ handleSubmit(event) {
       }
     })()
 
-    var previewPhotos = this.state.files.map((element) => {
+    var previewPhotos = this.state.photos.map((element) => {
       return (
         <img src = {element} height = '200' alt = 'image preview' />
       )
@@ -201,7 +229,7 @@ handleSubmit(event) {
     }
 
     var display;
-    if (this.state.files.length >= 5) {
+    if (this.state.photos.length >= 5) {
       display = 'none';
     }
 
@@ -222,13 +250,13 @@ handleSubmit(event) {
         <h5>* = required</h5>
         <form id = 'add-review-form' className = 'add-review-form' onSubmit = {this.handleSubmit}>
             <label htmlFor = 'overall-rating'>Overall Rating:</label>
-            <ClickableStars id = 'overall-rating' recommend = {this.handleRecommendChange.bind(this)} required/>
+            <ClickableStars id = 'overall-rating' rating = {this.handleRatingChange} required/>
 
             <p>Do you recommend this product?*</p>
 
-              <input type = 'radio' id='recommend' name = 'recommend' value = 'true' required></input>
+              <input type = 'radio' id='recommend' name = 'recommend' value = {true} onChange = {this.handleRecommendChange} required></input>
               <label htmlFor = 'recommend'>Yes</label>
-              <input type = 'radio' id='no-recommend' name = 'recommend'  value = 'false'></input>
+              <input type = 'radio' id='no-recommend' name = 'recommend'  value = {false} onChange = {this.handleRecommendChange}></input>
               <label htmlFor = 'no-recommend'>No</label>
 
 
