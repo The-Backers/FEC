@@ -491,12 +491,12 @@ input[type="checkbox"]:checked {
 #outfits-add-text {
   text-align: center;
   font-size: 1.3vw;
-  margin-top: 9vh;
+  margin-top: 3vh;
 }
 
 #outfits-add {
   font-size: 12vw;
-  margin-bottom: 5vh;
+  margin-bottom: 1vh;
 }
 
 .outfits-x:hover {

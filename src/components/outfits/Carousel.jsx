@@ -6,7 +6,6 @@ const Carousel = ({relatedProducts, currentProduct, fetchProduct, addToOutfit, r
   const chevronWidth = 10;
   const products = outfits ? outfitProducts : relatedProducts;
   const index = outfits ? outfitsCarouselIndex : relatedCarouselIndex;
-  console.log('this is index: ', outfitsCarouselIndex, relatedCarouselIndex);
   const changeIndex = outfits ? changeOutfitsIndex : changeRelatedIndex;
   const children = products ?
     products.map((product, index) => {
