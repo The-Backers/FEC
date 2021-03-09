@@ -484,17 +484,19 @@ input[type="checkbox"]:checked {
 }
 
 #outfits-add:hover {
-  font-size: 13vw;
+  font-weight: 550;
   color:#1e62b1;
 }
 
 #outfits-add-text {
   text-align: center;
   font-size: 1.3vw;
+  margin-top: 9vh;
 }
 
 #outfits-add {
   font-size: 12vw;
+  margin-bottom: 5vh;
 }
 
 .outfits-x:hover {
