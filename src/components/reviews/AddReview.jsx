@@ -18,7 +18,7 @@ class AddReview extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      showForm: true,
+      showForm: false,
       body: 'Why did you like the product or not?',
       email: 'Example: jackson11@email.com',
       nickname: 'Example: jackson11!',
@@ -278,7 +278,7 @@ handleSubmit(event) {
             </div>
 
             <label htmlFor = 'add-review-summary'>Summary: </label>
-            <input id = 'add-review-summary' name = 'add-review-summary'  value = {this.state.summary} onChange = {this.handleSummaryChange} type = 'text'/>
+            <input id = 'add-review-summary' name = 'add-review-summary' maxLength = '60'  value = {this.state.summary} onChange = {this.handleSummaryChange} type = 'text'/>
 
             <br></br>
 
@@ -296,12 +296,12 @@ handleSubmit(event) {
             <br></br>
 
             <label htmlFor = 'add-review-nickname'>Nickname*: </label>
-            <input id = 'add-review-nickname' name = 'add-review-nickname' type = 'text' value = {this.state.nickname} onChange = {this.handleNicknameChange} required />
+            <input id = 'add-review-nickname' name = 'add-review-nickname' maxLength = '60' type = 'text' value = {this.state.nickname} onChange = {this.handleNicknameChange} required />
 
             <br></br>
 
             <label htmlFor = 'add-review-email'>Email*: </label>
-            <input id = 'add-review-email' name = 'add-review-email' type = 'email' value = {this.state.email} onChange = {this.handleEmailChange} required />
+            <input id = 'add-review-email' name = 'add-review-email' maxLength = '60' type = 'email' value = {this.state.email} onChange = {this.handleEmailChange} required />
 
             <br></br>
 
