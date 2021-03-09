@@ -8,5 +8,8 @@ describe('showOutfit', () => {
       outfits: product
     }
     expect(showOutfit(product)).toEqual(expected);
-  })
+  });
+  it('should not create an action if not given a product', () => {
+    expect(showOutfit()).toEqual(undefined);
+  });
 })

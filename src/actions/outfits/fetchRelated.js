@@ -18,9 +18,7 @@ var fetchRelated = (dispatch) => {
       }
     })
       .then(({data}) => {
-        console.log('this is data: ', data);
         var unique = data.filter(getUnique);
-        console.log('this is unique: ', unique);
         dispatch(mapRelated(dispatch, unique, false))
       })
       .catch((error) => {

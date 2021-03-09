@@ -1,6 +1,693 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1615235536667" clover="3.2.0">
-  <project timestamp="1615235536667" name="All files">
-    <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="0" coveredelements="0" complexity="0" loc="0" ncloc="0" packages="0" files="0" classes="0"/>
+<coverage generated="1615239113243" clover="3.2.0">
+  <project timestamp="1615239113243" name="All files">
+    <metrics statements="447" coveredstatements="172" conditionals="181" coveredconditionals="57" methods="158" coveredmethods="34" elements="786" coveredelements="263" complexity="0" loc="447" ncloc="447" packages="19" files="61" classes="61"/>
+    <package name="FEC">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="config.js" path="/Users/nastassia/Desktop/HackReactor/FEC/config.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.actions">
+      <metrics statements="16" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="0"/>
+      <file name="handleProductSelect.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/handleProductSelect.js">
+        <metrics statements="7" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+      </file>
+      <file name="utils.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/utils.js">
+        <metrics statements="9" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.actions.outfits">
+      <metrics statements="63" coveredstatements="16" conditionals="16" coveredconditionals="2" methods="28" coveredmethods="3"/>
+      <file name="addPhotos.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/outfits/addPhotos.js">
+        <metrics statements="12" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+      </file>
+      <file name="addStars.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/outfits/addStars.js">
+        <metrics statements="12" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="19" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+      </file>
+      <file name="fetchOutfit.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/outfits/fetchOutfit.js">
+        <metrics statements="7" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="8" count="2" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+      </file>
+      <file name="fetchRelated.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/outfits/fetchRelated.js">
+        <metrics statements="12" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+      </file>
+      <file name="mapRelated.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/outfits/mapRelated.js">
+        <metrics statements="8" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+      </file>
+      <file name="removeOutfit.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/outfits/removeOutfit.js">
+        <metrics statements="7" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+      </file>
+      <file name="showOutfit.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/outfits/showOutfit.js">
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="3" count="1" type="stmt"/>
+      </file>
+      <file name="showRelated.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/outfits/showRelated.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.actions.overview">
+      <metrics statements="28" coveredstatements="6" conditionals="6" coveredconditionals="0" methods="11" coveredmethods="0"/>
+      <file name="expandGallery.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/overview/expandGallery.js">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+      </file>
+      <file name="fetchStyles.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/overview/fetchStyles.js">
+        <metrics statements="15" coveredstatements="1" conditionals="6" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="29" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+      </file>
+      <file name="setCurrentStyle.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/overview/setCurrentStyle.js">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+      </file>
+      <file name="setProduct.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/overview/setProduct.js">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="2" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+      </file>
+      <file name="setSku.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/overview/setSku.js">
+        <metrics statements="5" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="3" count="0" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+      </file>
+      <file name="setStyles.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/overview/setStyles.js">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="3" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.actions.reviews">
+      <metrics statements="12" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
+      <file name="fetchReviewMeta.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/reviews/fetchReviewMeta.js">
+        <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+      </file>
+      <file name="fetchReviews.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/reviews/fetchReviews.js">
+        <metrics statements="4" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+      </file>
+      <file name="showReviewMeta.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/reviews/showReviewMeta.js">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+      </file>
+      <file name="showReviews.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/actions/reviews/showReviews.js">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.components">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="App.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/App.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.components.outfits">
+      <metrics statements="59" coveredstatements="52" conditionals="26" coveredconditionals="20" methods="19" coveredmethods="16"/>
+      <file name="Carousel.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/outfits/Carousel.jsx">
+        <metrics statements="9" coveredstatements="8" conditionals="6" coveredconditionals="5" methods="3" coveredmethods="2"/>
+        <line num="5" count="3" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+        <line num="8" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="9" count="3" type="cond" truecount="1" falsecount="1"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="16" count="3" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+      </file>
+      <file name="Comparison.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/outfits/Comparison.jsx">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="2" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+      </file>
+      <file name="ComparisonModal.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/outfits/ComparisonModal.jsx">
+        <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="5" count="5" type="stmt"/>
+        <line num="16" count="5" type="stmt"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+      </file>
+      <file name="ProductCard.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/outfits/ProductCard.jsx">
+        <metrics statements="12" coveredstatements="10" conditionals="8" coveredconditionals="7" methods="9" coveredmethods="7"/>
+        <line num="5" count="4" type="stmt"/>
+        <line num="6" count="4" type="stmt"/>
+        <line num="7" count="4" type="stmt"/>
+        <line num="10" count="4" type="stmt"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="14" count="4" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+      </file>
+      <file name="index.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/outfits/index.js">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="2" type="stmt"/>
+        <line num="5" count="2" type="stmt"/>
+      </file>
+      <file name="utils.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/outfits/utils.js">
+        <metrics statements="26" coveredstatements="22" conditionals="12" coveredconditionals="8" methods="1" coveredmethods="1"/>
+        <line num="1" count="7" type="stmt"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="3" count="3" type="stmt"/>
+        <line num="4" count="6" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="10" count="3" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="18" count="6" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="28" count="12" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="36" count="6" type="cond" truecount="1" falsecount="1"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="6" type="stmt"/>
+        <line num="41" count="3" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.components.overview">
+      <metrics statements="77" coveredstatements="12" conditionals="52" coveredconditionals="9" methods="19" coveredmethods="2"/>
+      <file name="Carousel.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/overview/Carousel.js">
+        <metrics statements="7" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="5" count="2" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+      </file>
+      <file name="DefaultGallery.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/overview/DefaultGallery.js">
+        <metrics statements="26" coveredstatements="7" conditionals="38" coveredconditionals="9" methods="9" coveredmethods="1"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="12" count="3" type="stmt"/>
+        <line num="13" count="3" type="stmt"/>
+        <line num="14" count="3" type="stmt"/>
+        <line num="15" count="3" type="stmt"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="37" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="43" count="3" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="69" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="96" count="0" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+      </file>
+      <file name="ExpandedGallery.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/overview/ExpandedGallery.js">
+        <metrics statements="6" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+      </file>
+      <file name="imageZoom.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/overview/imageZoom.js">
+        <metrics statements="36" coveredstatements="1" conditionals="10" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="2" count="3" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="40" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="41" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="42" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+      </file>
+      <file name="index.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/overview/index.js">
+        <metrics statements="2" coveredstatements="1" conditionals="4" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.components.questions">
+      <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/questions/index.js">
+        <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.components.reviews">
+      <metrics statements="83" coveredstatements="4" conditionals="24" coveredconditionals="0" methods="26" coveredmethods="0"/>
+      <file name="ReviewCharacteristics.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/reviews/ReviewCharacteristics.jsx">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+      <file name="ReviewList.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/reviews/ReviewList.jsx">
+        <metrics statements="5" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+      </file>
+      <file name="ReviewPhoto.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/reviews/ReviewPhoto.jsx">
+        <metrics statements="8" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+      </file>
+      <file name="ReviewRatingsBar.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/reviews/ReviewRatingsBar.jsx">
+        <metrics statements="2" coveredstatements="1" conditionals="2" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+      </file>
+      <file name="ReviewStats.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/reviews/ReviewStats.jsx">
+        <metrics statements="36" coveredstatements="0" conditionals="10" coveredconditionals="0" methods="6" coveredmethods="0"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="69" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="70" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="86" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="90" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="92" count="0" type="stmt"/>
+        <line num="100" count="0" type="stmt"/>
+        <line num="102" count="0" type="stmt"/>
+        <line num="114" count="0" type="stmt"/>
+        <line num="122" count="0" type="stmt"/>
+      </file>
+      <file name="ReviewTile.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/reviews/ReviewTile.jsx">
+        <metrics statements="26" coveredstatements="1" conditionals="10" coveredconditionals="0" methods="8" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="41" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="80" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="88" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="89" count="0" type="stmt"/>
+        <line num="97" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="98" count="0" type="stmt"/>
+        <line num="104" count="0" type="stmt"/>
+      </file>
+      <file name="index.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/reviews/index.js">
+        <metrics statements="3" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.components.shared">
+      <metrics statements="24" coveredstatements="17" conditionals="14" coveredconditionals="7" methods="3" coveredmethods="3"/>
+      <file name="Star.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/shared/Star.jsx">
+        <metrics statements="22" coveredstatements="15" conditionals="14" coveredconditionals="7" methods="2" coveredmethods="2"/>
+        <line num="3" count="5" type="stmt"/>
+        <line num="7" count="10" type="stmt"/>
+        <line num="19" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="20" count="8" type="stmt"/>
+        <line num="22" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="42" count="10" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="58" count="10" type="cond" truecount="2" falsecount="0"/>
+        <line num="59" count="2" type="stmt"/>
+        <line num="63" count="10" type="stmt"/>
+      </file>
+      <file name="Stars.jsx" path="/Users/nastassia/Desktop/HackReactor/FEC/src/components/shared/Stars.jsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="7" count="5" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.containers.outfits">
+      <metrics statements="10" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="0"/>
+      <file name="CarouselContainer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/containers/outfits/CarouselContainer.js">
+        <metrics statements="6" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+      </file>
+      <file name="OutfitsContainer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/containers/outfits/OutfitsContainer.js">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.containers.overview">
+      <metrics statements="19" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="15" coveredmethods="0"/>
+      <file name="CarouselContainer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/containers/overview/CarouselContainer.js">
+        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="7" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+      </file>
+      <file name="DefaultGalleryContainer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/containers/overview/DefaultGalleryContainer.js">
+        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+      </file>
+      <file name="ExpandedGalleryContainer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/containers/overview/ExpandedGalleryContainer.js">
+        <metrics statements="4" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+      </file>
+      <file name="OverviewContainer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/containers/overview/OverviewContainer.js">
+        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.containers.reviews">
+      <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+      <file name="ReviewsContainer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/containers/reviews/ReviewsContainer.js">
+        <metrics statements="5" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.reducers">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="rootReducer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/reducers/rootReducer.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="14" count="5" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.reducers.outfits">
+      <metrics statements="12" coveredstatements="7" conditionals="10" coveredconditionals="5" methods="2" coveredmethods="2"/>
+      <file name="fetchOutfitReducer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/reducers/outfits/fetchOutfitReducer.js">
+        <metrics statements="8" coveredstatements="4" conditionals="5" coveredconditionals="3" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="25" type="cond" truecount="1" falsecount="1"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="25" type="cond" truecount="1" falsecount="1"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="11" count="25" type="stmt"/>
+      </file>
+      <file name="fetchRelatedReducer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/reducers/outfits/fetchRelatedReducer.js">
+        <metrics statements="4" coveredstatements="3" conditionals="5" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="25" type="cond" truecount="1" falsecount="1"/>
+        <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="7" count="25" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.reducers.overview">
+      <metrics statements="20" coveredstatements="15" conditionals="23" coveredconditionals="10" methods="5" coveredmethods="5"/>
+      <file name="expandGalleryReducer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/reducers/overview/expandGalleryReducer.js">
+        <metrics statements="4" coveredstatements="3" conditionals="5" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="4" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="5" count="25" type="cond" truecount="1" falsecount="1"/>
+        <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="9" count="25" type="stmt"/>
+      </file>
+      <file name="fetchProductReducer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/reducers/overview/fetchProductReducer.js">
+        <metrics statements="4" coveredstatements="3" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="5" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="6" count="25" type="cond" truecount="1" falsecount="1"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="9" count="25" type="stmt"/>
+      </file>
+      <file name="setCurrentStyleReducer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/reducers/overview/setCurrentStyleReducer.js">
+        <metrics statements="4" coveredstatements="3" conditionals="5" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="25" type="cond" truecount="1" falsecount="1"/>
+        <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="7" count="25" type="stmt"/>
+      </file>
+      <file name="setSkuReducer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/reducers/overview/setSkuReducer.js">
+        <metrics statements="4" coveredstatements="3" conditionals="5" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="25" type="cond" truecount="1" falsecount="1"/>
+        <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="7" count="25" type="stmt"/>
+      </file>
+      <file name="setStyleReducer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/reducers/overview/setStyleReducer.js">
+        <metrics statements="4" coveredstatements="3" conditionals="5" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="3" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="4" count="25" type="cond" truecount="1" falsecount="1"/>
+        <line num="5" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="7" count="25" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.reducers.reviews">
+      <metrics statements="8" coveredstatements="6" conditionals="10" coveredconditionals="4" methods="2" coveredmethods="2"/>
+      <file name="fetchReviewMetaReducer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/reducers/reviews/fetchReviewMetaReducer.js">
+        <metrics statements="4" coveredstatements="3" conditionals="5" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="5" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="25" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="11" count="25" type="stmt"/>
+      </file>
+      <file name="fetchReviewsReducer.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/reducers/reviews/fetchReviewsReducer.js">
+        <metrics statements="4" coveredstatements="3" conditionals="5" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="5" count="5" type="cond" truecount="1" falsecount="0"/>
+        <line num="8" count="25" type="cond" truecount="1" falsecount="1"/>
+        <line num="9" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="11" count="25" type="stmt"/>
+      </file>
+    </package>
+    <package name="FEC.src.store">
+      <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="store.js" path="/Users/nastassia/Desktop/HackReactor/FEC/src/store/store.js">
+        <metrics statements="5" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="9" count="5" type="stmt"/>
+        <line num="15" count="5" type="stmt"/>
+        <line num="17" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="35" count="5" type="stmt"/>
+      </file>
+    </package>
   </project>
 </coverage>
