@@ -17,12 +17,13 @@ class ClickableStars extends React.Component{
         5: '5 stars - "Great"',
       }
     }
-    this.handleStarClick = this.handleStarClick.bind(this)
+    this.handleStarClick = this.handleStarClick.bind(this);
   }
 
   handleStarClick(event) {
-
-    this.setState({total: event})
+    this.setState({total: event});
+    console.log(this)
+    this.props.recommend(event)
   }
 
   render(){

@@ -18,7 +18,7 @@ class AddReview extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      showForm: false,
+      showForm: true,
       body: 'Why did you like the product or not?',
       email: 'Example: jackson11@email.com',
       nickname: 'Example: jackson11!',
@@ -72,6 +72,7 @@ class AddReview extends React.Component {
     }
     this.handleOpenForm = this.handleOpenForm.bind(this);
     this.handleCloseForm = this.handleCloseForm.bind(this);
+    this.state.handleRecommendChange = this.handleRecommendChange.bind(this);
     this.handlePhoto = this.handlePhoto.bind(this);
     this.handleBodyChange = this.handleBodyChange.bind(this);
     this.handleSummaryChange = this.handleSummaryChange.bind(this);
@@ -86,6 +87,12 @@ class AddReview extends React.Component {
 
   handleCloseForm() {
     this.setState({ showForm: false });
+  }
+
+  handleRecommendChange(event) {
+
+    console.log(this.state.recommend)
+    this.setState({recommend: event});
   }
 
   handleBodyChange(event) {
@@ -215,7 +222,7 @@ handleSubmit(event) {
         <h5>* = required</h5>
         <form id = 'add-review-form' className = 'add-review-form' onSubmit = {this.handleSubmit}>
             <label htmlFor = 'overall-rating'>Overall Rating:</label>
-            <ClickableStars id = 'overall-rating' required/>
+            <ClickableStars id = 'overall-rating' recommend = {this.handleRecommendChange.bind(this)} required/>
 
             <p>Do you recommend this product?*</p>
 
