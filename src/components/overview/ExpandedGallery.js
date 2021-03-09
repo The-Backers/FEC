@@ -4,7 +4,7 @@ import styles from '../../../sample-data/products/get-productId-styles.json';
 import imageZoom from './imageZoom.js';
 import store from '../../store/store.js';
 
-let ExpandedGallery = ({expand, styles, product, collapseGallery, currentStyle}) => {
+let ExpandedGallery = ({index, expand, styles, product, collapseGallery, currentStyle}) => {
 
   function collapsedGallery() {
     window.scrollTo(0, 0);
@@ -14,7 +14,7 @@ let ExpandedGallery = ({expand, styles, product, collapseGallery, currentStyle})
   return (
     <div  id='overview-body-expanded' >
       <div  id='overview-body-image-expanded'>
-        <img  onClick={() => imageZoom('overview-zoom-image-expanded', 2.5)} id='overview-zoom-image-expanded' src={currentStyle.photos[0].url} />
+        <img  onClick={() => imageZoom('overview-zoom-image-expanded', 2.5)} id='overview-zoom-image-expanded' src={currentStyle.photos[index].url} />
         <div id="myresult" className="img-zoom-result"></div>
         <a onClick={() => collapsedGallery()} ><i  className="fas fa-expand button-expander"></i></a>
         <div className='current-style-gallery'>

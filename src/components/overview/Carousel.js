@@ -1,23 +1,22 @@
 import React, {useState} from 'react';
 import ItemsCarousel from 'react-items-carousel';
-import styles from '../../../sample-data/products/get-productId-styles.json';
 import imageZoom from './imageZoom.js';
 
-const Carousel = ({styles}) => {
-  const [activeItemIndex, setActiveItemIndex] = useState(0);
-  const chevronWidth = 50;
+const Carousel = ({index, changeIndex, styles}) => {
+  const chevronWidth = 30;
 
   var imageStyle = {
     height: 'auto',
   objectFit: 'cover',
+  minWidth: '500px',
   maxWidth: '100%',
-  height: '100%',
+  maxHeight: '75vh',
   }
   //children will be an array of images
 
-  const children = styles[0]?.photos?.map((photo, index) => {
+  const children = styles?.photos?.map((photo, index) => {
     return (
-      <img style={imageStyle} key={index} src={photo?.url} />
+      <img  style={imageStyle} key={index} src={photo?.url} />
     );
   })
 
@@ -25,9 +24,9 @@ const Carousel = ({styles}) => {
     <div style={{ padding: `0 ${chevronWidth}px` }}>
       <ItemsCarousel
         className="gallery-carousel"
-        requestToChangeActive={setActiveItemIndex}
-        activeItemIndex={activeItemIndex}
-        numberOfCards={4}
+        requestToChangeActive={changeIndex}
+        activeItemIndex={index}
+        numberOfCards={1}
         gutter={0}
         leftChevron={<button className="chevron fas fa-chevron-left"></button>}
         rightChevron={<button className="chevron fas fa-chevron-right"></button>}
