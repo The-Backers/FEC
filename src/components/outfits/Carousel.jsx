@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import ProductCard from './ProductCard.jsx';
 
-const Carousel = ({relatedProducts, currentProduct, fetchProduct, addToOutfit, removeOutfit, outfits, outfitProducts}) => {
-  const [activeItemIndex, setActiveItemIndex] = useState(0);
+const Carousel = ({relatedProducts, currentProduct, fetchProduct, addToOutfit, removeOutfit, outfits, outfitProducts, outfitsCarouselIndex, relatedCarouselIndex, changeOutfitsIndex, changeRelatedIndex}) => {
   const chevronWidth = 10;
-  let products = outfits ? outfitProducts : relatedProducts;
+  const products = outfits ? outfitProducts : relatedProducts;
+  const index = outfits ? outfitsCarouselIndex : relatedCarouselIndex;
+  console.log('this is index: ', outfitsCarouselIndex, relatedCarouselIndex);
+  const changeIndex = outfits ? changeOutfitsIndex : changeRelatedIndex;
   const children = products ?
     products.map((product, index) => {
       return (
@@ -21,8 +23,8 @@ const Carousel = ({relatedProducts, currentProduct, fetchProduct, addToOutfit, r
     <section style={{ padding: `0 ${chevronWidth}px` }} role="row">
       <ItemsCarousel
         className="carousel"
-        requestToChangeActive={setActiveItemIndex}
-        activeItemIndex={activeItemIndex}
+        requestToChangeActive={changeIndex}
+        activeItemIndex={index}
         numberOfCards={4}
         gutter={20}
         leftChevron={<button className="carousel-chevron">{'<'}</button>}
