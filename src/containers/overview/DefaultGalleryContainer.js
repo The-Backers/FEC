@@ -4,6 +4,7 @@ import DefaultGallery from '../../components/overview/DefaultGallery';
 import setStyles from '../../actions/overview/setStyles';
 import fetchStyles from '../../actions/overview/fetchStyles';
 import setCurrentStyle from '../../actions/overview/setCurrentStyle';
+import setGalleryIndex from '../../actions/overview/setGalleryIndex';
 
 
 var mapStoreToProps = (state) => ({
@@ -11,7 +12,9 @@ var mapStoreToProps = (state) => ({
     expand: state.expand,
     styles: state.currentStyles,
     currentStyle: state.currentStyle,
-    skus: state.skus
+    skus: state.skus,
+    index: state.currentGalleryIndex
+
 });
 
 var mapDispatchToProps = (dispatch) => ({
@@ -20,6 +23,9 @@ var mapDispatchToProps = (dispatch) => ({
     },
     changeCurrentStyle: (style) => {
       dispatch(setCurrentStyle(style))
+    },
+    changeIndex: (index) => {
+      dispatch(setGalleryIndex(index))
     }
 });
 

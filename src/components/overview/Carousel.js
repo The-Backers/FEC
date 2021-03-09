@@ -2,16 +2,15 @@ import React, {useState} from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import imageZoom from './imageZoom.js';
 
-const Carousel = ({styles}) => {
-  const [activeItemIndex, setActiveItemIndex] = useState(0);
-  const chevronWidth = 10;
+const Carousel = ({index, changeIndex, styles}) => {
+  const chevronWidth = 30;
 
   var imageStyle = {
     height: 'auto',
   objectFit: 'cover',
   minWidth: '500px',
   maxWidth: '100%',
-  maxHeight: '70vh',
+  maxHeight: '75vh',
   }
   //children will be an array of images
 
@@ -25,8 +24,8 @@ const Carousel = ({styles}) => {
     <div style={{ padding: `0 ${chevronWidth}px` }}>
       <ItemsCarousel
         className="gallery-carousel"
-        requestToChangeActive={setActiveItemIndex}
-        activeItemIndex={activeItemIndex}
+        requestToChangeActive={changeIndex}
+        activeItemIndex={index}
         numberOfCards={1}
         gutter={0}
         leftChevron={<button className="chevron fas fa-chevron-left"></button>}
