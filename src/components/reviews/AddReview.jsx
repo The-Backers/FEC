@@ -20,6 +20,9 @@ class AddReview extends React.Component {
     this.state = {
       showForm: false,
       body: 'Why did you like the product or not?',
+      email: 'Example: jackson11@email.com',
+      nickname: 'Example: jackson11!',
+      summary: 'Example: Best purchase ever!',
       files: [],
       characteristics: {
         Size: {
@@ -71,6 +74,9 @@ class AddReview extends React.Component {
     this.handleCloseForm = this.handleCloseForm.bind(this);
     this.handlePhoto = this.handlePhoto.bind(this);
     this.handleBodyChange = this.handleBodyChange.bind(this);
+    this.handleSummaryChange = this.handleSummaryChange.bind(this);
+    this.handleNicknameChange = this.handleNicknameChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -84,6 +90,16 @@ class AddReview extends React.Component {
 
   handleBodyChange(event) {
     this.setState({body: event.target.value});
+  }
+
+  handleSummaryChange(event) {
+    this.setState({summary: event.target.value});
+  }
+  handleNicknameChange(event) {
+    this.setState({nickname: event.target.value});
+  }
+  handleEmailChange(event) {
+    this.setState({email: event.target.value});
   }
 
   handlePhoto(event) {
@@ -110,8 +126,23 @@ class AddReview extends React.Component {
 
 handleSubmit(event) {
   event.preventDefault();
-  var elements = event.target.elements;
-  console.log(elements)
+  var elements = document.getElementById('add-review-form').elements;
+  var values = {};
+
+  for (var i = 0; i < elements.length; i++) {
+    var x = elements[i].name
+    console.log(elements[i], x)
+    console.log(elements[x])
+    if (elements[x]) {
+
+      if (elements[x].value) {
+        values[x] = elements[x].value
+      }
+    }
+  }
+
+  console.log(values)
+  // console.log(elements);
 }
 
 
@@ -212,30 +243,30 @@ handleSubmit(event) {
             </div>
 
             <label htmlFor = 'add-review-summary'>Summary: </label>
-            <input id = 'add-review-summary' defaultValue = 'Example: Best purchase ever!' type = 'text'/>
+            <input id = 'add-review-summary' name = 'add-review-summary'  value = {this.state.summary} onChange = {this.handleSummaryChange} type = 'text'/>
 
             <br></br>
 
             <label htmlFor = 'add-review-body'>Review Body*: </label>
-            <input id = 'add-review-body' type = 'text' maxLength = '1000' minLength = '50' onChange = {this.handleBodyChange} value = {this.state.body}  required />
+            <input id = 'add-review-body' name = 'add-review-body' type = 'text' maxLength = '1000' minLength = '50' onChange = {this.handleBodyChange} value = {this.state.body}  required />
             <br></br>
             {minCharLabel}
 
             <br></br>
             <label htmlFor = 'add-review-photos'>Upload Photos (Maximum 5): </label>
-            <input type = 'file' id = 'add-review-photos' onChange = {this.handlePhoto} style = {{display: display}}  />
+            <input type = 'file' id = 'add-review-photos' name = 'add-review-photos' onChange = {this.handlePhoto} style = {{display: display}}  />
             {previewPhotos}
 
 
             <br></br>
 
             <label htmlFor = 'add-review-nickname'>Nickname*: </label>
-            <input id = 'add-review-nickname' type = 'text' required />
+            <input id = 'add-review-nickname' name = 'add-review-nickname' type = 'text' value = {this.state.nickname} onChange = {this.handleNicknameChange} required />
 
             <br></br>
 
             <label htmlFor = 'add-review-email'>Email*: </label>
-            <input id = 'add-review-email' type = 'email' required />
+            <input id = 'add-review-email' name = 'add-review-email' type = 'email' value = {this.state.email} onChange = {this.handleEmailChange} required />
 
             <br></br>
 
