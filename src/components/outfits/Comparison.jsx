@@ -5,7 +5,7 @@ const Comparison = ({product, currentProduct}) => {
   const features = getFeatures(product.features, currentProduct.features)
   return (
     <React.Fragment>
-      <h5>Comparing</h5>
+      <h5 className="table-heading">Comparing</h5>
       <table>
         <tbody>
           <tr>

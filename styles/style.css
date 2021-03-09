@@ -574,6 +574,12 @@ input[type="checkbox"]:checked {
   right: 2%;
 }
 
+.table-heading {
+  font-size: 15px;
+  font-weight: 300;
+  padding-bottom: 15px;
+}
+
 tr td, tr th{
   text-align: center;
   font-size: 15px;
