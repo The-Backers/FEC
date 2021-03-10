@@ -5,6 +5,7 @@ import axios from 'axios';
 import TOKEN from '../../../config.js';
 import setCurrentStyle from './setCurrentStyle';
 import setSku from './setSku.js';
+import setQuantity from './setQuantity';
 
 var fetchStyles = (productId) => {
 

@@ -8,8 +8,6 @@ const Carousel = ({index, changeIndex, styles}) => {
   var imageStyle = {
     height: 'auto',
   objectFit: 'cover',
-  minWidth: '500px',
-  maxWidth: '100%',
   maxHeight: '75vh',
   }
   //children will be an array of images

@@ -8,6 +8,12 @@
   src: url('fonts/Varela_Round/VarelaRound-Regular.ttf') format('truetype');
 }
 
+ul {
+  list-style: none;
+  padding: 1rem;
+}
+
+
 * {
   box-sizing: border-box;
 }
@@ -27,8 +33,6 @@ h1, h2, h3, h4 {
 .social-media-icons {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: center;
   margin: 0 auto;
 }
 
@@ -54,6 +58,10 @@ h1, h2, h3, h4 {
 .twitter:hover {
   cursor: pointer;
   opacity: 80%;
+}
+
+.fa-check {
+  color: rgb(86, 170, 86);
 }
 
 .pinterest {
@@ -135,7 +143,6 @@ height: 100vh;
 }
 
 .prod-search {
-  outline: none;
   background-color: #525252;
   border-style: none;
   border-bottom: 1px white solid;
@@ -193,7 +200,7 @@ input[type="checkbox"]:checked {
 .button-expander {
   position: absolute;
   top: 10%;
-  right: 20%;
+  right: 25%;
   z-index: 1;
   color: rgb(243, 217, 217);
   font-size: 2rem;
@@ -214,7 +221,7 @@ input[type="checkbox"]:checked {
 
 #overview-body-image {
   position: relative;
-  width: 50%;
+  width: 60%;
   height: 100%;
   object-fit: cover;
   text-align: center;
@@ -227,25 +234,33 @@ input[type="checkbox"]:checked {
   flex-direction: row;
 }
 
-.star-product {
-  align-items: center;
-  height: 5rem;
-  margin-top: 1rem;
-  font-size: 2rem;
-  width: 10%;
-  border: 2px #525252 solid;
-  outline: none;
-  font-weight: bold;
-  padding: 15px;
-  background-color: white;
+#successful-add {
+  display: none;
+  position: absolute;
 }
 
-.star-product:hover {
+.heart-product {
+  height: 4rem;
+  width: 5rem;
+  margin-top: 1rem;
+  font-size: 3rem;
+  border: 2px #525252 solid;
+  background-color: white;
+
+  padding: 0 15px;
+}
+
+#out-of-stock {
+  width: 20rem;
+}
+
+
+.heart-product:hover {
   cursor: pointer;
   opacity: 80%;
   transform: translateY(-5px);
-  border-bottom: 5px #414040 solid;
-  color: #0275FE;
+  border-bottom: 5px #525252 solid;
+  color: #e40f0f;
 }
 
 
@@ -254,12 +269,11 @@ input[type="checkbox"]:checked {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 5rem;
+  height: 4rem;
   margin-top: 1rem;
   font-size: 1.5rem;
   width: 40%;
   border: 2px #525252 solid;
-  outline: none;
   font-weight: bold;
   padding: 15px;
   background-color: white;
@@ -270,28 +284,26 @@ input[type="checkbox"]:checked {
   cursor: pointer;
   opacity: 80%;
   transform: translateY(-5px);
-  border-bottom: 5px #414040 solid;
+  border-bottom: 5px #525252 solid;
 }
 
-.select-size-dropdown {
+#select-size-dropdown {
   box-sizing: border-box;
-  height: 4rem;
+  height: 3rem;
   margin-right: 1rem;
   font-size: 1.5rem;
   width: 14rem;
   border: 2px #525252 solid;
-  outline: none;
   font-weight: bold;
   padding: 10px;
 }
 
-.select-quantity-dropdown {
+#select-quantity-dropdown {
   padding: 10px;
-  height: 4rem;
+  height: 3rem;
   width: 8rem;
   border: 2px #525252 solid;
   font-size: 1.5rem;
-  outline: none;
   font-weight: bold;
 }
 #overview-body-image-expanded {
@@ -325,7 +337,8 @@ input[type="checkbox"]:checked {
 }
 
 #overview-body-image-expanded img {
-  width: 100%;
+  vertical-align: middle;
+  width: auto;
   height: 100%;
   margin: 0 auto;
   cursor: crosshair;
@@ -333,7 +346,7 @@ input[type="checkbox"]:checked {
 
 #img-magnifier-glass {
   position: absolute;
-  border: 2px solid rgb(173, 171, 171);
+  border: 2px #525252 solid;
   cursor: none;
   /* border-radius: 50%; */
   width: 8rem;
@@ -357,6 +370,12 @@ input[type="checkbox"]:checked {
   margin-bottom: 0.5rem;
 }
 
+.fa-shopping-cart {
+  margin-left: 1rem;
+}
+.fa-shopping-cart:hover {
+  cursor: pointer;
+}
 .expanded-image {
   width: 100%;
   height: auto;
@@ -424,11 +443,10 @@ input[type="checkbox"]:checked {
 
 .product-styles {
   grid-area: 2 / 1 / 3 / 2;
-  height: 100%;
+  height: 50%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 2rem;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
 }
 
@@ -441,10 +459,17 @@ input[type="checkbox"]:checked {
 }
 .overview-description {
   grid-area: 3 / 1 / 4 / 3;
-  height: 100%;
+  line-height: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  height: 70%;
   margin: 0 auto;
   width: 80vw;
-  display: inline-block;
+  align-items: center;
+}
+.product-features-list {
+  margin-left: 1rem;
+  border-left: 2px #525252 solid;
 }
 
 /* Related Products */
@@ -470,7 +495,7 @@ input[type="checkbox"]:checked {
   display: flex;
   flex-direction: column;
   margin: 10px;
-  border: 2px solid black;
+  border: 2px #525252 solid;
   background-color: white;
 }
 
@@ -550,15 +575,15 @@ tr td, tr th{
 }
 
 tr th {
-  border-bottom: 2px dotted black;
+  border-bottom: 2px dotted #525252;
 }
 
 .table-product {
-  border-right: 2px dotted black;
+  border-right: 2px dotted #525252;
 }
 
 .table-currentProduct {
-  border-left: 2px dotted black;
+  border-left: 2px dotted #525252;
 }
 
 .table-feature {
@@ -592,7 +617,7 @@ tr th {
 
 .review-tile {
   padding: 0 10px 0 10px;
-  border: solid #7B9EB3 2px;
+  border: 2px #525252 solid;
   margin-bottom: 1px;
   display: grid;
   grid-template-columns:  repeat( auto-fit, minmax(12vw, 1fr) ) ;
@@ -712,7 +737,7 @@ tr th {
   width: 7vw;
   height: 10px;
   margin-left: 10px;
-  border: solid black 2px;
+  border: solid #525252 2px;
   background-color: rgb(233, 233, 233);
 }
 
@@ -746,7 +771,7 @@ tr th {
 
   width: 50%;
   height: 10px;
-  border-right: solid black 4px;
+  border-right: solid #525252 4px;
   margin-bottom: 10px;
 }
 
@@ -869,28 +894,44 @@ tr th {
     object-fit: cover;
     max-width: 100%;
   }
-  .select-size-dropdown {
+  #select-size-dropdown {
     box-sizing: border-box;
-    height: 4rem;
+    height: 3rem;
     margin-right: 1rem;
     font-size: 1rem;
     width: 10rem;
     border: 2px #525252 solid;
-    outline: none;
     font-weight: bold;
     padding: 10px;
   }
 
-  .select-quantity-dropdown {
+  #select-quantity-dropdown {
     padding: 10px;
-    height: 4rem;
+    height: 3rem;
     width: 4rem;
     border: 2px #525252 solid;
     font-size: 1rem;
-    outline: none;
     font-weight: bold;
+  }
+  .add-to-bag {
+    box-sizing: border-box;
+    height: 3rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    width: 10rem;
+    border: 2px #525252 solid;
+    font-weight: bold;
+    padding: 10px;
+  }
+  .heart-product {
+    padding: 10px;
+    height: 3rem;
+    width: 4rem;
+    border: 2px #525252 solid;
+    font-size: 1rem;
   }
   .read-all-scroll {
     padding-top: .3rem;
   }
+
 }

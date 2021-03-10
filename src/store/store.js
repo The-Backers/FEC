@@ -15,16 +15,19 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 var initialSate = {
-  product: product,
-  currentStyles: styles.results,
+  product: {},
+  currentStyles: [],
   relatedProducts: [],
-  currentStyle: styles.results[0],
+  currentStyle: {},
   outfits: [],
   reviews: [],
   reviewMeta: {},
   expand: false,
   skus: [],
+  quantity: [],
   currentGalleryIndex: 0,
+  selectedSku: 0,
+
 };
 
 export const store = createStore (

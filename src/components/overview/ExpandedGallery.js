@@ -1,8 +1,9 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import product from '../../../sample-data/products/get-productId.json';
 import styles from '../../../sample-data/products/get-productId-styles.json';
 import imageZoom from './imageZoom.js';
 import store from '../../store/store.js';
+
 
 let ExpandedGallery = ({index, expand, styles, product, collapseGallery, currentStyle}) => {
 
