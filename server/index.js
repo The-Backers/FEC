@@ -5,6 +5,6 @@ const path = require('path');
 
 app.use(express.static('dist'));
 
-app.listen(port, () => {
+app.listen(port, "0.0.0.0", () => {
   console.log(`The Backers App listening at port ${port}`);
 });
