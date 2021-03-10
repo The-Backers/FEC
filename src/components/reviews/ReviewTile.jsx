@@ -54,7 +54,7 @@ showMore(event) {
 
 componentDidMount() {
 
-  console.log(this.props.helpfulLog, 'review-tile')
+
     this.more.current.style.display = 'none'
   if (this.state.body2.length > 0) {
     var x = this.state.body1 + '...';
@@ -119,7 +119,7 @@ render() {
         }
         </div>
       <div className = 'review-actions'>
-        <p className = 'review-helpful'  >Helpful? <span style = {{color: (this.props.helpfulLog[this.props.review.review_id] !== undefined) ? 'green' : null}} onClick = {(() => {if (this.props.helpfulLog[this.props.review.review_id] ===undefined) {this.props.handleHelpfulLog(this.props.review.review_id); console.log('yes')}})} >Yes</span> ({this.props.review.helpfulness}) </p>
+        <p className = 'review-helpful'  >Helpful? <span style = {{color: (this.props.helpfulLog[this.props.review.review_id] !== undefined) ? 'green' : null}} onClick = {(() => {if (this.props.helpfulLog[this.props.review.review_id] ===undefined) {this.props.handleHelpfulLog(this.props.review.review_id); }})} >Yes</span> ({this.props.review.helpfulness}) </p>
 
       </div>
 

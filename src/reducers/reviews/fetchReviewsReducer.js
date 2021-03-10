@@ -12,13 +12,11 @@ var fetchReviewsReducer = (state={}, action) => {
       console.log(action.reviews.results.length, state.results.length)
       if (action.reviews.results.length < 2) {
 
-
           action.reviews.done = 'none';
-
-
       }
     }
       action.reviews.sort = action.sort;
+      action.reviews.filter = action.filter;
       return action.reviews || [];
 
   } else {

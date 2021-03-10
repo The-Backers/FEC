@@ -648,6 +648,7 @@ tr th {
 .review-tile {
   padding: 0 10px 0 10px;
   border: solid #7B9EB3 2px;
+  background-color:rgb(255, 255, 253);
   border-radius: 10px;
   margin-bottom: 1px;
   display: grid;
@@ -766,6 +767,16 @@ tr th {
 .bar-label {
   width: 60px;
 }
+
+.bar-label-active {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.bar-label-active:hover {
+  opacity: .7;
+}
+
 .outer-bar {
   position: relative;
 
