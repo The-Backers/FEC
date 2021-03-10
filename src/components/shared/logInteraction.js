@@ -14,7 +14,7 @@ const logInteraction = (element, widget) => {
   axios.post("https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/interactions", data, {
     headers: {'AUTHORIZATION': TOKEN}
   })
-    .then((response) => {
+    .then(() => {
       console.log('interaction successfully logged!');
     })
     .catch((err) => {
