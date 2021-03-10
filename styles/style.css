@@ -746,7 +746,6 @@ tr th {
 
 .review-bar {
  display: flex;
-
 }
 
 .bar-label {
@@ -754,11 +753,12 @@ tr th {
 }
 .outer-bar {
   position: relative;
+
   width: 7vw;
   height: 10px;
   margin-left: 10px;
-  border: solid black 2px;
-  background-color: rgb(233, 233, 233);
+
+  background-color: rgb(211, 211, 211);
 }
 
 
