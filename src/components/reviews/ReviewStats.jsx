@@ -139,7 +139,7 @@ render(){
         <div id = 'fill'></div>
       </div> */}
       {bars}
-      <button id = 'reviews-reset-filters' style = {{display: 'none'}} onClick = { () => {this.resetFilters()}}>Reset Filters</button>
+      <button id = 'reviews-reset-filters' style = {{display: (this.props.getReviews.filter.length > 0) ? 'inline': 'none'}} onClick = { () => {this.resetFilters()}}>Reset Filters</button>
       <p className = 'reviews-recommend-percent'>{Math.round((parseInt(this.props.stats.recommended[true]) * 100) /(parseInt(this.props.stats.recommended[true]) + parseInt(this.props.stats.recommended[false])))}% of reviews recommend this product.</p>
 
       {Object.keys(this.props.stats.characteristics).map((element) => <ReviewCharacteristics type = {element} data = {this.props.stats.characteristics[element]} />)}

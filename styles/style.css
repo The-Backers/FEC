@@ -761,7 +761,9 @@ tr th {
 }
 
 .review-bar {
+position: relative;
  display: flex;
+
 }
 
 .bar-label {
@@ -769,6 +771,7 @@ tr th {
 }
 
 .bar-label-active {
+  width: 60px;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -779,7 +782,7 @@ tr th {
 
 .outer-bar {
   position: relative;
-
+  top: 5px;
   width: 7vw;
   height: 10px;
   margin-left: 10px;

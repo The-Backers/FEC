@@ -23,12 +23,12 @@ class ReviewRatingsBar extends React.Component {
     if (this.props.width !== '0') {
             if(tempFilter.indexOf(this.props.value) < 0) {
 
-        event.target.style.color = 'red';
+        // event.target.style.color = 'red';
         tempFilter.push(this.props.value)
-        console.log(tempFilter, 'tempFilter')
+
         this.props.getReviews.get(this.props.stats.product_id, this.props.getReviews.length , this.props.getReviews.sort, tempFilter);
       } else {
-        event.target.style.color = 'black';
+        // event.target.style.color = 'black';
 
         tempFilter.splice([tempFilter.indexOf(this.props.value)] , 1)
         this.props.getReviews.get(this.props.stats.product_id, this.props.getReviews.length , this.props.getReviews.sort, tempFilter);
@@ -47,13 +47,14 @@ class ReviewRatingsBar extends React.Component {
 
 
   return (
-          <div className = 'review-bar'>
-          <div className = {'bar-label', (this.props.width !== '0') ? 'bar-label-active' : null} onClick = {this.filterFunc} >{this.props.value} Stars</div> {
+        <div className = 'review-bar'>
+                <div className = {(this.props.width !== '0') ? 'bar-label-active' : 'bar-label'} style = {{color: (this.props.getReviews.filter) ? ((this.props.getReviews.filter.indexOf(this.props.value) >= 0) ? 'red': 'black') : 'black'}} onClick = {this.filterFunc} ><span>{this.props.value} Stars</span></div>
+                {
                   <div className = 'outer-bar'>
                      <div className = 'fill' style ={{width: this.props.width + 'vw'}}></div>
                   </div>
-                  } ({this.props.ratings[this.props.value] || 0})
-                   </div>
+                  } (<span>{this.props.ratings[this.props.value] || 0}</span>)
+        </div>
            )
 }
 
