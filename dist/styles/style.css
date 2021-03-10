@@ -474,7 +474,6 @@ input[type="checkbox"]:checked {
 }
 
 #outfits-card {
-  position: relative;
   justify-content: center;
 }
 
