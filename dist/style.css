@@ -470,7 +470,6 @@ input[type="checkbox"]:checked {
 .product-card:hover {
   color:#1e62b1;
   cursor: pointer;
-  /* opacity: 80%; */
   box-shadow: 1px 1px 10px gray;
 }
 
@@ -509,7 +508,6 @@ input[type="checkbox"]:checked {
 
 .product-name {
   margin: 0px;
-  /* overflow: hidden; */
   display: inline-block;
   font-size: 1.2vw;
 }

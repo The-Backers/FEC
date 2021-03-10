@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "react-dev": "webpack --mode development --watch",
-    "test": "npx jest --watch"
+    "test": "npx jest --watch",
+    "start": "nodemon server"
   },
   "jest": {
     "setupFilesAfterEnv": [
       "./testing/setupTests.js"
     ],
-    "testPathIgnorePatterns" : [
+    "testPathIgnorePatterns": [
       "<rootDir>/config.js"
     ],
     "verbose": true
@@ -52,7 +53,9 @@
     "babel-loader": "^8.2.2",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
+    "express": "^4.17.1",
     "jest-enzyme": "^7.1.2",
+    "nodemon": "^2.0.7",
     "react": "16.14.0",
     "react-dom": "16.14.0",
     "react-hot-loader": "^4.13.0",
