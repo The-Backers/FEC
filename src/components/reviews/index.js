@@ -25,7 +25,7 @@ class Reviews extends React.Component  {
      <div className = 'reviews-content'>
         <div className='reviews-ratings'>
 
-          <ReviewStats stats = {this.props.reviewMeta} getReviews = {{get: this.props.handleGetReviews, sort: this.props.reviews.sort, length: this.props.reviews.length}} />
+          <ReviewStats stats = {this.props.reviewMeta} updated = {false} getReviews = {{get: this.props.handleGetReviews, sort: this.props.reviews.sort, length: this.props.reviews.length}} />
 
         </div>
 

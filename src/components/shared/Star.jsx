@@ -31,15 +31,15 @@ var Star = (props) => {
     var remainder = (props.value - props.total) * 100;
 
     if (remainder < 12.5) {
-      percent = 0;
+      percent = 100;
     } else if (remainder < 37.5) {
-      percent = 25;
+      percent = 75;
     } else if (remainder < 62.5) {
       percent = 50;
     } else if (remainder < 87.5) {
-      percent = 75;
+      percent = 25;
     } else {
-      percent = 100;
+      percent = 0;
     }
   }
 
