@@ -11,9 +11,7 @@ const logInteraction = (element, widget) => {
     time,
   };
 
-  axios.post("https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/interactions", data, {
-    headers: {'AUTHORIZATION': TOKEN}
-  })
+  axios.post('/interactions', data)
     .then(() => {
       console.log('interaction successfully logged!');
     })

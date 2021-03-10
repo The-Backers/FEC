@@ -10,11 +10,7 @@ var addStars = (dispatch, products, outfits) => {
     var items = JSON.parse(JSON.stringify(products))
     var test = items.map((product) => {
       return (
-        axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews/meta/?product_id=${product.id}`, {
-        headers: {
-          'AUTHORIZATION': TOKEN
-        }
-      })
+        axios.get(`/reviews/meta/?product_id=${product.id}`)
         .then((response) => {
           product.total = getAverage(response.data.ratings) || null;
           return product;

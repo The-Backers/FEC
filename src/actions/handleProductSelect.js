@@ -15,11 +15,7 @@ var handleProductSelect = (productId) => {
 
   return (dispatch) => {
 
-    return axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/${productId}`, {
-      headers: {
-        'AUTHORIZATION': TOKEN
-      }
-    })
+    return axios.get(`/products/${productId}`)
     // add any dispatches that will re render your component after a product change here. Make sure you chain it with a then if it is doing async request! chain after the initial then which handles the initial store change.
 
     .then(({data}) => {

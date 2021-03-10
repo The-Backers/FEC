@@ -10,7 +10,6 @@ const ProductCard = ({product, index, currentProduct, fetchProduct, removeOutfit
   }
 
   const handleRemove = (e) => {
-    console.log('item to be removed: ', e.target.name);
     removeOutfit(e.target.name);
     logInteraction(`remove-outfit: ${e.target.name}`, 'related-items');
   }
