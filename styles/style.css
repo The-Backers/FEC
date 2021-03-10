@@ -609,6 +609,7 @@ tr th {
   height: 100vh;
   width: 80vw;
   margin: 0 auto;
+  padding: 5px;
 }
 
 .reviews-content {
@@ -623,8 +624,15 @@ tr th {
 
 /* review tiles styles start */
 
-.reviews-accordion {
+.review-list {
   width: 58vw;
+  border: solid black 2px;
+
+}
+
+.review-tiles {
+  height: 90vh;
+  overflow: auto;
 }
 
 .review-tile {
@@ -758,7 +766,6 @@ tr th {
 .fill{
   position: absolute;
   height: 10px;
-
   bottom: 0;
   background-color: #487DB8;
 }
@@ -802,7 +809,15 @@ tr th {
 
 /* review stats styles end */
 
+/* add review styles start */
 
+.characteristic-radio input {
+  margin-bottom: 1rem;
+}
+
+
+
+/* add review styles end */
 
 
 
