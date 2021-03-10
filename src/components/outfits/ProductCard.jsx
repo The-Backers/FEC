@@ -25,7 +25,7 @@ const ProductCard = ({product, index, currentProduct, fetchProduct, removeOutfit
           </span>
         }
         {outfits &&
-          <button className="outfits-x" name={product.id} onClick={handleRemove}>X</button>
+          <span className="outfits-x" name={product.id} onClick={handleRemove}>X</span>
         }
       </div>
       <span className="product-category" onClick={() => handleClick(product.id)}>{product.category}</span>

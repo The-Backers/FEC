@@ -36,7 +36,9 @@ const Carousel = ({relatedProducts, currentProduct, fetchProduct, addToOutfit, r
         {outfits &&
           <div className="product-card" id="outfits-card" onClick={addOutfit} role="cell">
             <h3 id="outfits-add-text" name={currentProduct.id}>Add to Outfit</h3>
-            <button id="outfits-add" name={currentProduct.id}>+</button>
+            <span>
+              <button id="outfits-add" name={currentProduct.id}>+</button>
+            </span>
           </div>
         }
         {children}
