@@ -85,6 +85,7 @@ class AddReview extends React.Component {
   }
 
   handleOpenForm() {
+    ReactModal.setAppElement('#app');
     this.setState({ showForm: true });
   }
 
@@ -238,11 +239,12 @@ handleSubmit(event) {
     return (
       <div className = 'add-review'>
 
-      <button onClick = {this.handleOpenForm}>Add Review</button>
+      <button onClick = {this.handleOpenForm}>Write Your Review</button>
         <ReactModal
         isOpen={this.state.showForm}
         contentLabel='Add Review From'
         style = {{position: 'relative'}}
+        onRequestClose = {this.handleCloseForm}
       >
         <button style = {{position: 'sticky', top: '0', float: 'right'}} onClick={this.handleCloseForm}>Close</button>
         <h3>Write Your Review</h3>

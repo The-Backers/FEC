@@ -110,7 +110,7 @@ render(){
         <div id = 'fill'></div>
       </div> */}
       {bars}
-      <p>{Math.round((parseInt(this.props.stats.recommended[true]) * 100) /(parseInt(this.props.stats.recommended[true]) + parseInt(this.props.stats.recommended[false])))}% of reviews recommend this product.</p>
+      <p className = 'reviews-recommend-percent'>{Math.round((parseInt(this.props.stats.recommended[true]) * 100) /(parseInt(this.props.stats.recommended[true]) + parseInt(this.props.stats.recommended[false])))}% of reviews recommend this product.</p>
 
       {Object.keys(this.props.stats.characteristics).map((element) => <ReviewCharacteristics type = {element} data = {this.props.stats.characteristics[element]} />)}
     </div>

@@ -25,6 +25,7 @@ class ReviewPhoto extends React.Component{
   }
 
   handleOpenPhoto () {
+    ReactModal.setAppElement('#app');
     this.setState({ showPhoto: true });
   }
 

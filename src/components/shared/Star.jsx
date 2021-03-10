@@ -29,7 +29,7 @@ var Star = (props) => {
   } else {
     fillValue = `url(#${randomId})`
     var remainder = (props.value - props.total) * 100;
-    console.log(remainder,'remainder')
+
     if (remainder < 12.5) {
       percent = 0;
     } else if (remainder < 37.5) {

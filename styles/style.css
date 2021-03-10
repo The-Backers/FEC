@@ -612,6 +612,15 @@ tr th {
   padding: 5px;
 }
 
+.review-title {
+  margin-bottom: 2rem;
+
+}
+
+.review-title h1 {
+  font-size: 2rem;
+}
+
 .reviews-content {
   display: flex;
 }
@@ -626,18 +635,20 @@ tr th {
 
 .review-list {
   width: 58vw;
-  border: solid black 2px;
+
 
 }
 
 .review-tiles {
-  height: 90vh;
+  height: 70vh;
   overflow: auto;
+  margin-bottom: 1rem;
 }
 
 .review-tile {
   padding: 0 10px 0 10px;
   border: solid #7B9EB3 2px;
+  border-radius: 10px;
   margin-bottom: 1px;
   display: grid;
   grid-template-columns:  repeat( auto-fit, minmax(12vw, 1fr) ) ;
@@ -744,6 +755,10 @@ tr th {
   width: 30vw;
 }
 
+.reviews-recommend-percent {
+  margin-top: .5rem;
+}
+
 .review-bar {
  display: flex;
 }
@@ -771,7 +786,8 @@ tr th {
 }
 
 .review-characteristic{
-  width: 60%;
+  width: 80%;
+  margin-bottom: 1rem;
 }
 
 .review-characteristic p {
@@ -791,17 +807,19 @@ tr th {
   width: 50%;
   height: 10px;
   border-right: solid black 4px;
-  margin-bottom: 10px;
+
 }
 
 .characteristics-labels {
-
   display: flex;
   justify-content: space-between;
+
 }
 
 .characteristics-labels p{
   margin-top: 0;
+  font-size: .75rem;
+  text-align: center;
 }
 
 
