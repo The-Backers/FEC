@@ -40,6 +40,7 @@ class ReviewPhoto extends React.Component{
       <ReactModal
          isOpen={this.state.showPhoto}
          contentLabel="Review Photo"
+         onRequestClose = {this.handleClosePhoto}
          style = {{position: 'relative'}}
       >
         <button style = {{position: 'sticky', top: '0', left: '0'}} onClick={this.handleClosePhoto}>Close</button>
