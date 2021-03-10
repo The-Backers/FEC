@@ -74,7 +74,7 @@ render() {
 
   return (
     <div className = 'review-tile'>
-      <h3 className = 'review-summary'>{this.props.review.summary}, {JSON.stringify(this.props.helpfulLog)}</h3>
+      <h3 className = 'review-summary'>{this.props.review.summary}</h3>
       <div className = 'review-stars'><Stars className = 'review-stars' total = {this.props.review.rating} /></div>
 
       <p className = 'review-user-date'>{this.props.review.reviewer_name}: {date}</p>
@@ -119,7 +119,7 @@ render() {
         }
         </div>
       <div className = 'review-actions'>
-        <p className = 'review-helpful'>Helpful? <span onClick = {(() => {this.props.handleHelpfulLog(this.props.review.review_id)})} >Yes</span> ({this.props.review.helpfulness}) </p>
+        <p className = 'review-helpful'>Helpful? <span onClick = {(() => {if (this.props.helpfulLog[this.props.review.review_id] ===undefined) {this.props.handleHelpfulLog(this.props.review.review_id); console.log('yes')}})} >Yes</span> ({this.props.review.helpfulness}) </p>
 
       </div>
 
