@@ -6,7 +6,21 @@ var fetchReviewsReducer = (state={}, action) => {
 
 
   if (action.type === 'SHOW_REVIEWS') {
-    return action.reviews || [];
+
+    if (Object.keys(state).length !== 0) {
+
+      console.log(action.reviews.results.length, state.results.length)
+      if (action.reviews.results.length < 2) {
+
+
+          action.reviews.done = 'none';
+
+
+      }
+    }
+      action.reviews.sort = action.sort;
+      return action.reviews || [];
+
   } else {
     return state;
   }

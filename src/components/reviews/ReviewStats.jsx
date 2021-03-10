@@ -90,11 +90,12 @@ render(){
       if (Object.keys(this.state.widths).length === 5) {
 
         bars =   <div>
-        <ReviewRatingsBar value = '1' ratings = {this.props.stats.ratings} width = {this.state.widths['1']}  />
-        <ReviewRatingsBar value = '2' ratings = {this.props.stats.ratings} width = {this.state.widths['2']}  />
-        <ReviewRatingsBar value = '3' ratings = {this.props.stats.ratings} width = {this.state.widths['3']}  />
-        <ReviewRatingsBar value = '4' ratings = {this.props.stats.ratings} width = {this.state.widths['4']}  />
-        <ReviewRatingsBar value = '5' ratings = {this.props.stats.ratings} width = {this.state.widths['5']} />
+        <ReviewRatingsBar getReviews = {this.props.getReviews} stats = {this.props.stats} value = {0} ratings = {this.props.stats.ratings} width = {this.state.widths['0']}  />
+        <ReviewRatingsBar getReviews = {this.props.getReviews} stats = {this.props.stats} value = {1} ratings = {this.props.stats.ratings} width = {this.state.widths['1']}  />
+        <ReviewRatingsBar getReviews = {this.props.getReviews} stats = {this.props.stats} value = {2} ratings = {this.props.stats.ratings} width = {this.state.widths['2']}  />
+        <ReviewRatingsBar getReviews = {this.props.getReviews} stats = {this.props.stats} value = {3} ratings = {this.props.stats.ratings} width = {this.state.widths['3']}  />
+        <ReviewRatingsBar getReviews = {this.props.getReviews} stats = {this.props.stats} value = {4} ratings = {this.props.stats.ratings} width = {this.state.widths['4']}  />
+        <ReviewRatingsBar getReviews = {this.props.getReviews} stats = {this.props.stats} value = {5} ratings = {this.props.stats.ratings} width = {this.state.widths['5']} />
         </div>
       } else {
         bars = <p>hi</p>

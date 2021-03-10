@@ -3,6 +3,8 @@ import TOKEN from '../../config.js';
 import setProduct from './overview/setProduct.js';
 import fetchStyles from './overview/fetchStyles.js';
 import fetchRelated from './outfits/fetchRelated.js';
+import fetchReviews from './reviews/fetchReviews.js';
+import fetchReviewMeta from './reviews/fetchReviewMeta.js';
 import setGalleryIndex from './overview/setGalleryIndex.js'
 import setRelatedIndex from './outfits/setRelatedIndex.js'
 import store from '../store/store.js'
@@ -31,6 +33,12 @@ var handleProductSelect = (productId) => {
        dispatch(fetchStyles(productId));
        dispatch(setGalleryIndex(0))
     })
+    .then(() => {
+      dispatch(fetchReviews(productId));
+   })
+   .then(() => {
+    dispatch(fetchReviewMeta(productId));
+ })
     .catch((err) => {
       console.log(err);
     })

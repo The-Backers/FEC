@@ -63,6 +63,10 @@ componentDidMount() {
 render() {
 
 
+  if (this.props.review.response) {
+   var resp = ( <p>Response from Seller: {this.props.review.response}</p> )
+  }
+
   var date = `${months[this.state.month]} ${this.state.day}, ${this.state.year}`
 
 
@@ -117,6 +121,10 @@ render() {
         <p className = 'review-report'>
            <span>Report</span>
         </p>
+      </div>
+
+      <div className = 'review-response'>
+        {resp}
       </div>
 
 
