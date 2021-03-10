@@ -6,6 +6,7 @@ import fetchRelated from './outfits/fetchRelated.js';
 import fetchReviews from './reviews/fetchReviews.js';
 import fetchReviewMeta from './reviews/fetchReviewMeta.js';
 import setGalleryIndex from './overview/setGalleryIndex.js'
+import setRelatedIndex from './outfits/setRelatedIndex.js'
 import store from '../store/store.js'
 import thunk from 'redux-thunk';
 import axios from 'axios';
@@ -26,7 +27,7 @@ var handleProductSelect = (productId) => {
     })
     .then(() => {
       dispatch(fetchRelated(dispatch));
-
+      dispatch(setRelatedIndex(0));
     })
     .then(() => {
        dispatch(fetchStyles(productId));
