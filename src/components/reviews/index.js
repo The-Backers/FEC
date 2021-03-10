@@ -1,6 +1,7 @@
 import React from 'react';
 import ReviewList from './ReviewList.jsx';
 import ReviewStats from './ReviewStats.jsx';
+import AddReview from './AddReview.jsx';
 
 class Reviews extends React.Component  {
 
@@ -10,7 +11,7 @@ class Reviews extends React.Component  {
 
 
   componentDidMount() {
-    this.props.handleGetReviews();
+    //  this.props.handleGetReviews('11004', 4);
   }
 
 
@@ -24,12 +25,14 @@ class Reviews extends React.Component  {
      <div className = 'reviews-content'>
         <div className='reviews-ratings'>
 
-          <ReviewStats stats = {this.props.reviewMeta} />
+          <ReviewStats stats = {this.props.reviewMeta} getReviews = {{get: this.props.handleGetReviews, sort: this.props.reviews.sort, length: this.props.reviews.length}} />
 
         </div>
 
         <div className='reviews-accordion'>
-            <ReviewList reviews = {this.props.reviews.results} />
+            <ReviewList sort = {this.props.reviews.sort} display = {this.props.reviews.done} product = {this.props.reviews.product} reviews = {this.props.reviews.results} more = {this.props.handleGetReviews} />
+            <AddReview characteristics = {this.props.reviewMeta.characteristics} name = {this.props.product.name} sort = {this.props.reviews.sort} length = {this.props.reviews.length} id = {this.props.product.id} add = {this.props.handleAddReview} />
+
         </div>
      </div>
    </div>
