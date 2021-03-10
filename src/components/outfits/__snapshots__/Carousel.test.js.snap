@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Carousel Carousel Snapshot 1`] = `
+<section
+  role="row"
+  style={
+    Object {
+      "padding": "0 40px",
+    }
+  }
+>
+  <r
+    activeItemIndex={0}
+    activePosition="left"
+    alwaysShowChevrons={false}
+    calculateActualTranslateX={[Function]}
+    chevronWidth={40}
+    classes={Object {}}
+    disableSwipe={false}
+    enablePlaceholder={false}
+    firstAndLastGutter={false}
+    gutter={20}
+    infiniteLoop={false}
+    leftChevron={
+      <button>
+        &lt;
+      </button>
+    }
+    numberOfCards={4}
+    numberOfPlaceholderItems={0}
+    onActiveStateChange={null}
+    outsideChevron={true}
+    placeholderItem={null}
+    requestToChangeActive={[Function]}
+    rightChevron={
+      <button>
+        &gt;
+      </button>
+    }
+    showSlither={false}
+    slidesToScroll={1}
+  />
+</section>
+`;

@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "react-dev": "webpack --mode development --watch",
-    "test": "npx jest --coverage --watch"
+    "test": "npx jest --watch"
   },
   "jest": {
     "setupFilesAfterEnv": [
       "./testing/setupTests.js"
+    ],
+    "testPathIgnorePatterns" : [
+      "<rootDir>/config.js"
     ],
     "verbose": true
   },

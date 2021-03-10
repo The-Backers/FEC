@@ -27,7 +27,8 @@ var initialSate = {
   quantity: [],
   currentGalleryIndex: 0,
   selectedSku: 0,
-
+  outfitsCarouselIndex: 0,
+  relatedCarouselIndex: 0
 };
 
 export const store = createStore (

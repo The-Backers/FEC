@@ -60,7 +60,7 @@ var Star = (props) => {
   }
 
 //this actually puts it togetehr
-  return( <svg viewBox = '0 0 40 40' >
+  return( <svg viewBox = '0 0 40 40' onClick = {() => {props.onClick(props.value)}}>
       {partial}
   <polyline stroke = '#487DB8' strokeWidth = '2' fill = {fillValue} points = {starPoints} />
 </svg>)

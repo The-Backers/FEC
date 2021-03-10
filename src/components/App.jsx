@@ -9,7 +9,7 @@ import Reviews from './reviews';
 var App = () => (
   <div id="overall-container">
     <OverviewContainer />
-    <OutfitsContainer />
+    <OutfitsContainer async/>
     <ReviewsContainer />
   </div>
 );

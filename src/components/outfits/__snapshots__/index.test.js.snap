@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RelatedItems RelatedItems Snapshot 1`] = `
+<section
+  className="related-products"
+  role="grid"
+>
+  <h3
+    className="related-products-title"
+  >
+    Related Products
+  </h3>
+  <Connect(Carousel)
+    className="carousel"
+    outfits={false}
+  />
+  <h3
+    className="outfits-title"
+  >
+    Your Outfit
+  </h3>
+  <Connect(Carousel)
+    className="carousel outfits"
+    outfits={true}
+  />
+</section>
+`;

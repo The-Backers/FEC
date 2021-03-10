@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App App Snapshot 1`] = `
+<div
+  id="overall-container"
+>
+  <Connect(Overview) />
+  <Connect(RelatedItems) />
+  <Connect(Reviews) />
+</div>
+`;
