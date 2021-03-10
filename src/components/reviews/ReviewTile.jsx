@@ -1,6 +1,7 @@
 import React from 'react';
 import ReviewPhoto from './ReviewPhoto.jsx';
 import Stars from '../shared/Stars.jsx';
+
 //assigns month names to numbers
 var months = {
   0: 'January',
@@ -53,6 +54,7 @@ showMore(event) {
 
 componentDidMount() {
 
+  console.log(this.props.helpfulLog, 'review-tile')
     this.more.current.style.display = 'none'
   if (this.state.body2.length > 0) {
     var x = this.state.body1 + '...';
@@ -72,7 +74,7 @@ render() {
 
   return (
     <div className = 'review-tile'>
-      <h3 className = 'review-summary'>{this.props.review.summary}</h3>
+      <h3 className = 'review-summary'>{this.props.review.summary}, {JSON.stringify(this.props.helpfulLog)}</h3>
       <div className = 'review-stars'><Stars className = 'review-stars' total = {this.props.review.rating} /></div>
 
       <p className = 'review-user-date'>{this.props.review.reviewer_name}: {date}</p>
@@ -117,10 +119,8 @@ render() {
         }
         </div>
       <div className = 'review-actions'>
-        <p className = 'review-helpful'>Helpful? <span >Yes</span> ({this.props.review.helpfulness}) </p>
-        <p className = 'review-report'>
-           <span>Report</span>
-        </p>
+        <p className = 'review-helpful'>Helpful? <span onClick = {(() => {this.props.handleHelpfulLog(this.props.review.review_id)})} >Yes</span> ({this.props.review.helpfulness}) </p>
+
       </div>
 
       <div className = 'review-response'>
