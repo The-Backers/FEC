@@ -25,6 +25,8 @@ var initialSate = {
   expand: false,
   skus: [],
   currentGalleryIndex: 0,
+  outfitsCarouselIndex: 0,
+  relatedCarouselIndex: 0
 };
 
 export const store = createStore (

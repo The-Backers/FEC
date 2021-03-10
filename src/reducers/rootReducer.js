@@ -10,7 +10,8 @@ import fetchReviewsReducer from './reviews/fetchReviewsReducer';
 import fetchReviewMetaReducer from './reviews/fetchReviewMetaReducer';
 import setSkuReducer from './overview/setSkuReducer';
 import setGalleryIndexReducer from './overview/setGalleryIndexReducer';
-
+import setOutfitsIndexReducer from './outfits/setOutfitsIndexReducer';
+import setRelatedIndexReducer from './outfits/setRelatedIndexReducer';
 
 var rootReducer = combineReducers({
   skus: setSkuReducer,
@@ -22,7 +23,9 @@ var rootReducer = combineReducers({
   currentStyle: setCurrentStyleReducer,
   reviews: fetchReviewsReducer,
   reviewMeta: fetchReviewMetaReducer,
-  currentGalleryIndex: setGalleryIndexReducer
+  currentGalleryIndex: setGalleryIndexReducer,
+  outfitsCarouselIndex: setOutfitsIndexReducer,
+  relatedCarouselIndex: setRelatedIndexReducer
 })
 
 export default rootReducer;

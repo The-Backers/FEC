@@ -4,7 +4,6 @@ import setStyles from '../../actions/overview/setStyles';
 import fetchStyles from '../../actions/overview/fetchStyles';
 import setGalleryIndex from '../../actions/overview/setGalleryIndex';
 
-
 var mapStoreToProps = (state) => ({
     product: state.product,
     styles: state.currentStyle,
