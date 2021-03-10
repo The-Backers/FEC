@@ -10,6 +10,7 @@ const ProductCard = ({product, index, currentProduct, fetchProduct, removeOutfit
   }
 
   const handleRemove = (e) => {
+    console.log('item to be removed: ', e.target.name);
     removeOutfit(e.target.name);
     logInteraction(`remove-outfit: ${e.target.name}`, 'related-items');
   }
@@ -25,7 +26,7 @@ const ProductCard = ({product, index, currentProduct, fetchProduct, removeOutfit
           </span>
         }
         {outfits &&
-          <span className="outfits-x" name={product.id} onClick={handleRemove}>X</span>
+          <button className="outfits-x" name={product.id} onClick={handleRemove}>X</button>
         }
       </div>
       <span className="product-category" onClick={() => handleClick(product.id)}>{product.category}</span>
