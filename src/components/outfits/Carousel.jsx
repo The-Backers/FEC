@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import ProductCard from './ProductCard.jsx';
+import logInteraction from '../shared/logInteraction.js';
 
 const Carousel = ({relatedProducts, currentProduct, fetchProduct, addToOutfit, removeOutfit, outfits, outfitProducts, outfitsCarouselIndex, relatedCarouselIndex, changeOutfitsIndex, changeRelatedIndex}) => {
   const chevronWidth = 10;
@@ -15,6 +16,7 @@ const Carousel = ({relatedProducts, currentProduct, fetchProduct, addToOutfit, r
     }) : null;
 
   const addOutfit = (e) => {
+    logInteraction(`add-outfit: ${e.target.name}`, 'related-items');
     addToOutfit(e.target.name);
   }
 

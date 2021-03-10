@@ -1,14 +1,17 @@
 import React from 'react';
 import Stars from '../shared/Stars.jsx';
 import ComparisonModal from './ComparisonModal.jsx';
+import logInteraction from '../shared/logInteraction.js';
 
 const ProductCard = ({product, index, currentProduct, fetchProduct, removeOutfit, outfits}) => {
   const handleClick = (id) => {
     fetchProduct(id);
+    logInteraction(`change-product: ${id}`, 'related-items');
   }
 
   const handleRemove = (e) => {
     removeOutfit(e.target.name);
+    logInteraction(`remove-outfit: ${e.target.name}`, 'related-items');
   }
 
   return (
