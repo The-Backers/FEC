@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactModal from 'react-modal';
-import ClickableStars from '../shared/ClickableStars.jsx'
+import ClickableStars from '../shared/ClickableStars.jsx';
+import logInteraction from '../shared/logInteraction.js';
+
 
 const customStyles = {
   content : {
@@ -82,24 +84,35 @@ class AddReview extends React.Component {
     this.handleEmailChange = this.handleEmailChange.bind(this);
     this.handleCharacteristicChange = this.handleCharacteristicChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.clickLogger = this.clickLogger.bind(this);
+
   }
 
+
+clickLogger(name,input) {
+  logInteraction(`${name}: ${input}`, 'reviews');
+}
+
+
   handleOpenForm() {
+    this.clickLogger('open-add-review-form', this.props.id);
     ReactModal.setAppElement('#app');
     this.setState({ showForm: true });
   }
 
   handleCloseForm() {
+    this.clickLogger('close-add-review-form', this.props.id);
     this.setState({ showForm: false });
   }
 
   handleRatingChange(event) {
 
-
+    this.clickLogger('set-review-rating', this.props.id);
     this.setState({rating: event});
   }
 
   handleRecommendChange(event) {
+    this.clickLogger('set-review-recommend', this.props.id);
     if (event.target.value === 'true') {
       var x = true;
     } else {
@@ -111,6 +124,7 @@ class AddReview extends React.Component {
   }
 
   handleBodyChange(event) {
+
     this.setState({body: event.target.value});
   }
 
@@ -125,6 +139,7 @@ class AddReview extends React.Component {
   }
 
   handleCharacteristicChange(event, element) {
+    this.clickLogger('set-review-characteristic', this.props.id);
     var x = this.state.characteristics;
 
     x[this.props.characteristics[element].id] =  parseInt(event.target.value);
@@ -135,7 +150,7 @@ class AddReview extends React.Component {
   }
 
   handlePhoto(event) {
-
+    this.clickLogger('set-review-photo', this.props.id);
     var reader = new FileReader();
     var parent = this;
     var file = event.target.files[0];
@@ -157,6 +172,7 @@ class AddReview extends React.Component {
 
 
 handleSubmit(event) {
+  this.clickLogger('submit-new-review', this.props.id);
   event.preventDefault();
   // var elements = document.getElementById('add-review-form').elements;
   // var values = {};
@@ -256,7 +272,7 @@ handleSubmit(event) {
 
             <p>Do you recommend this product?*</p>
 
-              <input type = 'radio' id='recommend' name = 'recommend' value = {true} onChange = {this.handleRecommendChange} required></input>
+              <input type = 'radio' id='recommend' name = 'recommend' value = {true}  onChange = {this.handleRecommendChange} required></input>
               <label htmlFor = 'recommend'>Yes</label>
               <input type = 'radio' id='no-recommend' name = 'recommend'  value = {false} onChange = {this.handleRecommendChange}></input>
               <label htmlFor = 'no-recommend'>No</label>
@@ -280,12 +296,12 @@ handleSubmit(event) {
             </div>
 
             <label htmlFor = 'add-review-summary'>Summary: </label>
-            <input id = 'add-review-summary' name = 'add-review-summary' maxLength = '60'  value = {this.state.summary} onChange = {this.handleSummaryChange} type = 'text'/>
+            <input id = 'add-review-summary' name = 'add-review-summary' maxLength = '60' onClick = {() => {this.clickLogger('set-review-summary', this.props.id)}}  value = {this.state.summary} onChange = {this.handleSummaryChange} type = 'text'/>
 
             <br></br>
 
             <label htmlFor = 'add-review-body'>Review Body*: </label>
-            <input id = 'add-review-body' name = 'add-review-body' type = 'text' maxLength = '1000' minLength = '50' onChange = {this.handleBodyChange} value = {this.state.body}  required />
+            <input id = 'add-review-body' name = 'add-review-body' type = 'text' maxLength = '1000' minLength = '50' onClick = {() => {this.clickLogger('set-review-body', this.props.id)}} onChange = {this.handleBodyChange} value = {this.state.body}  required />
             <br></br>
             {minCharLabel}
 
@@ -298,12 +314,12 @@ handleSubmit(event) {
             <br></br>
 
             <label htmlFor = 'add-review-nickname'>Nickname*: </label>
-            <input id = 'add-review-nickname' name = 'add-review-nickname' maxLength = '60' type = 'text' value = {this.state.nickname} onChange = {this.handleNicknameChange} required />
+            <input id = 'add-review-nickname' name = 'add-review-nickname' maxLength = '60' type = 'text' value = {this.state.nickname} onClick = {() => {this.clickLogger('set-review-nickname', this.props.id)}} onChange = {this.handleNicknameChange} required />
 
             <br></br>
 
             <label htmlFor = 'add-review-email'>Email*: </label>
-            <input id = 'add-review-email' name = 'add-review-email' maxLength = '60' type = 'email' value = {this.state.email} onChange = {this.handleEmailChange} required />
+            <input id = 'add-review-email' name = 'add-review-email' maxLength = '60' type = 'email' value = {this.state.email} onClick = {() => {this.clickLogger('set-review-email', this.props.id)}} onChange = {this.handleEmailChange} required />
 
             <br></br>
 

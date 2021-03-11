@@ -1,4 +1,5 @@
 import React from 'react';
+import logInteraction from '../shared/logInteraction.js';
 
 //potential filtering for later
 // onClick = {() => {console.log(stats.product_id, 2, getReviews.sort, value); getReviews.get(stats.product_id, 2 , getReviews.sort, value)}}
@@ -10,11 +11,16 @@ class ReviewRatingsBar extends React.Component {
 
         constructor(props) {
                 super(props);
-                this.filterFunc = this.filterFunc.bind(this);
+                this.filterFunc = this.filterFunc.bind(this)
+                this.clickLogger = this.clickLogger.bind(this);;
+        }
+
+        clickLogger(input) {
+          logInteraction(`review-filter-${this.props.value}-stars: ${input}`, 'reviews');
         }
 
   filterFunc(event) {
-
+    this.clickLogger(this.props.stats.product_id)
     var tempFilter = [];
     if (this.props.getReviews.filter) {
         tempFilter = this.props.getReviews.filter
