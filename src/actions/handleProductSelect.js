@@ -31,6 +31,7 @@ var handleProductSelect = (productId) => {
     })
     .then(() => {
       dispatch(fetchReviews(productId));
+
    })
    .then(() => {
     dispatch(fetchReviewMeta(productId));

@@ -12,7 +12,11 @@ var Star = (props) => {
   var percent;
   var fillValue;
 
+  var getRandomInt = (max) => {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
 
+  var randomId = getRandomInt(1000000).toString()
 
 
   //if the stars value is less than the total score, it gets filled completely
@@ -23,18 +27,19 @@ var Star = (props) => {
     fillValue = 'none';
     //these if statements are the break points for how filled the star should be
   } else {
-    fillValue = 'url(#partial)'
+    fillValue = `url(#${randomId})`
     var remainder = (props.value - props.total) * 100;
+
     if (remainder < 12.5) {
-      percent = 0;
+      percent = 100;
     } else if (remainder < 37.5) {
-      percent = 25;
+      percent = 75;
     } else if (remainder < 62.5) {
       percent = 50;
     } else if (remainder < 87.5) {
-      percent = 75;
+      percent = 25;
     } else {
-      percent = 100;
+      percent = 0;
     }
   }
 
@@ -42,7 +47,7 @@ var Star = (props) => {
   var gradient = (percent) => {
     return (
       <defs>
-  <linearGradient id = 'partial' x1='0%' y1='0%' x2='100%' y2='0%'>
+  <linearGradient id = {randomId} x1='0%' y1='0%' x2='100%' y2='0%'>
     <stop offset = '0%' style = {{'stopColor': '#487DB8', 'stopOpacity': '1'}} />
     <stop offset = {percent + '%'} style = {{'stopColor': '#487DB8', 'stopOpacity': '1'}} />
     <stop offset = {percent + '%'} style = {{'stopColor': '#487DB8', 'stopOpacity': '0'}} />

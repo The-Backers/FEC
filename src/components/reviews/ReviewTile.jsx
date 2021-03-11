@@ -1,6 +1,8 @@
 import React from 'react';
 import ReviewPhoto from './ReviewPhoto.jsx';
 import Stars from '../shared/Stars.jsx';
+import logInteraction from '../shared/logInteraction.js';
+
 //assigns month names to numbers
 var months = {
   0: 'January',
@@ -31,13 +33,17 @@ class ReviewTile extends React.Component {
     }
     this.more = React.createRef();
     this.showMore = this.showMore.bind(this);
+    this.clickLogger = this.clickLogger.bind(this);
   }
 
 //sets the string for the date itself
 
+clickLogger(name,input) {
+  logInteraction(`${name}: ${input}`, 'reviews');
+}
 
 showMore(event) {
-
+    this.clickLogger('review-show-more', this.props.review.review_id)
     if (this.more.current.style.display !== 'none') {
       this.more.current.style.display = 'none';
       var x = this.state.body1 + '...';
@@ -52,6 +58,7 @@ showMore(event) {
 }
 
 componentDidMount() {
+
 
     this.more.current.style.display = 'none'
   if (this.state.body2.length > 0) {
@@ -117,10 +124,8 @@ render() {
         }
         </div>
       <div className = 'review-actions'>
-        <p className = 'review-helpful'>Helpful? <span >Yes</span> ({this.props.review.helpfulness}) </p>
-        <p className = 'review-report'>
-           <span>Report</span>
-        </p>
+        <p className = 'review-helpful'  >Helpful? <span style = {{color: (this.props.helpfulLog[this.props.review.review_id] !== undefined) ? 'green' : null}} onClick = {(() => {if (this.props.helpfulLog[this.props.review.review_id] ===undefined) {this.props.handleHelpfulLog(this.props.review.review_id); this.clickLogger('review-helpful', this.props.review.review_id) }})} >Yes</span> ({this.props.review.helpfulness}) </p>
+
       </div>
 
       <div className = 'review-response'>

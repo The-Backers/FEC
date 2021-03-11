@@ -9,7 +9,7 @@ import product from '../../sample-data/products/get-productId.json';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['outfits']
+  whitelist: ['outfits', 'reviewHelpfulLog']
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -22,6 +22,7 @@ var initialSate = {
   outfits: [],
   reviews: [],
   reviewMeta: {},
+  reviewHelpfulLog: {},
   expand: false,
   skus: [],
   currentGalleryIndex: 0,

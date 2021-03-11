@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactModal from 'react-modal';
+import logInteraction from '../shared/logInteraction.js';
 
 const customStyles = {
   content : {
@@ -22,13 +23,23 @@ class ReviewPhoto extends React.Component{
     }
     this.handleOpenPhoto = this.handleOpenPhoto.bind(this);
    this.handleClosePhoto = this.handleClosePhoto.bind(this);
+   this.clickLogger = this.clickLogger.bind(this);
   }
 
+
+  clickLogger(name,input) {
+    logInteraction(`${name}: ${input}`, 'reviews');
+  }
+
+
   handleOpenPhoto () {
+    ReactModal.setAppElement('#app');
+    this.clickLogger('open-review-photo', this.props.id);
     this.setState({ showPhoto: true });
   }
 
   handleClosePhoto () {
+    this.clickLogger('close-review-photo', this.props.id);
     this.setState({ showPhoto: false });
   }
 
@@ -44,7 +55,7 @@ class ReviewPhoto extends React.Component{
          style = {{position: 'relative'}}
       >
         <button style = {{position: 'sticky', top: '0', left: '0'}} onClick={this.handleClosePhoto}>Close</button>
-        <img src = {this.props.url} />
+        <img alt = 'review-photo' src = {this.props.url} />
       </ReactModal>
     </div>
 
