@@ -1,4 +1,3 @@
-import TOKEN from '../../../config.js';
 import axios from 'axios';
 import addPhotos from './addPhotos.js';
 import store from '../../store/store.js'

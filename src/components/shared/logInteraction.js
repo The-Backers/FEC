@@ -1,5 +1,4 @@
 import axios from 'axios';
-import TOKEN from '../../../config.js';
 
 // both the element and the widget have to be strings!
 const logInteraction = (element, widget) => {

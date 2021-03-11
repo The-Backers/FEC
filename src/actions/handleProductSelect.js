@@ -1,5 +1,4 @@
 // import other actions you want to take place after the product has been changed
-import TOKEN from '../../config.js';
 import setProduct from './overview/setProduct.js';
 import fetchStyles from './overview/fetchStyles.js';
 import fetchRelated from './outfits/fetchRelated.js';
