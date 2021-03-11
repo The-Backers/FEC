@@ -28,7 +28,7 @@ var initialSate = {
   selectedSku: 0,
   outfitsCarouselIndex: 0,
   relatedCarouselIndex: 0,
-  changePage: true,
+  changePage: false,
 
 };
 
