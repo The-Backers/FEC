@@ -3,8 +3,6 @@ import thunk from 'redux-thunk';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import rootReducer from '../reducers/rootReducer.js';
-import styles from '../../sample-data/products/get-productId-styles.json';
-import product from '../../sample-data/products/get-productId.json';
 
 const persistConfig = {
   key: 'root',
@@ -15,19 +13,23 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 var initialSate = {
-  product: product,
-  currentStyles: styles.results,
+  product: {},
+  currentStyles: [],
   relatedProducts: [],
-  currentStyle: styles.results[0],
+  currentStyle: {},
   outfits: [],
   reviews: [],
   reviewMeta: {},
   reviewHelpfulLog: {},
   expand: false,
   skus: [],
+  quantity: [],
   currentGalleryIndex: 0,
+  selectedSku: 0,
   outfitsCarouselIndex: 0,
-  relatedCarouselIndex: 0
+  relatedCarouselIndex: 0,
+  changePage: false,
+
 };
 
 export const store = createStore (

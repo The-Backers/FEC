@@ -6,7 +6,7 @@ import fetchReviews from './reviews/fetchReviews.js';
 import fetchReviewMeta from './reviews/fetchReviewMeta.js';
 import setGalleryIndex from './overview/setGalleryIndex.js'
 import setRelatedIndex from './outfits/setRelatedIndex.js'
-import store from '../store/store.js'
+import store from '../store/store.js';
 import thunk from 'redux-thunk';
 import axios from 'axios';
 
@@ -15,10 +15,9 @@ var handleProductSelect = (productId) => {
   return (dispatch) => {
 
     return axios.get(`/products/${productId}`)
-    // add any dispatches that will re render your component after a product change here. Make sure you chain it with a then if it is doing async request! chain after the initial then which handles the initial store change.
-
     .then(({data}) => {
       dispatch(setProduct(data));
+      console.log(window.location)
     })
     .then(() => {
       dispatch(fetchRelated(dispatch));
@@ -34,6 +33,7 @@ var handleProductSelect = (productId) => {
    })
    .then(() => {
     dispatch(fetchReviewMeta(productId));
+    window.location.hash = `${productId}`;
  })
     .catch((err) => {
       console.log(err);
