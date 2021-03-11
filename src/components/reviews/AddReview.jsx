@@ -315,11 +315,13 @@ handleSubmit(event) {
 
             <label htmlFor = 'add-review-nickname'>Nickname*: </label>
             <input id = 'add-review-nickname' name = 'add-review-nickname' maxLength = '60' type = 'text' value = {this.state.nickname} onClick = {() => {this.clickLogger('set-review-nickname', this.props.id)}} onChange = {this.handleNicknameChange} required />
+            <label htmlFor = 'add-review-nickname'>For privacy reasons, do not use your full name or email addressg</label>
 
             <br></br>
 
             <label htmlFor = 'add-review-email'>Email*: </label>
             <input id = 'add-review-email' name = 'add-review-email' maxLength = '60' type = 'email' value = {this.state.email} onClick = {() => {this.clickLogger('set-review-email', this.props.id)}} onChange = {this.handleEmailChange} required />
+            <label htmlFor = 'add-review-email'>For authentication reasons, you will not be emailed</label>
 
             <br></br>
 
