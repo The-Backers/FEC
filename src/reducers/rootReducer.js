@@ -15,6 +15,7 @@ import setQuantityReducer from './overview/setQuantityReducer';
 import setOutfitsIndexReducer from './outfits/setOutfitsIndexReducer';
 import setRelatedIndexReducer from './outfits/setRelatedIndexReducer';
 import viewMainPageReducer from './overview/viewMainPageReducer';
+import fetchReviewHelpfulLogReducer from './reviews/fetchReviewHelpfulLogReducer';
 
 var rootReducer = combineReducers({
   changePage: viewMainPageReducer,
@@ -28,6 +29,7 @@ var rootReducer = combineReducers({
   currentStyle: setCurrentStyleReducer,
   reviews: fetchReviewsReducer,
   reviewMeta: fetchReviewMetaReducer,
+  reviewHelpfulLog: fetchReviewHelpfulLogReducer,
   currentGalleryIndex: setGalleryIndexReducer,
   quantity: setQuantityReducer,
   outfitsCarouselIndex: setOutfitsIndexReducer,

@@ -7,7 +7,7 @@ import rootReducer from '../reducers/rootReducer.js';
 const persistConfig = {
   key: 'root',
   storage, // not sure about this one!
-  whitelist: ['outfits']
+  whitelist: ['outfits', 'reviewHelpfulLog']
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -20,6 +20,7 @@ var initialSate = {
   outfits: [],
   reviews: [],
   reviewMeta: {},
+  reviewHelpfulLog: {},
   expand: false,
   skus: [],
   quantity: [],
