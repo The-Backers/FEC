@@ -6,6 +6,7 @@ import SizeDropDownContainer from '../../containers/overview/SizeDropDownContain
 import StylesSectionContainer from '../../containers/overview/StylesSectionContainer.js'
 import ProductInfoContainer from '../../containers/overview/ProductInfoContainer.js';
 
+
 let DefaultGallery = ({reviewMeta, expandGallery}) => {
 
   let scrollToReviews = document.documentElement.clientHeight * 2;

@@ -1,6 +1,7 @@
 import React, {useState, useEffect, Fragment} from 'react';
 import axios from 'axios';
 import TOKEN from '../../../config.js';
+import logInteraction from '../shared/logInteraction.js';
 
 
 let SizeDropDown = ({quantity, setQuantity, product, selectedSku, setSku, skus, fetchOutfit, checkedOut}) => {
@@ -37,10 +38,11 @@ let SizeDropDown = ({quantity, setQuantity, product, selectedSku, setSku, skus, 
 
   return(
   <form onSubmit={(e) => checkOut(e)}>
-    <select onChange={getSelectedSku} id='select-size-dropdown'>
+    <select  onChange={getSelectedSku} id='select-size-dropdown'>
       <option value={0} default>SELECT SIZE</option>
       {skus.map((sku, i) => {
-        return (<option  value={sku.sku} key={sku.sku}>{sku.size}</option>)
+        return (<option
+        onClick={(e) =>  logInteraction(`selected Size: ${e.target.value}-${sku.sku}`, 'product-overview')} value={sku.sku} key={sku.sku}>{sku.size}</option>)
       })}
     </select>
 
@@ -48,7 +50,7 @@ let SizeDropDown = ({quantity, setQuantity, product, selectedSku, setSku, skus, 
       {quantity.map((num, i) => {
         if ( i < 15) {
           return (
-          <option key={i} value={num}>{num}</option>
+          <option  onClick={(e) =>  logInteraction(`selected quantity: ${document.getElementById("select-size-dropdown").value}-${num}`, 'product-overview')} key={i} value={num}>{num}</option>
           )
         }
       })}

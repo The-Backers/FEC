@@ -1,9 +1,9 @@
 import React, {useState, Fragment} from 'react';
+import logInteraction from '../shared/logInteraction.js';
 
 
 
 let StylesSection = ({product, currentStyle, styles, changeCurrentStyle, changeIndex}) => {
-
 
   function handleClick(e) {
     var clist = document.getElementsByTagName("input");
@@ -17,6 +17,7 @@ let StylesSection = ({product, currentStyle, styles, changeCurrentStyle, changeI
       }
     }
     changeIndex(0);
+    logInteraction(`selected Style: ${product.name}-${e.target.name}`, 'product-overview')
   }
 
   return(
@@ -25,18 +26,18 @@ let StylesSection = ({product, currentStyle, styles, changeCurrentStyle, changeI
       if (style.style_id === currentStyle.style_id) {
         return (
           <div key={i}>
-          <label onClick={handleClick} htmlFor={style.style_id } name={style.style_id } >
+          <label onClick={(e) => handleClick(e)} htmlFor={style.style_id } name={style.style_id } >
             <input type="checkbox" id={style.style_id } defaultChecked='true' checked/>
             <img  name={style.style_id} key={i} className='individual-styles' alt={product.name + style.name}  src= {style?.photos[0].thumbnail_url} />
-            </label>
+          </label>
           </div>
         )
       }
         return (
           <div key={i}>
-          <label onClick={handleClick} htmlFor={style.style_id } name={style.style_id } >
+          <label onClick={(e) => handleClick(e)} htmlFor={style.style_id } name={style.style_id } >
           <input type="checkbox" id={style.style_id } />
-          <img  name={style.style_id } key={i} className='individual-styles' alt={product.name + style.name }  src= {style.photos[0].thumbnail_url } />
+            <img  name={style.style_id } key={i} className='individual-styles' alt={product.name + style.name }  src= {style.photos[0].thumbnail_url } />
           </label>
           </div>
         )

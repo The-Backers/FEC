@@ -58,6 +58,7 @@ h1, h2, h3, h4 {
 .slogan {
   font-family: 'Montserrat';
   position: absolute;
+  z-index: 1;
   top: 25%;
   left: 25%;
   font-size: 30px;
@@ -74,6 +75,7 @@ h1, h2, h3, h4 {
   font-size: 30px;
   top: 5%;
   left: 3%;
+  z-index: 1;
   color: rgb(255, 254, 252);
 }
 

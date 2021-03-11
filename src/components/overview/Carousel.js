@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import ItemsCarousel from 'react-items-carousel';
 import imageZoom from './imageZoom.js';
+import logInteraction from '../shared/logInteraction.js';
 
-const Carousel = ({index, changeIndex, styles}) => {
+const Carousel = ({product, index, changeIndex, styles}) => {
   const chevronWidth = 30;
 
   var imageStyle = {
@@ -11,10 +12,9 @@ const Carousel = ({index, changeIndex, styles}) => {
   maxHeight: '75vh',
   }
   //children will be an array of images
-
   const children = styles?.photos?.map((photo, index) => {
     return (
-      <img  style={imageStyle} key={index} src={photo?.url} />
+      <img name={product.name} onClick={(e) => logInteraction(`main-image: ${e.target.name}-${imageStyle}`, 'product-overview')} alt={product.name} style={imageStyle} key={index} src={photo?.url} />
     );
   })
 
