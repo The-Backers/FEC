@@ -18,8 +18,8 @@ const ProductCard = ({product, index, currentProduct, fetchProduct, removeOutfit
   return (
     <div className="product-card" key={index} role="cell">
       <div className="product-image-container" role="img">
-        <LazyLoad>
-          <object className="product-image" data={product.stylePhoto} type="image/jpg" alt={product.name} onClick={() => handleClick(product.id)} async>{product.name}</object>
+        <LazyLoad height="220">
+          <object className="product-image" data={product.stylePhoto} type="image/jpg" alt={product.name} onClick={() => handleClick(product.id)} height="220" width="auto" async>{product.name}</object>
         </LazyLoad>
         {!outfits &&
           <span role="button" aria-label="Compare Product" className="compare-product-button">
