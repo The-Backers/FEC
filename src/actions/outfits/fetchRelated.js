@@ -12,11 +12,7 @@ const getUnique = (value, index, array) => {
 var fetchRelated = (dispatch) => {
   const id = store.getState().product.id;
   return dispatch => {
-    axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/${id}/related`, {
-      headers: {
-        'AUTHORIZATION': TOKEN
-      }
-    })
+    axios.get(`/products/${id}/related`)
       .then(({data}) => {
         var unique = data.filter(getUnique);
         dispatch(mapRelated(dispatch, unique, false))

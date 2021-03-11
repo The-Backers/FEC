@@ -9,11 +9,7 @@ var addPhotos = (dispatch, products, outfits) => {
     var items = JSON.parse(JSON.stringify(products))
     var photos = items.map((product) => {
       return (
-        axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/${product.id}/styles`, {
-        headers: {
-          'AUTHORIZATION': TOKEN
-        }
-      })
+        axios.get(`/products/${product.id}/styles`)
         .then((response) => {
           if (response.data.results.length) {
             product.stylePhoto = response.data.results[0].photos[0].url || null;

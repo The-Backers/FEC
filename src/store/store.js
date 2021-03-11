@@ -6,7 +6,7 @@ import rootReducer from '../reducers/rootReducer.js';
 
 const persistConfig = {
   key: 'root',
-  storage, // not sure about this one!
+  storage,
   whitelist: ['outfits', 'reviewHelpfulLog']
 };
 

@@ -7,11 +7,7 @@ var mapRelated = (dispatch, data, outfits) => {
   return dispatch => {
     var items = data.map((id) => {
       return (
-        axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/${id}`, {
-          headers: {
-            'AUTHORIZATION': TOKEN
-          }
-        })
+        axios.get(`/products/${id}`)
         .then((data) => {
           return data.data;
         })
