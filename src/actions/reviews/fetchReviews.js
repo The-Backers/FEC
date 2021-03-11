@@ -6,7 +6,7 @@ import store from '../../store/store.js';
 var fetchReviews = (productId, count = 2, sort = 'relevant', filter = []) => {
 
   return (dispatch) => {
-    axios.get(`https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews/?product_id=${productId}&count=${count}&sort=${sort}`, {
+    axios.get(`/reviews/?product_id=${productId}&count=${count}&sort=${sort}`, {
       headers: {
         'AUTHORIZATION': TOKEN
       }
