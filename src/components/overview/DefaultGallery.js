@@ -1,19 +1,21 @@
-import React, {useState, useEffect, Fragment} from 'react';
+import React, {useState, useEffect, lazy} from 'react';
 import Stars from '../shared/Stars.jsx';
 import getAverage from '../../actions/utils.js'
-import store from '../../store/store.js';
 import CarouselContainer from '../../containers/overview/CarouselContainer.js';
 import SizeDropDownContainer from '../../containers/overview/SizeDropDownContainer.js';
 import StylesSectionContainer from '../../containers/overview/StylesSectionContainer.js'
 import ProductInfoContainer from '../../containers/overview/ProductInfoContainer.js';
 
-let DefaultGallery = ({skus, expand, styles, product, expandGallery, currentStyle, changeCurrentStyle, changeIndex, index}) => {
+let DefaultGallery = ({reviewMeta, expandGallery}) => {
 
-  const [currentQuantity, setCurrentQuantity] = useState(0);
   let scrollToReviews = document.documentElement.clientHeight * 2;
+  const [avgStars, setAvgStars] = useState(0)
 
   useEffect(() => {
-  })
+    if (reviewMeta.ratings) {
+      setAvgStars(getAverage(reviewMeta.ratings))
+    }
+  },[reviewMeta])
 
   return (
     <div  id='overview-body' >
@@ -25,8 +27,7 @@ let DefaultGallery = ({skus, expand, styles, product, expandGallery, currentStyl
       <div className='overview-body-interaction' >
         <div className='product-info'>
           <div className='current-stars'>
-          {/*change the total to be dynamic based on current product */}
-          <div className='current-stars-div'><Stars total = '3.6' /></div> <div className="read-all-scroll" onClick={() => window.scrollTo({top: scrollToReviews, behavior: 'smooth'})}>read all reviews</div>
+          <div className='current-stars-div'><Stars total = {avgStars} /></div> <div className="read-all-scroll" onClick={() => window.scrollTo({top: scrollToReviews, behavior: 'smooth'})}>read all reviews</div>
           </div>
           <ProductInfoContainer />
         </div>
@@ -41,9 +42,4 @@ let DefaultGallery = ({skus, expand, styles, product, expandGallery, currentStyl
 
   )
 }
-{/* <i className="far fa-check-circle check"></i> */}
 export default DefaultGallery;
-
-// ive written code in swift python and javascript
-// i trained professional athletes
-// i played varsity basketball in high school

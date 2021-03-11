@@ -3,8 +3,6 @@ import thunk from 'redux-thunk';
 import { persistStore, persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import rootReducer from '../reducers/rootReducer.js';
-import styles from '../../sample-data/products/get-productId-styles.json';
-import product from '../../sample-data/products/get-productId.json';
 
 const persistConfig = {
   key: 'root',
@@ -28,7 +26,9 @@ var initialSate = {
   currentGalleryIndex: 0,
   selectedSku: 0,
   outfitsCarouselIndex: 0,
-  relatedCarouselIndex: 0
+  relatedCarouselIndex: 0,
+  changePage: true,
+
 };
 
 export const store = createStore (

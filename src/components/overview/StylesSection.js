@@ -1,8 +1,8 @@
-import React, {useState, useEffect, Fragment} from 'react';
+import React, {useState, Fragment} from 'react';
 
 
 
-let StylesSection = ({product, currentStyle, styles, changeCurrentStyle, changeIndex, setQuantity}) => {
+let StylesSection = ({product, currentStyle, styles, changeCurrentStyle, changeIndex}) => {
 
 
   function handleClick(e) {
@@ -16,8 +16,6 @@ let StylesSection = ({product, currentStyle, styles, changeCurrentStyle, changeI
         changeCurrentStyle(styles[i] || {});
       }
     }
-    setQuantity([]);
-    document.getElementById("select-size-dropdown").value = 0;
     changeIndex(0);
   }
 

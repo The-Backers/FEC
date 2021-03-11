@@ -6,11 +6,12 @@ import {store, persistor} from './store/store.js';
 import TOKEN from '../config.js'
 import handleProductSelect from './actions/handleProductSelect';
 import { PersistGate } from 'redux-persist/integration/react'
+import AppContainer from './containers/AppContainer';
 
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <App />
+      <AppContainer />
     </PersistGate>
   </Provider>, document.getElementById('app'), () => handleProductSelect('11005')(store.dispatch)
 );

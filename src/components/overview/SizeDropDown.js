@@ -26,10 +26,7 @@ let SizeDropDown = ({quantity, setQuantity, product, selectedSku, setSku, skus, 
       let newQuantity = [];
       skus.map((sku) => {
         if (sku.sku === selectedSku) {
-          for(var i = 2; i <= sku.quantity; i++) {
-            newQuantity.push(i)
-          }
-          if (sku.quantity === 1) {
+          for(var i = 1; i <= sku.quantity; i++) {
             newQuantity.push(i)
           }
         }
@@ -48,9 +45,8 @@ let SizeDropDown = ({quantity, setQuantity, product, selectedSku, setSku, skus, 
     </select>
 
     {selectedSku > 0 ? <select id='select-quantity-dropdown'>
-    {quantity.length > 0 ?  <option value={1} default>1</option> :  <option id="out-of-stock" default>OUT OF STOCK</option>}
       {quantity.map((num, i) => {
-        if ( i < 14) {
+        if ( i < 15) {
           return (
           <option key={i} value={num}>{num}</option>
           )
@@ -61,11 +57,7 @@ let SizeDropDown = ({quantity, setQuantity, product, selectedSku, setSku, skus, 
             <button type='submit' className='add-to-bag'> ADD TO BAG <i className="fas fa-plus"></i> </button>
             <button type="button" onClick={() => fetchOutfit(product.id)}  className='heart-product'> <i  className="far fa-heart"> </i> </button>
     </div>
-    <div className='social-media-icons'>
-      <div className="facebook fab fa-facebook-square"></div>
-      <div className="twitter fab fa-twitter-square"></div>
-      <div className="pinterest fab fa-pinterest-square"></div>
-    </div>
+
   </form>
   )
 }

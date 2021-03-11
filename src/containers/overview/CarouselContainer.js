@@ -1,7 +1,5 @@
 import { connect, dispatch } from 'react-redux';
 import Carousel from '../../components/overview/Carousel';
-import setStyles from '../../actions/overview/setStyles';
-import fetchStyles from '../../actions/overview/fetchStyles';
 import setGalleryIndex from '../../actions/overview/setGalleryIndex';
 
 var mapStoreToProps = (state) => ({
@@ -13,9 +11,6 @@ var mapStoreToProps = (state) => ({
 var mapDispatchToProps = (dispatch) => ({
     expandGallery: (boolean) => {
       dispatch(expandGallery(boolean))
-    },
-    changeCurrentStyle: (style) => {
-      dispatch(setCurrentStyle(style))
     },
     changeIndex: (index) => {
       dispatch(setGalleryIndex(index))
