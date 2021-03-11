@@ -1,4 +1,4 @@
-import TOKEN from '../../../config.js';
+// import TOKEN from '../../../config.js';
 import axios from 'axios';
 import showReviews from './showReviews.js';
 import store from '../../store/store.js';
@@ -6,11 +6,7 @@ import store from '../../store/store.js';
 var fetchReviews = (productId, count = 2, sort = 'relevant', filter = []) => {
 
   return (dispatch) => {
-    axios.get(`/reviews/?product_id=${productId}&count=${count}&sort=${sort}`, {
-      headers: {
-        'AUTHORIZATION': TOKEN
-      }
-    })
+    axios.get(`/reviews/?product_id=${productId}&count=${count}&sort=${sort}`)
       .then(({data}) => {
 
           if (filter.length > 0) {

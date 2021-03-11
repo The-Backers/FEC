@@ -1,4 +1,4 @@
-import TOKEN from '../../../config.js';
+// import TOKEN from '../../../config.js';
 import axios from 'axios';
 import fetchReviews from './fetchReviews.js';
 import store from '../../store/store.js';
