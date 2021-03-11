@@ -315,7 +315,7 @@ handleSubmit(event) {
 
             <label htmlFor = 'add-review-nickname'>Nickname*: </label>
             <input id = 'add-review-nickname' name = 'add-review-nickname' maxLength = '60' type = 'text' value = {this.state.nickname} onClick = {() => {this.clickLogger('set-review-nickname', this.props.id)}} onChange = {this.handleNicknameChange} required />
-            <label htmlFor = 'add-review-nickname'>For privacy reasons, do not use your full name or email addressg</label>
+            <label htmlFor = 'add-review-nickname'>For privacy reasons, do not use your full name or email address.</label>
 
             <br></br>
 

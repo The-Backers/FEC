@@ -11,7 +11,7 @@
 }
 
 body {
-  background-color: #4b4b4b;
+  background-color: #442101;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -98,7 +98,7 @@ p, h1, h2, h3, h4, h5 {
   margin: 0 auto;
   grid-area: 1/1/2/3;
   height: 8vh;
-  background-color: #373737;
+  background-color: #833f00;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -131,7 +131,7 @@ p, h1, h2, h3, h4, h5 {
 
 .prod-search {
   outline: none;
-  background-color: #373737;
+  background-color: #833f00;
   border-style: none;
   border-bottom: 1px white solid;
   color: white;
@@ -176,7 +176,7 @@ input[type=checkbox]:checked {
   position: absolute;
   height: 500%;
   width: 500%;
-  background-color: #373737;
+  background-color: #833f00;
   z-index: 10;
 }
 
