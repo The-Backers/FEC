@@ -6,7 +6,6 @@ import logInteraction from '../shared/logInteraction.js';
 
 const customStyles = {
   content : {
-
     top                   : '50%',
     left                  : '50%',
     right                 : 'auto',
@@ -20,7 +19,7 @@ class AddReview extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      showForm: true,
+      showForm: false,
       body: 'Why did you like the product or not?',
       email: 'Example: jackson11@email.com',
       nickname: 'Example: jackson11!',
@@ -259,9 +258,11 @@ handleSubmit(event) {
         onRequestClose = {this.handleCloseForm}
       >
         <button style = {{position: 'sticky', top: '0', float: 'right'}} onClick={this.handleCloseForm}>Close</button>
-        <h3>Write Your Review</h3>
-        <h4>About the {this.props.name}</h4>
-        <h5>* = required</h5>
+        <div className = 'add-review-head'>
+          <h3>Write Your Review</h3>
+          <h4>About the {this.props.name}</h4>
+          <h5>* = required</h5>
+        </div>
         <form id = 'add-review-form' className = 'add-review-form' onSubmit = {this.handleSubmit}>
             <label htmlFor = 'overall-rating'>Overall Rating:</label>
             <ClickableStars id = 'overall-rating' rating = {this.handleRatingChange} required/>
@@ -291,6 +292,7 @@ handleSubmit(event) {
 
             } */}
             </div>
+
 
 
             <span htmlFor = 'add-review-summary'>Summary: </span>

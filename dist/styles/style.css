@@ -1021,22 +1021,64 @@ position: relative;
 
 /* add review styles start */
 
+.add-review-head h3{
+  font-size: 2rem;
+}
+
+.add-review-head h4 {
+  margin-bottom: .6rem;
+  margin-top: .6rem;
+
+}
+
+.add-review-head h5 {
+  margin-bottom: 1rem;
+
+}
+
 .characteristic-radio input {
   margin-bottom: 1rem;
 }
 
 #add-review-summary {
   margin-bottom: 1rem;
-  width: 40%
+  width: 80%
 }
 
 #add-review-body {
-  width: 40%;
+  width: 80%;
   padding-bottom: 20%;
   word-break: break-word;
   font-family: Montserrat;
 }
 
+#no-recommend {
+  margin-bottom: 1rem;
+}
+
+#overall-rating {
+  margin-bottom: 1rem;
+}
+
+#overall-rating .star {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* .add-review-form-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.arf-bottom-left{
+  width: 60%;
+}
+
+.arf-bottom-right {
+  margin-top: 3rem;
+  width: 40%;
+} */
 
 
 /* add review styles end */
