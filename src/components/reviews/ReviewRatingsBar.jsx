@@ -54,7 +54,7 @@ class ReviewRatingsBar extends React.Component {
 
   return (
         <div className = 'review-bar'>
-                <div className = {(this.props.width !== '0') ? 'bar-label-active' : 'bar-label'} style = {{color: (this.props.getReviews.filter) ? ((this.props.getReviews.filter.indexOf(this.props.value) >= 0) ? 'red': 'black') : 'black'}} onClick = {this.filterFunc} ><span>{this.props.value} Stars</span></div>
+                <div className = {(this.props.width !== '0') ? 'bar-label-active' : 'bar-label'} style = {{color: (Array.isArray(this.props.getReviews.filter)) ? ((this.props.getReviews.filter.indexOf(this.props.value) >= 0) ? 'red': 'black') : 'black'}} onClick = {this.filterFunc} ><span>{this.props.value} Stars</span></div>
                 {
                   <div className = 'outer-bar'>
                      <div className = 'fill' style ={{width: this.props.width + 'vw'}}></div>
