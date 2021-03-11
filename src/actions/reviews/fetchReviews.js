@@ -1,4 +1,4 @@
-
+import TOKEN from '../../../config.js';
 import axios from 'axios';
 import showReviews from './showReviews.js';
 import store from '../../store/store.js';
@@ -12,14 +12,14 @@ var fetchReviews = (productId, count = 2, sort = 'relevant', filter = []) => {
       }
     })
       .then(({data}) => {
-        if (filter) {
+
           if (filter.length > 0) {
 
 
               data.results = data.results.filter(element => filter.indexOf(element.rating) >= 0)
           }
 
-        }
+
 
         dispatch(showReviews(data, count, sort, filter))
       })

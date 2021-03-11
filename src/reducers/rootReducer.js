@@ -10,11 +10,16 @@ import fetchReviewsReducer from './reviews/fetchReviewsReducer';
 import fetchReviewMetaReducer from './reviews/fetchReviewMetaReducer';
 import setSkuReducer from './overview/setSkuReducer';
 import setGalleryIndexReducer from './overview/setGalleryIndexReducer';
+import setCurrentSkuReducer from './overview/setCurrentSkuReducer';
+import setQuantityReducer from './overview/setQuantityReducer';
 import setOutfitsIndexReducer from './outfits/setOutfitsIndexReducer';
 import setRelatedIndexReducer from './outfits/setRelatedIndexReducer';
+import viewMainPageReducer from './overview/viewMainPageReducer';
 import fetchReviewHelpfulLogReducer from './reviews/fetchReviewHelpfulLogReducer';
 
 var rootReducer = combineReducers({
+  changePage: viewMainPageReducer,
+  selectedSku: setCurrentSkuReducer,
   skus: setSkuReducer,
   product: fetchProductReducer,
   expand: expandGalleryReducer,
@@ -26,6 +31,7 @@ var rootReducer = combineReducers({
   reviewMeta: fetchReviewMetaReducer,
   reviewHelpfulLog: fetchReviewHelpfulLogReducer,
   currentGalleryIndex: setGalleryIndexReducer,
+  quantity: setQuantityReducer,
   outfitsCarouselIndex: setOutfitsIndexReducer,
   relatedCarouselIndex: setRelatedIndexReducer
 })

@@ -2,8 +2,8 @@ var setSku = (skus) => {
 
   let arrOfSkus = [];
   for (const sku in skus) {
-
-    arrOfSkus.push([skus[sku], sku])
+    skus[sku].sku = sku;
+    arrOfSkus.push(skus[sku])
   }
 
   return {
