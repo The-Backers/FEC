@@ -40,6 +40,7 @@ var handleProductSelect = (productId) => {
    })
    .then(() => {
     dispatch(fetchReviewMeta(productId));
+    window.location.hash = `${productId}`;
  })
     .catch((err) => {
       console.log(err);

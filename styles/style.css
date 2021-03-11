@@ -53,6 +53,7 @@ h1, h2, h3, h4 {
   -ms-transform: translateX(-50%) translateY(-50%);
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
+  z-index: 1;
 }
 .slogan {
   font-family: 'Montserrat';
@@ -243,6 +244,16 @@ input[type="checkbox"] {
   width: 100vw;
   margin: 0 auto;
 }
+.landing-1 img {
+	-webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.landing-1 img:hover {
+	-webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
 
 .landing-3 {
   grid-area: 2 / 1 / 3 / 2;
@@ -250,12 +261,36 @@ input[type="checkbox"] {
   width: 50vw;
   margin: 0 auto;
 }
+
+.landing-3 img {
+  -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.landing-3 img:hover {
+  -webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
 .landing-4 {
   grid-area: 2 / 2 / 3 / 3;
   height: 50vh;
   width: 50vw;
   margin: 0 auto;
 }
+.landing-4 img {
+  -webkit-filter: grayscale(100%);
+	filter: grayscale(100%);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.landing-4 img:hover {
+  -webkit-filter: grayscale(0);
+	filter: grayscale(0);
+}
+
+
 input[type="checkbox"]:checked {
   position: relative;
   margin: 0;

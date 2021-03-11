@@ -1,20 +1,18 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 
 
 let Nav = ({product, fetchProduct, changeView, currentView}) => {
 
-  useEffect(() => {
-    console.log(currentView)
-    console.log(changeView)
-  })
+
   const [productQuery, setProductQuery] = useState('');
   const onChange = (e) => setProductQuery(event.target.value);
 
   function changeProduct(e) {
     e.preventDefault();
     if (productQuery !== false && isNaN(Number(productQuery)) === false) {
-      fetchProduct(productQuery)
+      fetchProduct(productQuery);
     }
+    setProductQuery('');
   }
 
 
