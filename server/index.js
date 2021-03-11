@@ -37,7 +37,7 @@ app.post('/*', function (req, res, next) {
   })
     .then((response) => {
       console.log('successful!');
-      res.status(201).flush().send(response.data);
+      res.status(201).send(response.data);
     })
     .catch((err) => {
       console.error(err);
