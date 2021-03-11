@@ -55,7 +55,7 @@ h1, h2, h3, h4 {
   transform: translate(-50%,-50%);
   z-index: 1;
 }
-.slogan {
+#slogan {
   font-family: 'Montserrat';
   position: absolute;
   z-index: 1;
@@ -230,6 +230,7 @@ input[type="checkbox"] {
   height: 100%;
   width: 100%;
 
+
 } .landing-3 img{
   object-fit: cover;
   height: 100%;
@@ -243,8 +244,7 @@ input[type="checkbox"] {
 .landing-1 {
   grid-area: 1 / 1 / 2 / 3;
   height: 50vh;
-  width: 100vw;
-  margin: 0 auto;
+  width: 100vw
 }
 .landing-1 img {
 	-webkit-filter: grayscale(100%);
@@ -1106,7 +1106,7 @@ position: relative;
 }
 
 @media (max-height: 800px) {
-  * {
+  body {
 
     font-size: 14px;
   }
@@ -1159,5 +1159,6 @@ position: relative;
   .read-all-scroll {
     padding-top: .3rem;
   }
+
 
 }
