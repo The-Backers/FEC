@@ -470,12 +470,10 @@ input[type="checkbox"]:checked {
 .product-card:hover {
   color:#1e62b1;
   cursor: pointer;
-  /* opacity: 80%; */
   box-shadow: 1px 1px 10px gray;
 }
 
 #outfits-card {
-  position: relative;
   justify-content: center;
 }
 
@@ -497,6 +495,8 @@ input[type="checkbox"]:checked {
 #outfits-add {
   font-size: 12vw;
   margin-bottom: 1vh;
+  display: block;
+  margin: 0 auto;
 }
 
 .outfits-x:hover {
@@ -509,7 +509,6 @@ input[type="checkbox"]:checked {
 
 .product-name {
   margin: 0px;
-  /* overflow: hidden; */
   display: inline-block;
   font-size: 1.2vw;
 }

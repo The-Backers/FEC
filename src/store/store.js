@@ -8,7 +8,7 @@ import product from '../../sample-data/products/get-productId.json';
 
 const persistConfig = {
   key: 'root',
-  storage, // not sure about this one!
+  storage,
   whitelist: ['outfits', 'reviewHelpfulLog']
 };
 
