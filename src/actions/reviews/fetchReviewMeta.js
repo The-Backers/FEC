@@ -1,4 +1,4 @@
-import TOKEN from '../../../config.js';
+
 import axios from 'axios';
 import showReviewMeta from './showReviewMeta.js';
 import store from '../../store/store.js';
