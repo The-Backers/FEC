@@ -27,7 +27,7 @@ let StylesSection = ({product, currentStyle, styles, changeCurrentStyle, changeI
         return (
           <div key={i}>
           <label onClick={(e) => handleClick(e)} htmlFor={style.style_id } name={style.style_id } >
-            <input type="checkbox" id={style.style_id } defaultChecked='true' checked/>
+            <input type="checkbox" id={style.style_id }  checked/>
             <img  name={style.style_id} key={i} className='individual-styles' alt={product.name + style.name}  src= {style?.photos[0].thumbnail_url} />
           </label>
           </div>

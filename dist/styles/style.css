@@ -210,6 +210,9 @@ p, h1, h2, h3, h4, h5 {
   border-bottom: 1px white solid;
   color: white;
 }
+.prod-search::placeholder {
+  color: white;
+}
 
 .prod-search:hover {
   border-bottom: 2px white solid;
