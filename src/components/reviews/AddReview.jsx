@@ -20,7 +20,7 @@ class AddReview extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      showForm: false,
+      showForm: true,
       body: 'Why did you like the product or not?',
       email: 'Example: jackson11@email.com',
       nickname: 'Example: jackson11!',
@@ -172,27 +172,23 @@ clickLogger(name,input) {
 
 
 handleSubmit(event) {
-  this.clickLogger('submit-new-review', this.props.id);
-  event.preventDefault();
-  // var elements = document.getElementById('add-review-form').elements;
-  // var values = {};
+    event.preventDefault();
+     this.clickLogger('submit-new-review', this.props.id);
+  var text = document.getElementById('add-review-body').value
+  if (text.length < 50) {
+    alert ('Please use the minimum required characters');
+  } else {
+    var state = this.state
 
-  // for (var i = 0; i < elements.length; i++) {
-  //   var x = elements[i].name
-  //   console.log(elements[i], x)
-  //   console.log(elements[x])
-  //   if (elements[x]) {
+    console.log(this.props.id, this.props.length, this.props.sort, state.rating, state.summary, state.body, state.recommend, state.nickname, state.email, state.photos, state.characteristics)
+    this.props.add(this.props.id, this.props.length, this.props.sort, state.rating, state.summary, state.body, state.recommend, state.nickname, state.email, state.photos, state.characteristics)
 
-  //     if (elements[x].value) {
-  //       values[x] = elements[x].value
-  //     }
-  //   }
-  // }
+  }
 
-  var state = this.state
 
-  console.log(this.props.id, this.props.length, this.props.sort, state.rating, state.summary, state.body, state.recommend, state.nickname, state.email, state.photos, state.characteristics)
-  this.props.add(this.props.id, this.props.length, this.props.sort, state.rating, state.summary, state.body, state.recommend, state.nickname, state.email, state.photos, state.characteristics)
+
+
+
 
   // console.log(elements);
 }
@@ -255,7 +251,7 @@ handleSubmit(event) {
     return (
       <div className = 'add-review'>
 
-      <button onClick = {this.handleOpenForm}>Write Your Review</button>
+      <button className = 'add-review-button' onClick = {this.handleOpenForm}>Write Your Review</button>
         <ReactModal
         isOpen={this.state.showForm}
         contentLabel='Add Review From'
@@ -280,7 +276,8 @@ handleSubmit(event) {
 
             <br></br>
 
-            <div>
+            <span>Characteristics:</span>
+            <div className = 'characteristics-parent'>
 
             {characteristics.map((element) => element)}
             {/* {
@@ -295,33 +292,50 @@ handleSubmit(event) {
             } */}
             </div>
 
-            <label htmlFor = 'add-review-summary'>Summary: </label>
+
+            <span htmlFor = 'add-review-summary'>Summary: </span>
+            <br></br>
             <input id = 'add-review-summary' name = 'add-review-summary' maxLength = '60' onClick = {() => {this.clickLogger('set-review-summary', this.props.id)}}  value = {this.state.summary} onChange = {this.handleSummaryChange} type = 'text'/>
 
             <br></br>
 
-            <label htmlFor = 'add-review-body'>Review Body*: </label>
-            <input id = 'add-review-body' name = 'add-review-body' type = 'text' maxLength = '1000' minLength = '50' onClick = {() => {this.clickLogger('set-review-body', this.props.id)}} onChange = {this.handleBodyChange} value = {this.state.body}  required />
-            <br></br>
-            {minCharLabel}
-
-            <br></br>
-            <label htmlFor = 'add-review-photos'>Upload Photos (Maximum 5): </label>
-            <input type = 'file' id = 'add-review-photos' name = 'add-review-photos' onChange = {this.handlePhoto} style = {{display: display}}  />
-            {previewPhotos}
-
+            <div className = 'body-input'>
+              <span htmlFor = 'add-review-body'>Review Body*: </span>
+              <br></br>
+              <textarea form = 'add-review-form'  id = 'add-review-body' name = 'add-review-body' type = 'text' maxLength = '1000' minLength = '50' onClick = {() => {this.clickLogger('set-review-body', this.props.id)}} onChange = {this.handleBodyChange} value = {this.state.body}  required ></textarea>
+              <br></br>
+             {minCharLabel}
+            </div>
 
             <br></br>
 
-            <label htmlFor = 'add-review-nickname'>Nickname*: </label>
-            <input id = 'add-review-nickname' name = 'add-review-nickname' maxLength = '60' type = 'text' value = {this.state.nickname} onClick = {() => {this.clickLogger('set-review-nickname', this.props.id)}} onChange = {this.handleNicknameChange} required />
-            <label htmlFor = 'add-review-nickname'>For privacy reasons, do not use your full name or email address.</label>
+            <div className = 'photos-input'>
+              <span htmlFor = 'add-review-photos'>Upload Photos (Maximum 5): </span>
+              <br></br>
+              <input type = 'file' id = 'add-review-photos' name = 'add-review-photos' onChange = {this.handlePhoto} style = {{display: display}}  />
+              {previewPhotos}
+            </div>
+
 
             <br></br>
 
-            <label htmlFor = 'add-review-email'>Email*: </label>
-            <input id = 'add-review-email' name = 'add-review-email' maxLength = '60' type = 'email' value = {this.state.email} onClick = {() => {this.clickLogger('set-review-email', this.props.id)}} onChange = {this.handleEmailChange} required />
-            <label htmlFor = 'add-review-email'>For authentication reasons, you will not be emailed</label>
+            <div className = 'nickname-input'>
+              <span htmlFor = 'add-review-nickname'>Nickname*: </span>
+              <br></br>
+              <input id = 'add-review-nickname' name = 'add-review-nickname' maxLength = '60' type = 'text' value = {this.state.nickname} onClick = {() => {this.clickLogger('set-review-nickname', this.props.id)}} onChange = {this.handleNicknameChange} required />
+              <br></br>
+              <span htmlFor = 'add-review-nickname'>For privacy reasons, do not use your full name or email address.</span>
+            </div>
+
+            <br></br>
+
+            <div className = 'email-input'>
+              <span htmlFor = 'add-review-email'>Email*: </span>
+              <br></br>
+              <input id = 'add-review-email' name = 'add-review-email' maxLength = '60' type = 'email' value = {this.state.email} onClick = {() => {this.clickLogger('set-review-email', this.props.id)}} onChange = {this.handleEmailChange} required />
+              <br></br>
+              <span htmlFor = 'add-review-email'>For authentication reasons, you will not be emailed</span>
+            </div>
 
             <br></br>
 

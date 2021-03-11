@@ -803,6 +803,21 @@ tr th {
   margin-bottom: 1rem;
 }
 
+.review-tiles button, .add-review-button {
+  background-color: white;
+  border: solid #487DB8 1px;
+  color: #376294;
+  font-family: Montserrat;
+
+  margin-top: 1rem;
+  height: 2rem;
+  transition: opacity .1s;
+}
+
+.review-tiles button:hover, .add-review-button:hover {
+  opacity: .7;
+}
+
 .review-tile {
   padding: 0 10px 0 10px;
   border: solid #7B9EB3 2px;
@@ -957,6 +972,11 @@ position: relative;
   background-color: #487DB8;
 }
 
+.characteristics-parent {
+  display: flex;
+  justify-content: space-around;
+}
+
 .review-characteristic{
   width: 80%;
   margin-bottom: 1rem;
@@ -1003,6 +1023,18 @@ position: relative;
 
 .characteristic-radio input {
   margin-bottom: 1rem;
+}
+
+#add-review-summary {
+  margin-bottom: 1rem;
+  width: 40%
+}
+
+#add-review-body {
+  width: 40%;
+  padding-bottom: 20%;
+  word-break: break-word;
+  font-family: Montserrat;
 }
 
 
