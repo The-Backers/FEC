@@ -1,11 +1,13 @@
 @font-face {
   font-family: 'Montserrat';
   src: url('fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'VarelaRound';
   src: url('fonts/Varela_Round/VarelaRound-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 
