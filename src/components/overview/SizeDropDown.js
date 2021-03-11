@@ -52,7 +52,7 @@ let SizeDropDown = ({quantity, setQuantity, product, selectedSku, setSku, skus, 
           )
         }
       })}
-    </select> :  <select id='select-quantity-dropdown' disabled='true'> <option default value='-'>-</option> </select>}
+    </select> :  <select id='select-quantity-dropdown' disabled={true}> <option default value='-'>-</option> </select>}
     <div className='star-add-to-bag-div'>
             <button type='submit' className='add-to-bag'> ADD TO BAG <i className="fas fa-plus"></i> </button>
             <button type="button" onClick={() => fetchOutfit(product.id)}  className='heart-product'> <i  className="far fa-heart"> </i> </button>
