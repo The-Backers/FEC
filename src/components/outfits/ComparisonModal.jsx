@@ -16,6 +16,7 @@ const customStyles = {
   }
 };
 
+//? comment out following line when running tests!
 Modal.setAppElement('#app');
 
 const ComparisonModal = ({product, currentProduct}) => {

@@ -2,7 +2,7 @@
 
 exports[`RelatedItems RelatedItems Snapshot 1`] = `
 <section
-  className="related-products"
+  id="related-products"
   role="grid"
 >
   <h3
