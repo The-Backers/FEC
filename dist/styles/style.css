@@ -92,6 +92,9 @@ h1, h2, h3, h4 {
   margin: 0 auto;
 }
 
+.fa-facebook-square {
+  color: #0e44b8;
+}
 
 .twitter-share-button {
   border-top: 1px solid black;
@@ -102,7 +105,7 @@ h1, h2, h3, h4 {
 
   height: 2rem;
   font-size: 30px;
-  color: #4967A9;
+  color: #0e44b8;
   display: inline-block;
 
 }
@@ -361,6 +364,8 @@ input[type="checkbox"]:checked {
 .star-add-to-bag-div {
   display: flex;
   flex-direction: row;
+  height: 100%;
+  width: 100%;
 }
 
 #successful-add {
@@ -1090,6 +1095,9 @@ position: relative;
   .nav, #overview-body, .overview-description, #related-products, .parent-reviews {
     width: 100vw;
   }
+  body {
+    font-size: 12px;
+  }
 
 
 }
@@ -1146,13 +1154,20 @@ position: relative;
   }
   .add-to-bag {
     box-sizing: border-box;
+    display: inline-block;
+    text-align: center;
     height: 3rem;
     margin-right: 1rem;
-    font-size: 1rem;
     width: 10rem;
     border: 2px #525252 solid;
     font-weight: bold;
     padding: 10px;
+
+  }
+
+  .add-to-bag span {
+    height: 100%;
+    width: 100%;
   }
   .heart-product {
     padding: 10px;
