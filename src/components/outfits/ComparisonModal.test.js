@@ -1,12 +1,11 @@
 const React = require('react');
 const {shallow, mount} = require('enzyme');
 const toJson = require('enzyme-to-json');
-
 const ComparisonModal = require('./ComparisonModal.jsx').default;
 
 describe('ComparisonModal', () => {
   let wrapper;
-  var product = {id: 'test'}
+  var product = {id: 'test'};
 
   beforeEach(() => {
     wrapper = shallow(<ComparisonModal product={product}/>);

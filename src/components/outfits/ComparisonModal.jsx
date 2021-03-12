@@ -16,8 +16,7 @@ const customStyles = {
   }
 };
 
-//? comment out following line when running tests!
-Modal.setAppElement('#app');
+// Modal.setAppElement('#app');
 
 const ComparisonModal = ({product, currentProduct}) => {
   var subtitle;
@@ -40,6 +39,7 @@ const ComparisonModal = ({product, currentProduct}) => {
           onRequestClose={closeModal}
           style={customStyles}
           contentLabel="Example Modal"
+          appElement={document.querySelector('#app')}
         >
           <button onClick={closeModal} name={product.id} className="modal-close">X</button>
           <Comparison product={product} currentProduct={currentProduct}/>
