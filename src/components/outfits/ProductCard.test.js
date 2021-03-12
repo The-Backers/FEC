@@ -36,10 +36,9 @@ describe('ProductCard Clicks', () => {
     let wrapper = mount(<ProductCard product={sampleProduct} currentProduct={currentProduct} index={index} fetchProduct={mockFetchProduct}/>);
 
     wrapper.find('.product-category').simulate('click');
-    wrapper.find('.product-image').simulate('click');
+    wrapper.find('.product-rating').simulate('click');
     wrapper.find('.product-name').simulate('click');
     wrapper.find('.product-price').simulate('click');
-    // wrapper.find('.product-rating').simulate('click');
     expect(mockFetchProduct.mock.calls.length).toBe(4);
   });
 

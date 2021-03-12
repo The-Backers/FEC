@@ -1,4 +1,3 @@
-import TOKEN from '../../../config.js';
 import axios from 'axios';
 import showRelated from './showRelated.js';
 import addStars from './addStars.js';

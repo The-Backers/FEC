@@ -1,4 +1,3 @@
-import TOKEN from '../../../config.js';
 import axios from 'axios';
 import mapRelated from './mapRelated.js';
 import showOutfit from './showOutfit.js';
