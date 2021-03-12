@@ -11,6 +11,7 @@ exports[`ComparisonModal ComparisonModal Snapshot 1`] = `
      
   </button>
   <Modal
+    appElement={null}
     ariaHideApp={true}
     bodyOpenClassName="ReactModal__Body--open"
     closeTimeoutMS={0}

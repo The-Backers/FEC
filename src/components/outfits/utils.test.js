@@ -1,4 +1,4 @@
-const getFeatures = require('./utils.js').default;
+const getFeatures = require('./utils.jsx').default;
 
 const sampleProduct = require('../../../sample-data/products/get-productId.json').features;
 const currentProduct = require('../../../sample-data/products/get-productId.json').features;
