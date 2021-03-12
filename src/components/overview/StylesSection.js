@@ -28,7 +28,7 @@ let StylesSection = ({product, currentStyle, styles, changeCurrentStyle, changeI
           <div key={i}>
           <label onClick={(e) => handleClick(e)} htmlFor={style.style_id } name={style.style_id } >
             <input type="checkbox" id={style.style_id }  checked/>
-            <img  name={style.style_id} key={i} className='individual-styles' alt={product.name + style.name}  src= {style?.photos[0].thumbnail_url} />
+            <img   width={200} height={400} name={style.style_id} key={i} className='individual-styles' alt={product.name + style.name}  src= {style?.photos[0].thumbnail_url} />
           </label>
           </div>
         )
@@ -37,7 +37,7 @@ let StylesSection = ({product, currentStyle, styles, changeCurrentStyle, changeI
           <div key={i}>
           <label onClick={(e) => handleClick(e)} htmlFor={style.style_id } name={style.style_id } >
           <input type="checkbox" id={style.style_id } />
-            <img  name={style.style_id } key={i} className='individual-styles' alt={product.name + style.name }  src= {style.photos[0].thumbnail_url } />
+            <img  width={200} height={400} name={style.style_id } key={i} className='individual-styles' alt={product.name + style.name }  src= {style.photos[0].thumbnail_url } />
           </label>
           </div>
         )

@@ -14,7 +14,7 @@ const Carousel = ({product, index, changeIndex, styles}) => {
   //children will be an array of images
   const children = styles?.photos?.map((photo, index) => {
     return (
-      <img name={product.name} onClick={(e) => logInteraction(`main-image: ${e.target.name}-${imageStyle}`, 'product-overview')} alt={product.name} style={imageStyle} key={index} src={photo?.url} />
+      <img name={product.name}  width={500} height={600} onClick={(e) => logInteraction(`main-image: ${e.target.name}-${imageStyle}`, 'product-overview')} alt={product.name} style={imageStyle} key={index} src={photo?.url} />
     );
   })
 
