@@ -813,7 +813,7 @@ tr th {
   margin-bottom: 1rem;
 }
 
-.review-tiles button, .add-review-button {
+.review-tiles button, .add-review-button, .add-review-head button, .add-review-form input[type=submit], .add-review-form label[for=add-review-photos] {
   background-color: white;
   border: solid #487DB8 1px;
   color: #376294;
@@ -823,8 +823,20 @@ tr th {
   height: 2rem;
   transition: opacity .1s;
 }
+.add-review-head button, .add-review-form input[type=submit], .add-review-form label[for=add-review-photos] {
+  background-color: gainsboro;
+  color: black;
+  border-color: black;
+}
 
-.review-tiles button:hover, .add-review-button:hover {
+
+.add-review-form label[for=add-review-photos] {
+  padding: 1px 6px;
+  font-size: 13.3333px;
+}
+
+
+.review-tiles button:hover, .add-review-button:hover, .add-review-head button:hover, .add-review-form input[type=submit]:hover, .add-review-form label[for=add-review-photos]:hover {
   opacity: .7;
 }
 

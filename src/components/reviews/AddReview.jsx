@@ -11,7 +11,8 @@ const customStyles = {
     right                 : 'auto',
     bottom                : 'auto',
     marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
+    transform             : 'translate(-50%, -50%)',
+
   }
 };
 
@@ -283,7 +284,16 @@ handleSubmit(event) {
 
     var previewPhotos = this.state.photos.map((element) => {
       return (
-        <img src = {element} height = '200' alt = 'image preview' />
+        <div className = 'review-preview-photo'>
+          <img src = {element} height = '200' alt = 'image preview' />
+          <br></br>
+          <button onClick = {() => {
+
+            var photos = this.state.photos;
+            photos.splice(photos.indexOf(element), 1);
+            this.setState({photos: photos})
+          }}>Remove</button>
+        </div>
       )
     })
 
@@ -311,8 +321,8 @@ handleSubmit(event) {
         style = {{position: 'relative'}}
         onRequestClose = {this.handleCloseForm}
       >
-        <button style = {{position: 'sticky', top: '0', float: 'right'}} onClick={this.handleCloseForm}>Close</button>
         <div className = 'add-review-head'>
+        <button style = {{position: 'sticky', top: '0', float: 'right'}} onClick={this.handleCloseForm}>Close</button>
           <h3>Write Your Review</h3>
           <h4>About the {this.props.name}</h4>
           <h5>* = required</h5>
@@ -368,7 +378,8 @@ handleSubmit(event) {
             <div className = 'photos-input'>
               <span htmlFor = 'add-review-photos' >Upload Photos (Maximum 5): </span>
               <br></br>
-              <input type = 'file' id = 'add-review-photos' aria-label = 'Add review photo' name = 'add-review-photos' onChange = {this.handlePhoto} style = {{display: display}}  />
+              <label htmlFor ='add-review-photos'>Upload image</label>
+              <input type = 'file' id = 'add-review-photos' aria-label = 'Add review photo' name = 'add-review-photos' onChange = {this.handlePhoto} style = {{display: display, opacity: 0}}  />
               {previewPhotos}
             </div>
 
