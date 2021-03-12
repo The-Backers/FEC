@@ -6,11 +6,24 @@ import fetchReviews from './reviews/fetchReviews.js';
 import fetchReviewMeta from './reviews/fetchReviewMeta.js';
 import setGalleryIndex from './overview/setGalleryIndex.js'
 import setRelatedIndex from './outfits/setRelatedIndex.js'
-import store from '../store/store.js';
+import {store} from '../store/store.js';
 import thunk from 'redux-thunk';
 import axios from 'axios';
+import removeLocationHash from './removeHash';
 
 var handleProductSelect = (productId) => {
+
+
+
+  var isOnLandingPage = store.getState().changePage;
+  if (isOnLandingPage === false) {
+   parent.location.hash = `${productId}`;
+
+  } else {
+    var isOnLandingPage = store.getState().changePage;
+    window.location.hash = '';
+    removeLocationHash()
+  }
 
   return (dispatch) => {
 
@@ -33,7 +46,7 @@ var handleProductSelect = (productId) => {
    })
    .then(() => {
     dispatch(fetchReviewMeta(productId));
-    window.location.hash = `${productId}`;
+
  })
     .catch((err) => {
       console.log(err);
