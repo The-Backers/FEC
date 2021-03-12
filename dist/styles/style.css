@@ -835,6 +835,7 @@ tr th {
   font-size: 13.3333px;
 }
 
+
 .review-tiles button:hover, .add-review-button:hover, .add-review-head button:hover, .add-review-form input[type=submit]:hover, .add-review-form label[for=add-review-photos]:hover {
   opacity: .7;
 }
