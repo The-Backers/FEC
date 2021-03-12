@@ -1,5 +1,5 @@
 import React from 'react';
-import getFeatures from './utils.js';
+import getFeatures from './utils.jsx';
 
 const Comparison = ({product, currentProduct}) => {
   const features = getFeatures(product.features, currentProduct.features)
