@@ -9,7 +9,7 @@ This component was built using the business requirements document as well as the
 
 This section uses mostly react class components to store local states that affect a components content and styles. Eventually, these class components will be refactored out in favor of more redux containers and functional components utilizing react hooks.
 
-'<iframe alt = 'review screenshot' src="https://drive.google.com/file/d/1JT3y03s5nA1h-8KPRBIIyl0upLicQhE6/preview" width="200" height="150"></iframe>'
+![review screenshot](documentation/review-screenshot.png)
 
 ---
 
@@ -24,7 +24,7 @@ As per the business requirements doc, this section takes the meta data for a pro
 
 This section can also filter the reviews list based on the star ratings selected here.
 
-![](documentation/review-breakdown.gif)
+![](documentation/review-breakdown-2.gif)
 
 ### Reviews List
 The business requirements doc requested that the reviews list display a...
@@ -46,7 +46,7 @@ This list is composed of review entries that each include a...
 - photos posted by the user to include in the review (if applicable)
 - response to the review by the seller (if applicable)
 
-![](documentation/review-list.gif)
+![](documentation/review-list-2.gif)
 
 ### Add Review Form
 This form follows the business requirements doc's guidelines, allowing users to input a...
@@ -61,7 +61,7 @@ This form follows the business requirements doc's guidelines, allowing users to 
 - Email address (required, maximum of 60 characters)
 - Submit button
 
-![](documentation/add-review-form.gif)
+![](documentation/review-form-2.gif)
 
 
 
