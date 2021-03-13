@@ -9,7 +9,7 @@ This component was built using the business requirements document as well as the
 
 This section uses mostly react class components to store local states that affect a components content and styles. Eventually, these class components will be refactored out in favor of more redux containers and functional components utilizing react hooks.
 
-![review screenshot](documentation/reviews/review-screenshot.png)
+![review screenshot](documentation/reviews/reviews-screenshot.png)
 
 ---
 
