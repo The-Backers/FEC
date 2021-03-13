@@ -20,7 +20,7 @@ useEffect(() => {
      <OutfitsContainer async/>
      <ReviewsContainer />
     </div>}
-    {viewMainPage ? null : <SocialMediaIcons />}
+     <SocialMediaIcons />
  </Fragment>)
 }
 
