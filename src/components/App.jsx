@@ -14,13 +14,13 @@ useEffect(() => {
 
   return(
   <Fragment>
-    {viewMainPage ? null : <SocialMediaIcons />}
     {viewMainPage ? <MainPageContainer /> :
     <div id="overall-container">
      <OverviewContainer />
      <OutfitsContainer async/>
      <ReviewsContainer />
     </div>}
+     <SocialMediaIcons />
  </Fragment>)
 }
 
