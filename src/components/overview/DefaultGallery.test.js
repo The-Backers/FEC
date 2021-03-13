@@ -1,13 +1,9 @@
-// this is where Tests for App.jsx go!
 const React = require('react');
 const {shallow, mount} = require('enzyme');
-// if using snapshots, you also need this line!
 const toJson = require('enzyme-to-json');
 import Stars from '../shared/stars.jsx';
 
 const DefaultGallery = require('./DefaultGallery').default;
-
-// example test using shallow render
 
 describe('DefaultGallery', () => {
   it('should render DefaultGallery with an interaction section(stars component, interaction body div)', () => {
