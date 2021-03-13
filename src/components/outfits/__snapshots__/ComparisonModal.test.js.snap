@@ -5,11 +5,13 @@ exports[`ComparisonModal ComparisonModal Snapshot 1`] = `
   <button
     aria-label="Compare Product"
     className="comparison-modal"
+    name="test"
     onClick={[Function]}
   >
      
   </button>
   <Modal
+    appElement={null}
     ariaHideApp={true}
     bodyOpenClassName="ReactModal__Body--open"
     closeTimeoutMS={0}
@@ -29,7 +31,9 @@ exports[`ComparisonModal ComparisonModal Snapshot 1`] = `
     style={
       Object {
         "content": Object {
+          "borderRadius": "10px",
           "bottom": "auto",
+          "boxShadow": "0.5px 0.5px 5px gray",
           "left": "50%",
           "marginRight": "-50%",
           "right": "auto",
@@ -41,11 +45,18 @@ exports[`ComparisonModal ComparisonModal Snapshot 1`] = `
   >
     <button
       className="modal-close"
+      name="test"
       onClick={[Function]}
     >
       X
     </button>
-    <Comparison />
+    <Comparison
+      product={
+        Object {
+          "id": "test",
+        }
+      }
+    />
   </Modal>
 </Fragment>
 `;

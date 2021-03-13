@@ -2,7 +2,9 @@
 
 exports[`Comparison Comparison Snapshot 1`] = `
 <Fragment>
-  <h5>
+  <h5
+    className="table-heading"
+  >
     Comparing
   </h5>
   <table>

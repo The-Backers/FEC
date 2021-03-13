@@ -2,6 +2,7 @@ import React from 'react';
 import Stars from '../shared/Stars.jsx';
 import ComparisonModal from './ComparisonModal.jsx';
 import logInteraction from '../shared/logInteraction.js';
+import LazyLoad from 'react-lazyload';
 
 const ProductCard = ({product, index, currentProduct, fetchProduct, removeOutfit, outfits}) => {
   const handleClick = (id) => {
@@ -17,7 +18,9 @@ const ProductCard = ({product, index, currentProduct, fetchProduct, removeOutfit
   return (
     <div className="product-card" key={index} role="cell">
       <div className="product-image-container" role="img">
-        <object className="product-image" data={product.stylePhoto} type="image/jpg" alt={product.name} width="auto" height="220vh" onClick={() => handleClick(product.id)} >{product.name}</object>
+        <LazyLoad height="220">
+          <object className="product-image" data={product.stylePhoto} type="image/jpg" alt={product.name} onClick={() => handleClick(product.id)} height="220" width="auto" async>{product.name}</object>
+        </LazyLoad>
         {!outfits &&
           <span role="button" aria-label="Compare Product" className="compare-product-button">
             <i className="far fa-star"></i>

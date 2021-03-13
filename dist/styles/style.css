@@ -1,11 +1,13 @@
 @font-face {
   font-family: 'Montserrat';
   src: url('fonts/Montserrat/Montserrat-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'VarelaRound';
   src: url('fonts/Varela_Round/VarelaRound-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 
@@ -808,9 +810,36 @@ tr th {
 }
 
 .review-tiles {
-  height: 70vh;
+  height: 50vh;
   overflow: auto;
   margin-bottom: 1rem;
+}
+
+.review-tiles button, .add-review-button, .add-review-head button, .add-review-form input[type=submit], .add-review-form label[for=add-review-photos] {
+  background-color: white;
+  border: solid #487DB8 1px;
+  color: #376294;
+  font-family: Montserrat;
+
+  margin-top: 1rem;
+  height: 2rem;
+  transition: opacity .1s;
+}
+.add-review-head button, .add-review-form input[type=submit], .add-review-form label[for=add-review-photos] {
+  background-color: gainsboro;
+  color: black;
+  border-color: black;
+}
+
+
+.add-review-form label[for=add-review-photos] {
+  padding: 1px 6px;
+  font-size: 13.3333px;
+}
+
+
+.review-tiles button:hover, .add-review-button:hover, .add-review-head button:hover, .add-review-form input[type=submit]:hover, .add-review-form label[for=add-review-photos]:hover {
+  opacity: .7;
 }
 
 .review-tile {
@@ -967,6 +996,11 @@ position: relative;
   background-color: #487DB8;
 }
 
+.characteristics-parent {
+  display: flex;
+  justify-content: space-around;
+}
+
 .review-characteristic{
   width: 80%;
   margin-bottom: 1rem;
@@ -1011,10 +1045,64 @@ position: relative;
 
 /* add review styles start */
 
+.add-review-head h3{
+  font-size: 2rem;
+}
+
+.add-review-head h4 {
+  margin-bottom: .6rem;
+  margin-top: .6rem;
+
+}
+
+.add-review-head h5 {
+  margin-bottom: 1rem;
+
+}
+
 .characteristic-radio input {
   margin-bottom: 1rem;
 }
 
+#add-review-summary {
+  margin-bottom: 1rem;
+  width: 80%
+}
+
+#add-review-body {
+  width: 80%;
+  padding-bottom: 20%;
+  word-break: break-word;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#no-recommend {
+  margin-bottom: 1rem;
+}
+
+#overall-rating {
+  margin-bottom: 1rem;
+}
+
+#overall-rating .star {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* .add-review-form-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.arf-bottom-left{
+  width: 60%;
+}
+
+.arf-bottom-right {
+  margin-top: 3rem;
+  width: 40%;
+} */
 
 
 /* add review styles end */

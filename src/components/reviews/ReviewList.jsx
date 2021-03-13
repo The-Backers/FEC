@@ -25,7 +25,7 @@ const ReviewList = (props) => {
         </div>
         <div className = 'review-tiles'>
          {props.reviews.map((element) => <ReviewTile helpfulLog = {props.helpfulLog} handleHelpfulLog = {props.handleHelpfulLog}  review = {element} />)}
-         <button onClick = {() => {props.more(props.product, props.reviews.length + 2, props.sort, props.filter); clickLogger('more-reviews', props.product)}} style = {{display: props.display}}  >More reviews</button>
+         <button onClick = {() => {props.more(props.product, props.reviews.length + 2, props.sort, props.filter); clickLogger('more-reviews', props.product)}} style = {{display: props.display}}  >More Reviews</button>
         </div>
       </div>
 

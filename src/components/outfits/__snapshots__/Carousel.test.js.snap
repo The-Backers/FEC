@@ -5,16 +5,16 @@ exports[`Carousel Carousel Snapshot 1`] = `
   role="row"
   style={
     Object {
-      "padding": "0 40px",
+      "padding": "0 10px",
     }
   }
 >
   <r
-    activeItemIndex={0}
     activePosition="left"
     alwaysShowChevrons={false}
     calculateActualTranslateX={[Function]}
-    chevronWidth={40}
+    chevronWidth={10}
+    className="carousel"
     classes={Object {}}
     disableSwipe={false}
     enablePlaceholder={false}
@@ -22,7 +22,9 @@ exports[`Carousel Carousel Snapshot 1`] = `
     gutter={20}
     infiniteLoop={false}
     leftChevron={
-      <button>
+      <button
+        className="carousel-chevron"
+      >
         &lt;
       </button>
     }
@@ -31,9 +33,10 @@ exports[`Carousel Carousel Snapshot 1`] = `
     onActiveStateChange={null}
     outsideChevron={true}
     placeholderItem={null}
-    requestToChangeActive={[Function]}
     rightChevron={
-      <button>
+      <button
+        className="carousel-chevron"
+      >
         &gt;
       </button>
     }

@@ -1,3 +1,4 @@
+import React from 'react';
 const getFeatures = (product, currentProduct) => {
   const features = new Set();
   for (let item of product) {
@@ -17,7 +18,7 @@ const getFeatures = (product, currentProduct) => {
         if (item.value) {
           obj.product = item.value;
         } else {
-          obj.product = "None";
+          obj.product = <i className="fas fa-check"></i>;
         }
       }
     }
@@ -29,7 +30,7 @@ const getFeatures = (product, currentProduct) => {
         if (item.value) {
           obj.currentProduct = item.value;
         } else {
-          obj.currentProduct = "None";
+          obj.currentProduct = <i className="fas fa-check"></i>;
         }
       }
     }
