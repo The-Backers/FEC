@@ -9,7 +9,7 @@ This component was built using the business requirements document as well as the
 
 This section uses mostly react class components to store local states that affect a components content and styles. Eventually, these class components will be refactored out in favor of more redux containers and functional components utilizing react hooks.
 
-'<iframe alt = 'review screenshot' src="https://drive.google.com/file/d/1JT3y03s5nA1h-8KPRBIIyl0upLicQhE6/preview" width="200" height="150"></iframe>'
+![review screenshot](documentation/review-screenshot.png)
 
 ---
 
