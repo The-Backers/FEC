@@ -7,7 +7,7 @@ import rootReducer from '../reducers/rootReducer.js';
 const persistConfig = {
   key: 'root',
   storage,
-  whitelist: ['outfits', 'reviewHelpfulLog']
+  whitelist: ['outfits', 'reviewHelpfulLog', 'changePage']
 };
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -28,7 +28,7 @@ var initialSate = {
   selectedSku: 0,
   outfitsCarouselIndex: 0,
   relatedCarouselIndex: 0,
-  changePage: false,
+  changePage: true,
 
 };
 

@@ -59,7 +59,7 @@ let SizeDropDown = ({quantity, setQuantity, product, selectedSku, setSku, skus, 
 
 
     <div className='star-add-to-bag-div'>
-            <button type='submit' className='add-to-bag'> ADD TO BAG <i className="fas fa-plus"></i>  </button>
+            <button type='submit' className='add-to-bag'> <p>ADD TO BAG <i className="fas fa-plus"></i> </p>  </button>
             <button aria-label="add to outfit" type="button" onClick={() => fetchOutfit(product.id)}  className='heart-product'> <i  className="far fa-heart"> </i> </button>
     </div>
 

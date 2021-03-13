@@ -24,7 +24,7 @@ As per the business requirements doc, this section takes the meta data for a pro
 
 This section can also filter the reviews list based on the star ratings selected here.
 
-(insert breakdown photo and screen cap here)
+![](documentation/review-breakdown.gif)
 
 ### Reviews List
 The business requirements doc requested that the reviews list display a...
@@ -46,7 +46,7 @@ This list is composed of review entries that each include a...
 - photos posted by the user to include in the review (if applicable)
 - response to the review by the seller (if applicable)
 
-(include photo or screencap of review list here)
+![](documentation/review-list.gif)
 
 ### Add Review Form
 This form follows the business requirements doc's guidelines, allowing users to input a...
@@ -61,7 +61,9 @@ This form follows the business requirements doc's guidelines, allowing users to 
 - Email address (required, maximum of 60 characters)
 - Submit button
 
-(include photo or screencap of review form here)
+![](documentation/add-review-form.gif)
 
 
 
+> Carousel Demonstration
+> ![](documentation/related-products-gif.gif)
