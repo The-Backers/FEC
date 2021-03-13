@@ -16,7 +16,6 @@ let ExpandedGallery = ({index, collapseGallery, currentStyle}) => {
         <div id="myresult" className="img-zoom-result"></div>
         <a onClick={() => collapsedGallery()} ><i  className="fas fa-expand button-expander"></i></a>
         <div className='current-style-gallery'>
-        {/* create a vertical carousel here */}
         </div>
       </div>
     </div>
