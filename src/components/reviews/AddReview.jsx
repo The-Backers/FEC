@@ -282,9 +282,9 @@ handleSubmit(event) {
       }
     })()
 
-    var previewPhotos = this.state.photos.map((element) => {
+    var previewPhotos = this.state.photos.map((element, index) => {
       return (
-        <div className = 'review-preview-photo'>
+        <div key={index} className = 'review-preview-photo'>
           <img src = {element} height = '200' alt = 'image preview' />
           <br></br>
           <button onClick = {() => {
