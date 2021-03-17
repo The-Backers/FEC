@@ -36,3 +36,4 @@ Usage: sass <input.scss> [output.css]
     --[no-]trace               Print full Dart stack traces for exceptions.
 -h, --help                     Print this usage information.
     --version                  Print the version of Dart Sass.
+
