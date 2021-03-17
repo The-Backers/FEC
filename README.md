@@ -62,6 +62,30 @@ A few metrics:
 Each team member was in charge of a component on the app. Anton Menchaca worked on the Product Overview, Nastassia Fulconis focused on the Related Items and the Outfits, and David Backer was in charge of the Reviews.
 
 ---
+## Product Overview Documentation
+---
+### Intro
+This widget was built using the business requirements documented as well as the design mockup provided. All of the components were built from scratch using react and css styling.
+
+---
+
+### Product Overview Breakdown
+This section, following the business requirements, displays:
+
+- A gallery of photos for the current Product given by the API. This gallery features:
+	- image of the default style for the product chosen
+	- carousel feature for associated photos of current style chosen
+	- expand and zoom feature for the current product chosen.
+	- enables user to choose specific style
+- A detailed product description:
+	- detailed product information (product name, category, and price, description, features, rating)
+	- enables a user to add current product to outfits list with a click event on the heart button
+	- add to bag feature which specifies the current available quantity and sizes
+	- share feature that allows the current product to be shared through social media
+
+> ![](documentation/product-overview.gif)
+
+---
 
 ## Related Items Documentation
 ---
