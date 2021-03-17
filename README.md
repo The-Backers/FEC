@@ -20,7 +20,7 @@ A three person dev team created a mock product page for an e-retail site focusin
 - `npm install` - install dependencies
 - `npm run react-dev` - webpack build the front end
 - `npm start` - start the server
-- `npm test` - runs our jest tests
+- `npm test` - runs jest tests
 
 * Navigate to http://localhost:3000/
 
